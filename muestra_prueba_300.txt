@@ -1,0 +1,305 @@
+FIFA MOBILE 18 - TEMPORADA 2 - CARTAS BASE (sin programas)
+Fuente RenderZ: https://renderz.app/18/player/{fifa_id}  |  Guia SoFIFA: https://sofifa.com/?r=180084&set=true
+Total cartas base: 298  |  Generado: 2026-11-05T17:50:43.154318+00:00
+Nombres en ASCII sin tildes ni caracteres especiales (ver JSON para nombres originales).
+
+ID      OVR  POS   NOMBRE                    CLUB                         FONDO  RARIDAD
+-----------------------------------------------------------------------------------------------
+20801   90   LW    Cristiano Ronaldo         Real Madrid                  MR4    Master Rare
+158023  89   RW    Lionel Messi              FC Barcelona                 ER3    Epic Rare
+167495  88   GK    Manuel Neuer              Bayern Munchen               ER3    Epic Rare
+190871  88   LW    Neymar                    Paris Saint-Germain          ER3    Epic Rare
+193080  88   GK    De Gea                    Manchester United            ER3    Epic Rare
+138956  87   CB    Giorgio Chiellini         Juventus FC                  ER3    Epic Rare
+173731  87   RW    Gareth Bale               Real Madrid                  ER3    Epic Rare
+176580  87   ST    Luis Suarez               FC Barcelona                 ER3    Epic Rare
+183277  87   LW    Eden Hazard               Chelsea FC                   ER3    Epic Rare
+188545  87   ST    Robert Lewandowski        Bayern Munchen               ER3    Epic Rare
+1179    86   GK    Gianluigi Buffon          Juventus FC                  ER3    Epic Rare
+41236   86   ST    Zlatan Ibrahimovic        LA Galaxy                    ER3    Epic Rare
+153079  86   ST    Sergio Aguero             Manchester City              ER3    Epic Rare
+162835  86   GK    Samir Handanovic          Inter Milan                  ER3    Epic Rare
+167664  86   ST    Gonzalo Higuain           Juventus FC                  ER3    Epic Rare
+167948  86   GK    Hugo Lloris               Tottenham Hotspur            ER3    Epic Rare
+172879  86   CB    Sokratis                  Borussia Dortmund            ER3    Epic Rare
+183907  86   CB    Jerome Boateng            Bayern Munchen               ER3    Epic Rare
+192119  86   GK    Thibaut Courtois          Chelsea FC                   ER3    Epic Rare
+200389  86   GK    Jan Oblak                 Atletico Madrid              ER3    Epic Rare
+155862  85   CB    Sergio Ramos              Real Madrid                  ER3    Epic Rare
+182521  85   CM    Toni Kroos                Real Madrid                  ER3    Epic Rare
+188350  85   LM    Marco Reus                Borussia Dortmund            ER3    Epic Rare
+188567  85   ST    Pierre-Emerick Aubameyang Arsenal FC                   ER3    Epic Rare
+192985  85   CAM   Kevin De Bruyne           Manchester City              ER3    Epic Rare
+194765  85   ST    Antoine Griezmann         Atletico Madrid              ER3    Epic Rare
+211110  85   CAM   Paulo Dybala              Juventus FC                  ER3    Epic Rare
+9014    84   RM    Arjen Robben              Bayern Munchen               ER3    Epic Rare
+156616  84   LM    Franck Ribery             Bayern Munchen               ER3    Epic Rare
+164240  84   CB    Thiago Silva              Paris Saint-Germain          ER3    Epic Rare
+167628  84   GK    Stephane Ruffier          AS Saint-Etienne             ER3    Epic Rare
+168609  84   CB    Miranda                   Inter Milan                  ER3    Epic Rare
+177003  84   CM    Luka Modric               Real Madrid                  ER3    Epic Rare
+179783  84   GK    Ralf Fahrmann             Schalke 04                   ER3    Epic Rare
+182493  84   CB    Diego Godin               Atletico Madrid              ER3    Epic Rare
+184087  84   CB    Toby Alderweireld         Tottenham Hotspur            ER3    Epic Rare
+184344  84   CB    Leonardo Bonucci          AC Milan                     ER3    Epic Rare
+184941  84   LM    Alexis Sanchez            Manchester United            ER3    Epic Rare
+192505  84   ST    Romelu Lukaku             Manchester United            ER3    Epic Rare
+192563  84   GK    Bernd Leno                Bayer 04 Leverkusen          ER3    Epic Rare
+193301  84   ST    Alexandre Lacazette       Arsenal FC                   ER3    Epic Rare
+195864  84   CM    Paul Pogba                Manchester United            ER3    Epic Rare
+198219  84   LW    Lorenzo Insigne           SSC Napoli                   ER3    Epic Rare
+41      83   CM    Iniesta                   Vissel Kobe                  ER3    Epic Rare
+48940   83   GK    Petr Cech                 Arsenal FC                   ER3    Epic Rare
+120533  83   CB    Pepe                      Besiktas JK                  ER3    Epic Rare
+139720  83   CB    Vincent Kompany           Manchester City              ER3    Epic Rare
+163587  83   GK    Kasper Schmeichel         Leicester City               ER3    Epic Rare
+165153  83   ST    Karim Benzema             Real Madrid                  ER3    Epic Rare
+171877  83   CM    Marek Hamsik              SSC Napoli                   ER3    Epic Rare
+175943  83   LF    Dries Mertens             SSC Napoli                   ER3    Epic Rare
+176635  83   CAM   Mesut Ozil                Arsenal FC                   ER3    Epic Rare
+177388  83   LW    Dimitri Payet             Olympique de Marseille       ER3    Epic Rare
+177509  83   CB    Medhi Benatia             Juventus FC                  ER3    Epic Rare
+177610  83   CB    Javi Martinez             Bayern Munchen               ER3    Epic Rare
+178518  83   CM    Radja Nainggolan          AS Roma                      ER3    Epic Rare
+178603  83   CB    Mats Hummels              Bayern Munchen               ER3    Epic Rare
+178750  83   GK    Sergio Asenjo             Villarreal CF                ER3    Epic Rare
+180403  83   RW    Willian                   Chelsea FC                   ER3    Epic Rare
+183898  83   RW    Angel Di Maria            Paris Saint-Germain          ER3    Epic Rare
+189242  83   LW    Coutinho                  FC Barcelona                 ER3    Epic Rare
+189332  83   LB    Jordi Alba                FC Barcelona                 ER3    Epic Rare
+190460  83   CAM   Christian Eriksen         Tottenham Hotspur            ER3    Epic Rare
+192448  83   GK    Marc-Andre ter Stegen     FC Barcelona                 ER3    Epic Rare
+192593  83   GK    Danijel Subasic           AS Monaco                    ER3    Epic Rare
+192774  83   CB    Kostas Manolas            AS Roma                      ER3    Epic Rare
+192883  83   RM    Henrikh Mkhitaryan        Arsenal FC                   ER3    Epic Rare
+193041  83   GK    Keylor Navas              Real Madrid                  ER3    Epic Rare
+198009  83   GK    Mattia Perin              Genoa                        ER3    Epic Rare
+199482  83   GK    Anthony Lopes             Olympique Lyonnais           ER3    Epic Rare
+200316  83   GK    Timo Horn                 1. FC Koln                   ER3    Epic Rare
+201024  83   CB    Kalidou Koulibaly         SSC Napoli                   ER3    Epic Rare
+201535  83   CB    Raphael Varane            Real Madrid                  ER3    Epic Rare
+202126  83   ST    Harry Kane                Tottenham Hotspur            ER3    Epic Rare
+24630   82   GK    Jose Reina                SSC Napoli                   ER3    Epic Rare
+137186  82   CB    Andrea Barzagli           Juventus FC                  ER3    Epic Rare
+152729  82   CB    Pique                     FC Barcelona                 ER3    Epic Rare
+161956  82   CAM   Borja Valero              Inter Milan                  ER3    Epic Rare
+164169  82   LB    Filipe Luis               Atletico Madrid              ER3    Epic Rare
+165229  82   CB    Laurent Koscielny         Arsenal FC                   ER3    Epic Rare
+168542  82   CAM   David Silva               Manchester City              ER3    Epic Rare
+172871  82   CB    Jan Vertonghen            Tottenham Hotspur            ER3    Epic Rare
+173210  82   CM    Claudio Marchisio         Juventus FC                  ER3    Epic Rare
+176676  82   LB    Marcelo                   Real Madrid                  ER3    Epic Rare
+179813  82   ST    Edinson Cavani            Paris Saint-Germain          ER3    Epic Rare
+179844  82   ST    Diego Costa               Atletico Madrid              ER3    Epic Rare
+179944  82   CB    David Luiz                Chelsea FC                   ER3    Epic Rare
+181872  82   CDM   Arturo Vidal              Bayern Munchen               ER3    Epic Rare
+184432  82   CB    Azpilicueta               Chelsea FC                   ER3    Epic Rare
+189505  82   RW    Pedro                     Chelsea FC                   ER3    Epic Rare
+189509  82   CM    Thiago                    Bayern Munchen               ER3    Epic Rare
+189596  82   RF    Thomas Muller             Bayern Munchen               ER3    Epic Rare
+190547  82   CB    Kamil Glik                AS Monaco                    ER3    Epic Rare
+191043  82   LB    Alex Sandro               Juventus FC                  ER3    Epic Rare
+193698  82   GK    Oliver Baumann            TSG 1899 Hoffenheim          ER3    Epic Rare
+197445  82   LB    David Alaba               Bayern Munchen               ER3    Epic Rare
+198710  82   CAM   James Rodriguez           Bayern Munchen               ER3    Epic Rare
+200145  82   CDM   Casemiro                  Real Madrid                  ER3    Epic Rare
+202652  82   RW    Raheem Sterling           Manchester City              ER3    Epic Rare
+203376  82   CB    Virgil van Dijk           Liverpool FC                 ER3    Epic Rare
+205452  82   CB    Antonio Rudiger           Chelsea FC                   ER3    Epic Rare
+208418  82   LM    Yannick Carrasco          Belgium                      ER3    Epic Rare
+208722  82   RW    Sadio Mane                Liverpool FC                 ER3    Epic Rare
+209331  82   RW    Mohamed Salah             Liverpool FC                 ER3    Epic Rare
+211117  82   CAM   Dele Alli                 Tottenham Hotspur            ER3    Epic Rare
+212190  82   CB    Niklas Sule               Bayern Munchen               ER3    Epic Rare
+212218  82   CB    Aymeric Laporte           Manchester City              ER3    Epic Rare
+213565  82   LM    Thomas Lemar              AS Monaco                    ER3    Epic Rare
+215316  82   GK    Geronimo Rulli            Real Sociedad                ER3    Epic Rare
+215785  82   LW    Keita Balde Diao          AS Monaco                    ER3    Epic Rare
+216460  82   CB    Jose Maria Gimenez        Atletico Madrid              ER3    Epic Rare
+218667  82   RM    Bernardo Silva            Manchester City              ER3    Epic Rare
+222492  82   LW    Leroy Sane                Manchester City              ER3    Epic Rare
+225508  82   CB    Eric Bailly               Manchester United            ER3    Epic Rare
+230621  82   GK    Gianluigi Donnarumma      AC Milan                     ER3    Epic Rare
+231443  82   RW    Ousmane Dembele           FC Barcelona                 ER3    Epic Rare
+231747  82   ST    Kylian Mbappe             Paris Saint-Germain          ER3    Epic Rare
+20775   81   RM    Quaresma                  Besiktas JK                  ER3    Epic Rare
+104389  81   GK    Rune Almenning Jarstein   Hertha BSC                   ER3    Epic Rare
+106231  81   ST    Aduriz                    Athletic Club                ER3    Epic Rare
+143076  81   LF    Alejandro Gomez           Atalanta BC                  ER3    Epic Rare
+146748  81   GK    Diego Lopez               RCD Espanyol                 ER3    Epic Rare
+162895  81   CM    Cesc Fabregas             Chelsea FC                   ER3    Epic Rare
+163489  81   GK    Andrea Consigli           Sassuolo                     ER3    Epic Rare
+163705  81   GK    Steve Mandanda            Olympique de Marseille       ER3    Epic Rare
+164468  81   CB    Gary Cahill               Chelsea FC                   ER3    Epic Rare
+167905  81   RB    Antonio Valencia          Manchester United            ER3    Epic Rare
+168354  81   GK    Emiliano Viviano          Sampdoria                    ER3    Epic Rare
+168651  81   CM    Ivan Rakitic              FC Barcelona                 ER3    Epic Rare
+170890  81   CDM   Blaise Matuidi            Juventus FC                  ER3    Epic Rare
+176769  81   ST    Jonas                     SL Benfica                   ER3    Epic Rare
+177683  81   GK    Yann Sommer               Borussia Monchengladbach     ER3    Epic Rare
+178005  81   GK    Rui Patricio              Sporting CP                  ER3    Epic Rare
+178086  81   GK    Adan                      Real Betis Balompie          ER3    Epic Rare
+178088  81   CAM   Juan Mata                 Manchester United            ER3    Epic Rare
+178372  81   CB    Branislav Ivanovic        Zenit                        ER3    Epic Rare
+180206  81   CM    Miralem Pjanic            Juventus FC                  ER3    Epic Rare
+180930  81   ST    Edin Dzeko                AS Roma                      ER3    Epic Rare
+181458  81   LM    Ivan Perisic              Inter Milan                  ER3    Epic Rare
+183574  81   LF    Max Kruse                 Werder Bremen                ER3    Epic Rare
+184431  81   CF    Sebastian Giovinco        Toronto FC                   ER3    Epic Rare
+185020  81   RW    Jose Callejon             SSC Napoli                   ER3    Epic Rare
+185239  81   CB    Omer Toprak               Borussia Dortmund            ER3    Epic Rare
+186153  81   GK    Wojciech Szczesny         Juventus FC                  ER3    Epic Rare
+186942  81   CM    Ilkay Gundogan            Manchester City              ER3    Epic Rare
+187754  81   RM    Marlos                    Shakhtar Donetsk             ER3    Epic Rare
+188377  81   RB    Kyle Walker               Manchester City              ER3    Epic Rare
+188803  81   LM    Taison                    Shakhtar Donetsk             ER3    Epic Rare
+191740  81   CM    Ander Herrera             Manchester United            ER3    Epic Rare
+192387  81   ST    Ciro Immobile             SS Lazio                     ER3    Epic Rare
+192629  81   ST    Iago Aspas                RC Celta                     ER3    Epic Rare
+193082  81   RM    Juan Cuadrado             Juventus FC                  ER3    Epic Rare
+197061  81   CB    Joel Matip                Liverpool FC                 ER3    Epic Rare
+198176  81   CB    Stefan de Vrij            SS Lazio                     ER3    Epic Rare
+199556  81   CM    Marco Verratti            Paris Saint-Germain          ER3    Epic Rare
+199715  81   LM    Vitolo                    Atletico Madrid              ER3    Epic Rare
+200949  81   RW    Lucas                     Tottenham Hotspur            ER3    Epic Rare
+201153  81   ST    Morata                    Chelsea FC                   ER3    Epic Rare
+201399  81   ST    Mauro Icardi              Inter Milan                  ER3    Epic Rare
+201942  81   ST    Roberto Firmino           Liverpool FC                 ER3    Epic Rare
+202166  81   LW    Julian Draxler            Paris Saint-Germain          ER3    Epic Rare
+202651  81   RW    Suso                      AC Milan                     ER3    Epic Rare
+204485  81   RM    Riyad Mahrez              Leicester City               ER3    Epic Rare
+204963  81   RB    Carvajal                  Real Madrid                  ER3    Epic Rare
+204970  81   RW    Florian Thauvin           Olympique de Marseille       ER3    Epic Rare
+206652  81   GK    Sergio Rico               Sevilla FC                   ER3    Epic Rare
+207471  81   CAM   Franco Vazquez            Sevilla FC                   ER3    Epic Rare
+207865  81   CB    Marquinhos                Paris Saint-Germain          ER3    Epic Rare
+208596  81   ST    Andrea Belotti            Torino FC                    ER3    Epic Rare
+210257  81   GK    Ederson                   Manchester City              ER3    Epic Rare
+212404  81   RM    Federico Bernardeschi     Juventus FC                  ER3    Epic Rare
+213331  81   CB    Jonathan Tah              Bayer 04 Leverkusen          ER3    Epic Rare
+220834  81   CAM   Marco Asensio             Real Madrid                  ER3    Epic Rare
+5479    80   GK    Casillas                  FC Porto                     ER3    Epic Rare
+53302   80   CDM   Daniele De Rossi          AS Roma                      ER3    Epic Rare
+146530  80   RB    Dani Alves                Paris Saint-Germain          ER3    Epic Rare
+146760  80   RB    Juanfran                  Atletico Madrid              ER3    Epic Rare
+157481  80   CB    Raul Albiol               SSC Napoli                   ER3    Epic Rare
+162240  80   CM    Moussa Dembele            Tottenham Hotspur            ER3    Epic Rare
+167397  80   ST    Falcao                    AS Monaco                    ER3    Epic Rare
+171919  80   CB    Naldo                     Schalke 04                   ER3    Epic Rare
+173771  80   RB    Lukasz Piszczek           Borussia Dortmund            ER3    Epic Rare
+176600  80   ST    Kevin Gameiro             Atletico Madrid              ER3    Epic Rare
+178562  80   CAM   Ever Banega               Sevilla FC                   ER3    Epic Rare
+179784  80   CB    Benedikt Howedes          Juventus FC                  ER3    Epic Rare
+179846  80   CM    Sami Khedira              Juventus FC                  ER3    Epic Rare
+179847  80   CB    Federico Fazio            AS Roma                      ER3    Epic Rare
+181783  80   ST    Mario Mandzukic           Juventus FC                  ER3    Epic Rare
+181786  80   CB    Vedran Corluka            FC Lokomotiv                 ER3    Epic Rare
+184267  80   LM    Yacine Brahimi            FC Porto                     ER3    Epic Rare
+184826  80   CM    Adrien Silva              Leicester City               ER3    Epic Rare
+186627  80   ST    Mario Balotelli           OGC Nice                     ER3    Epic Rare
+189125  80   CM    Giacomo Bonaventura       AC Milan                     ER3    Epic Rare
+189511  80   CDM   Sergio Busquets           FC Barcelona                 ER3    Epic Rare
+189712  80   CM    Kevin Strootman           AS Roma                      ER3    Epic Rare
+190483  80   LM    Douglas Costa             Juventus FC                  ER3    Epic Rare
+190941  80   GK    Lukas Hradecky            Eintracht Frankfurt          ER3    Epic Rare
+191202  80   CDM   Nemanja Matic             Manchester United            ER3    Epic Rare
+192227  80   CB    Shkodran Mustafi          Arsenal FC                   ER3    Epic Rare
+192366  80   CB    Nicolas Otamendi          Manchester City              ER3    Epic Rare
+193348  80   RM    Xherdan Shaqiri           Stoke City                   ER3    Epic Rare
+193469  80   CB    Victor Ruiz               Villarreal CF                ER3    Epic Rare
+193474  80   CDM   Idrissa Gueye             Everton FC                   ER3    Epic Rare
+193747  80   CM    Koke                      Atletico Madrid              ER3    Epic Rare
+195093  80   ST    Willian Jose              Real Sociedad                ER3    Epic Rare
+197781  80   CM    Isco                      Real Madrid                  ER3    Epic Rare
+198717  80   RM    Wilfried Zaha             Crystal Palace               ER3    Epic Rare
+200104  80   LM    Heung Min Son             Tottenham Hotspur            ER3    Epic Rare
+200888  80   CDM   Danilo Pereira            FC Porto                     ER3    Epic Rare
+204525  80   CB    Inigo Martinez            Athletic Club                ER3    Epic Rare
+205600  80   CB    Samuel Umtiti             FC Barcelona                 ER3    Epic Rare
+207863  80   CB    Felipe                    FC Porto                     ER3    Epic Rare
+208421  80   CM    Saul                      Atletico Madrid              ER3    Epic Rare
+208448  80   CAM   Emil Forsberg             RB Leipzig                   ER3    Epic Rare
+208618  80   RW    Lucas Vazquez             Real Madrid                  ER3    Epic Rare
+208808  80   RM    Quincy Promes             Spartak Moscow               ER3    Epic Rare
+208830  80   ST    Jamie Vardy               Leicester City               ER3    Epic Rare
+209499  80   CDM   Fabinho                   AS Monaco                    ER3    Epic Rare
+209658  80   CM    Leon Goretzka             Schalke 04                   ER3    Epic Rare
+210243  80   RB    Ricardo Pereira           FC Porto                     ER3    Epic Rare
+211300  80   LM    Anthony Martial           Manchester United            ER3    Epic Rare
+212188  80   ST    Timo Werner               RB Leipzig                   ER3    Epic Rare
+213661  80   CB    Andreas Christensen       Chelsea FC                   ER3    Epic Rare
+215914  80   CDM   N'Golo Kante              Chelsea FC                   ER3    Epic Rare
+216451  80   CM    Jean Michael Seri         OGC Nice                     ER3    Epic Rare
+220793  80   CB    Davinson Sanchez          Tottenham Hotspur            ER3    Epic Rare
+222737  80   RW    Malcom                    FC Girondins de Bordeaux     ER3    Epic Rare
+227055  80   RM    Gelson Martins            Sporting CP                  ER3    Epic Rare
+230666  80   ST    Gabriel Jesus             Manchester City              ER3    Epic Rare
+231677  80   ST    Marcus Rashford           Manchester United            ER3    Epic Rare
+170481  79   CB    Ezequiel Garay            Valencia CF                  GR2    Gold Rare
+181291  79   CM    Georginio Wijnaldum       Liverpool FC                 GR2    Gold Rare
+187936  79   CDM   Steven N'Zonzi            Sevilla FC                   GR2    Gold Rare
+189068  79   ST    Bas Dost                  Sporting CP                  GR2    Gold Rare
+189358  79   CAM   Shinji Kagawa             Borussia Dortmund            GR2    Gold Rare
+191180  79   CM    Javier Pastore            Paris Saint-Germain          GR2    Gold Rare
+197965  79   CM    Pizzi                     SL Benfica                   GR2    Gold Rare
+199564  79   RB    Sergi Roberto             FC Barcelona                 GR2    Gold Rare
+202685  79   ST    Simone Zaza               Valencia CF                  GR2    Gold Rare
+203551  79   RB    Alessandro Florenzi       AS Roma                      GR2    Gold Rare
+204639  79   CB    Stefan Savic              Atletico Madrid              GR2    Gold Rare
+205362  79   CB    Matija Nastasic           Schalke 04                   GR2    Gold Rare
+206585  79   GK    Arrizabalaga              Athletic Club                GR2    Gold Rare
+207566  79   CDM   William Carvalho          Sporting CP                  GR2    Gold Rare
+207664  79   ST    Carlos Bacca              Villarreal CF                GR2    Gold Rare
+209297  79   CM    Fred                      Shakhtar Donetsk             GR2    Gold Rare
+210896  79   CM    Morgan Sanson             Olympique de Marseille       GR2    Gold Rare
+212194  79   LM    Julian Brandt             Bayer 04 Leverkusen          GR2    Gold Rare
+212814  79   CM    Joao Mario                West Ham United              GR2    Gold Rare
+212831  79   GK    Alisson                   AS Roma                      GR2    Gold Rare
+216201  79   RW    Williams                  Athletic Club                GR2    Gold Rare
+216354  79   ST    Andrej Kramaric           TSG 1899 Hoffenheim          GR2    Gold Rare
+216594  79   CAM   Nabil Fekir               Olympique Lyonnais           GR2    Gold Rare
+219683  79   CM    Corentin Tolisso          Bayern Munchen               GR2    Gold Rare
+162347  78   CM    Joao Moutinho             AS Monaco                    GR2    Gold Rare
+177457  78   CDM   Lars Bender               Bayer 04 Leverkusen          GR2    Gold Rare
+178509  78   ST    Olivier Giroud            Chelsea FC                   GR2    Gold Rare
+180819  78   CM    Adam Lallana              Liverpool FC                 GR2    Gold Rare
+184942  78   CAM   Giuliano                  Fenerbahce SK                GR2    Gold Rare
+186561  78   CM    Aaron Ramsey              Arsenal FC                   GR2    Gold Rare
+187961  78   CM    Paulinho                  FC Barcelona                 GR2    Gold Rare
+203486  78   LF    Thorgan Hazard            Borussia Monchengladbach     GR2    Gold Rare
+204529  78   ST    Michy Batshuayi           Borussia Dortmund            GR2    Gold Rare
+206545  78   CM    Manu Trigueros            Villarreal CF                GR2    Gold Rare
+207410  78   CM    Mateo Kovacic             Real Madrid                  GR2    Gold Rare
+207877  78   ST    Josef Martinez            Atlanta United               GR2    Gold Rare
+210008  78   CM    Adrien Rabiot             Paris Saint-Germain          GR2    Gold Rare
+211320  78   CB    Daniele Rugani            Juventus FC                  GR2    Gold Rare
+212462  78   LB    Alex Telles               FC Porto                     GR2    Gold Rare
+212523  78   CAM   Anderson Talisca          Besiktas JK                  GR2    Gold Rare
+212622  78   RB    Joshua Kimmich            Bayern Munchen               GR2    Gold Rare
+213345  78   RM    Kingsley Coman            Bayern Munchen               GR2    Gold Rare
+220971  78   CM    Naby Keita                RB Leipzig                   GR2    Gold Rare
+227928  78   RB    Nelson Semedo             FC Barcelona                 GR2    Gold Rare
+135507  77   CDM   Fernandinho               Manchester City              GR2    Gold Rare
+158963  77   CDM   Lucas Biglia              AC Milan                     GR2    Gold Rare
+183376  77   CDM   Ljubomir Fejsa            SL Benfica                   GR2    Gold Rare
+184120  77   CM    Bruno                     Villarreal CF                GR2    Gold Rare
+189513  77   CM    Parejo                    Valencia CF                  GR2    Gold Rare
+192638  77   LWB   Marcos Alonso             Chelsea FC                   GR2    Gold Rare
+195365  77   CM    Kevin Kampl               RB Leipzig                   GR2    Gold Rare
+205498  77   CM    Jorginho                  SSC Napoli                   GR2    Gold Rare
+205923  77   LB    Ben Davies                Tottenham Hotspur            GR2    Gold Rare
+207494  77   RM    Jesse Lingard             Manchester United            GR2    Gold Rare
+211575  77   CM    Andre Gomes               FC Barcelona                 GR2    Gold Rare
+212198  77   CAM   Bruno Fernandes           Sporting CP                  GR2    Gold Rare
+221087  77   GK    Pau Lopez                 RCD Espanyol                 GR2    Gold Rare
+223848  77   CM    Sergej Milinkovic-Savic   SS Lazio                     GR2    Gold Rare
+185221  76   CDM   Luiz Gustavo              Olympique de Marseille       GR2    Gold Rare
+192318  76   CM    Mario Gotze               Borussia Dortmund            GR2    Gold Rare
+199503  76   CM    Granit Xhaka              Arsenal FC                   GR2    Gold Rare
+204923  76   CAM   Marcel Sabitzer           RB Leipzig                   GR2    Gold Rare
+208670  76   CM    Hakim Ziyech              Ajax                         GR2    Gold Rare
+207993  75   LB    Sead Kolasinac            Arsenal FC                   GR2    Gold Rare
+229906  75   LM    Leon Bailey               Bayer 04 Leverkusen          GR2    Gold Rare
+216194  74   CDM   Dani Garcia               SD Eibar                     GR2    Gold Rare
+232363  74   CB    Milan Skriniar            Inter Milan                  GR2    Gold Rare
+176266  73   CDM   Lucas Leiva               SS Lazio                     GR2    Gold Rare

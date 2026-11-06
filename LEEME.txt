@@ -1,0 +1,69 @@
+FIFA MOBILE 18 - TEMPORADA 2 - CARTAS BASE (sin programas)
+===========================================================
+Fuentes:
+  - RenderZ (media, posicion, club, carta base):
+    https://renderz.app/18/player/20801   (ejemplo Cristiano Ronaldo)
+    Cambia el numero por la FIFA ID de SoFIFA.
+  - SoFIFA (guia de IDs, nombre completo, equipo, media FIFA18 consola):
+    https://sofifa.com/?r=180084&set=true
+
+REGLA "SOLO BASE, SIN PROGRAMAS":
+  En RenderZ cada ficha base muestra tarjetas relacionadas 502xxx, 603xxx, 990xxx...
+  Esas son programas/eventos. NO se copian como filas.
+  En la base solo aparece 1 fila por jugador: la de su FIFA ID (ej. 20801).
+  Los programas detectados se listan aparte en programs_excluded.csv.
+
+ARCHIVOS QUE SE GENERAN:
+  fifa_mobile_18_base.csv  -> base principal (1 fila = 1 carta base)
+  fifa_mobile_18_base.txt  -> misma tabla legible en texto plano
+  fifa_mobile_18_base.json -> version completa con nombres originales UTF-8
+  missing_in_renderz.csv   -> IDs de SoFIFA sin carta base en RenderZ (404)
+  programs_excluded.csv    -> IDs de programas excluidos (no son cartas base)
+
+SIN TILDES NI CARACTERES ESPECIALES:
+  CSV/TXT usan ASCII puro (sin acentos, sin eñes, sin símbolos raros)
+  para que Excel y cualquier editor no rompan los nombres.
+  Ejemplo: "Luka Modric", "Sergio Aguero", "Dembélé" -> "Dembele"
+  Los nombres originales con tildes se conservan en el JSON (campos *_original).
+
+COMO USARLO (Python 3, sin librerias extra):
+  1) Prueba rapida (10 jugadores):
+       python extract_fifa18.py --test
+  2) Prueba con 200 IDs:
+       python extract_fifa18.py --limit 200
+  3) Extraccion completa (SoFIFA 17976 IDs aprox + RenderZ base):
+       python extract_fifa18.py
+     Es reanudable: si se corta, vuelve a ejecutar el mismo comando
+     y continua donde se quedo (cache en data/cache_renderz.jsonl).
+  4) Solo regenerar CSV/TXT/JSON desde lo ya descargado:
+       python extract_fifa18.py --export-only
+  5) Solo unos IDs concretos:
+       python extract_fifa18.py --only-ids 20801,158023,190871
+
+REGISTRO Y ACTUALIZACION:
+  - data/cache_sofifa_list.json : lista SoFIFA descargada (con fecha)
+  - data/cache_renderz.jsonl    : 1 linea por ID consultado (ok/404/error)
+  - data/manual_overrides.json  : correcciones que quieres forzar siempre
+  - data/progress.json          : contadores de la ultima ejecucion
+
+  Corregir un nombre o media a mano (se aplica en cada exportacion):
+       python extract_fifa18.py --set-name 20801 "Cristiano Ronaldo"
+       python extract_fifa18.py --set-ovr 20801 91
+     o edita data/manual_overrides.json y luego --export-only
+
+  Actualizar todo de nuevo desde cero:
+       python extract_fifa18.py --refresh
+
+  Actualizar solo lo que falte (recomendado):
+       python extract_fifa18.py        (reanuda solo)
+
+NOTAS:
+  - RenderZ deshabilito "Advanced player info" y "Legacy season browsing"
+    para la Temporada 2, por eso solo se puede sacar media/posicion/club/fondo
+    de la carta base. Las estadisticas detalladas (ritmo, tiro, pase...)
+    no las expone RenderZ para esta temporada.
+  - SoFIFA aporta la media FIFA18 consola (ej. Ronaldo 94, Messi 94).
+    La media FIFA Mobile es distinta (Ronaldo 90, Messi 89) y es la que
+    se guarda como ovr_mobile desde RenderZ.
+  - Respetar los sitios: el script usa 8 hilos por defecto y reintentos.
+    Si te bloquean, baja --workers a 4.
