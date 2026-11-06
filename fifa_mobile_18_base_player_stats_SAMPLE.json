@@ -1,0 +1,227 @@
+{
+  "_readme": "MUESTRA de fifa_mobile_18_base_stats_clean.json (esquema + 3 ejemplos). Archivo completo: 13.885 jugadores.",
+  "metadata": {
+    "title": "FIFA Mobile 18 (Temporada 2) - Cartas base con estadisticas",
+    "version": "1.0-clean",
+    "generated_at": "2026-11-06T17:09:50.413971+00:00",
+    "season": "FIFA Mobile 18 - Season 2",
+    "total_cards": 13885,
+    "counts_by_rarity": {
+      "Master Rare": 1,
+      "Epic Rare": 285,
+      "Gold Rare": 3656,
+      "Silver Rare": 7752,
+      "Bronze Rare": 2191
+    },
+    "counts_by_position": {
+      "LW": 251,
+      "RW": 267,
+      "GK": 1540,
+      "CB": 2413,
+      "ST": 1920,
+      "CM": 1606,
+      "LM": 846,
+      "CAM": 776,
+      "RM": 861,
+      "LF": 19,
+      "LB": 1073,
+      "CDM": 1153,
+      "RF": 12,
+      "RB": 1048,
+      "CF": 26,
+      "RWB": 40,
+      "LWB": 34
+    },
+    "how_to_read": {
+      "fifa_id": "ID unico del jugador",
+      "name": "short = nombre corto en la carta, full = nombre completo (ASCII sin tildes)",
+      "age": "Edad del jugador",
+      "card.ovr": "Media FIFA Mobile 18 de la carta base (42-90)",
+      "card.position": "Posicion Mobile (GK, CB, ST...)",
+      "card.club_id": "ID del club",
+      "card.club": "Club (ASCII sin tildes)",
+      "card.rarity": "Master Rare / Epic Rare / Gold Rare / Silver Rare / Bronze Rare",
+      "card.background_code": "MR4, ER3, GR2, SR1, BR0",
+      "stats.primary": "6 atributos principales. Campo: pace/shooting/passing/agility/defending/physical. Portero: gk_diving/gk_positioning/handling/reflexes/passing/physical",
+      "stats.detailed": "Detallados. Campo 20: sprint_speed...crossing. Portero 16: sin tiro (finishing/shot_power/long_shot/positioning)",
+      "stats.goalkeeping": "Solo porteros: gk_diving, gk_positioning, reflexes, handling. null en el resto",
+      "null": "No aplicable (ej. goalkeeping en un ST)"
+    }
+  },
+  "schema": {
+    "_descripcion": "Cada jugador en 'players' tiene esta forma exacta.",
+    "fifa_id": "int - ID unico",
+    "name": {
+      "short": "string ASCII - nombre corto",
+      "full": "string ASCII - nombre completo"
+    },
+    "age": "int - edad",
+    "card": {
+      "ovr": "int 42-90",
+      "position": "string",
+      "club_id": "int",
+      "club": "string ASCII",
+      "rarity": "string",
+      "background_code": "string",
+      "season": "string"
+    },
+    "stats": {
+      "primary": "object - 6 primarios",
+      "detailed": "object - 20 (campo) o 16 (GK) detallados",
+      "goalkeeping": "object|null - solo GK"
+    }
+  },
+  "players_ejemplos": [
+    {
+      "fifa_id": 20801,
+      "name": {
+        "short": "Cristiano Ronaldo",
+        "full": "Cristiano Ronaldo"
+      },
+      "age": 32,
+      "card": {
+        "ovr": 90,
+        "position": "LW",
+        "club_id": 243,
+        "club": "Real Madrid",
+        "rarity": "Master Rare",
+        "background_code": "MR4",
+        "season": "Season 2 (FIFA Mobile 18)"
+      },
+      "stats": {
+        "primary": {
+          "pace": 93,
+          "shooting": 94,
+          "passing": 85,
+          "agility": 95,
+          "defending": 37,
+          "physical": 78
+        },
+        "detailed": {
+          "sprint_speed": 94,
+          "acceleration": 92,
+          "strength": 86,
+          "ball_control": 96,
+          "dribbling": 94,
+          "heading": 90,
+          "finishing": 96,
+          "shot_power": 96,
+          "long_shot": 95,
+          "positioning": 97,
+          "tackling": 33,
+          "marking": 24,
+          "aggression": 66,
+          "composure": 96,
+          "awareness": 77,
+          "reactions": 98,
+          "free_kick": 80,
+          "short_passing": 86,
+          "long_passing": 82,
+          "crossing": 88
+        },
+        "goalkeeping": null
+      }
+    },
+    {
+      "fifa_id": 167495,
+      "name": {
+        "short": "Neuer",
+        "full": "Manuel Neuer"
+      },
+      "age": 31,
+      "card": {
+        "ovr": 88,
+        "position": "GK",
+        "club_id": 21,
+        "club": "Bayern Munchen",
+        "rarity": "Epic Rare",
+        "background_code": "ER3",
+        "season": "Season 2 (FIFA Mobile 18)"
+      },
+      "stats": {
+        "primary": {
+          "gk_diving": 91,
+          "gk_positioning": 90,
+          "handling": 90,
+          "reflexes": 88,
+          "passing": 55,
+          "physical": 61
+        },
+        "detailed": {
+          "sprint_speed": 61,
+          "acceleration": 58,
+          "strength": 83,
+          "ball_control": 48,
+          "dribbling": 30,
+          "heading": 25,
+          "tackling": 22,
+          "marking": 22,
+          "aggression": 29,
+          "composure": 70,
+          "awareness": 58,
+          "reactions": 85,
+          "free_kick": 11,
+          "short_passing": 55,
+          "long_passing": 95,
+          "crossing": 22
+        },
+        "goalkeeping": {
+          "gk_diving": 91,
+          "gk_positioning": 90,
+          "reflexes": 88,
+          "handling": 90
+        }
+      }
+    },
+    {
+      "fifa_id": 235329,
+      "name": {
+        "short": "Gibbons",
+        "full": "James Gibbons"
+      },
+      "age": 19,
+      "card": {
+        "ovr": 42,
+        "position": "RB",
+        "club_id": 1928,
+        "club": "Port Vale",
+        "rarity": "Bronze Rare",
+        "background_code": "BR0",
+        "season": "Season 2 (FIFA Mobile 18)"
+      },
+      "stats": {
+        "primary": {
+          "pace": 47,
+          "shooting": 34,
+          "passing": 40,
+          "agility": 42,
+          "defending": 43,
+          "physical": 40
+        },
+        "detailed": {
+          "sprint_speed": 50,
+          "acceleration": 41,
+          "strength": 39,
+          "ball_control": 40,
+          "dribbling": 42,
+          "heading": 39,
+          "finishing": 32,
+          "shot_power": 40,
+          "long_shot": 34,
+          "positioning": 39,
+          "tackling": 45,
+          "marking": 46,
+          "aggression": 43,
+          "composure": 45,
+          "awareness": 49,
+          "reactions": 45,
+          "free_kick": 33,
+          "short_passing": 40,
+          "long_passing": 36,
+          "crossing": 46
+        },
+        "goalkeeping": null
+      }
+    }
+  ]
+}

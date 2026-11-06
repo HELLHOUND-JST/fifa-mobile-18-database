@@ -1,69 +1,114 @@
-FIFA MOBILE 18 - TEMPORADA 2 - CARTAS BASE (sin programas)
-===========================================================
-Fuentes:
-  - RenderZ (media, posicion, club, carta base):
-    https://renderz.app/18/player/20801   (ejemplo Cristiano Ronaldo)
-    Cambia el numero por la FIFA ID de SoFIFA.
-  - SoFIFA (guia de IDs, nombre completo, equipo, media FIFA18 consola):
-    https://sofifa.com/?r=180084&set=true
+FIFA MOBILE 18 - TEMPORADA 2 - BASE DE CARTAS Y ESTADISTICAS
+============================================================
 
-REGLA "SOLO BASE, SIN PROGRAMAS":
-  En RenderZ cada ficha base muestra tarjetas relacionadas 502xxx, 603xxx, 990xxx...
-  Esas son programas/eventos. NO se copian como filas.
-  En la base solo aparece 1 fila por jugador: la de su FIFA ID (ej. 20801).
-  Los programas detectados se listan aparte en programs_excluded.csv.
+PROYECTO
+--------
+Proyecto comunitario e independiente para recopilar, organizar y consultar
+informacion de las cartas base de FIFA Mobile 18 Season 2.
 
-ARCHIVOS QUE SE GENERAN:
-  fifa_mobile_18_base.csv  -> base principal (1 fila = 1 carta base)
-  fifa_mobile_18_base.txt  -> misma tabla legible en texto plano
-  fifa_mobile_18_base.json -> version completa con nombres originales UTF-8
-  missing_in_renderz.csv   -> IDs de SoFIFA sin carta base en RenderZ (404)
-  programs_excluded.csv    -> IDs de programas excluidos (no son cartas base)
+La version 2.0 incorpora una exportacion adicional con atributos principales,
+estadisticas detalladas y campos especificos para porteros.
 
-SIN TILDES NI CARACTERES ESPECIALES:
-  CSV/TXT usan ASCII puro (sin acentos, sin eñes, sin símbolos raros)
-  para que Excel y cualquier editor no rompan los nombres.
-  Ejemplo: "Luka Modric", "Sergio Aguero", "Dembélé" -> "Dembele"
-  Los nombres originales con tildes se conservan en el JSON (campos *_original).
+ARCHIVOS PRINCIPALES
+--------------------
+  fifa_mobile_18_base.csv
+    Base principal de cartas. Una fila por carta base. Delimitador: punto y coma.
 
-COMO USARLO (Python 3, sin librerias extra):
-  1) Prueba rapida (10 jugadores):
-       python extract_fifa18.py --test
-  2) Prueba con 200 IDs:
-       python extract_fifa18.py --limit 200
-  3) Extraccion completa (SoFIFA 17976 IDs aprox + RenderZ base):
-       python extract_fifa18.py
-     Es reanudable: si se corta, vuelve a ejecutar el mismo comando
-     y continua donde se quedo (cache en data/cache_renderz.jsonl).
-  4) Solo regenerar CSV/TXT/JSON desde lo ya descargado:
-       python extract_fifa18.py --export-only
-  5) Solo unos IDs concretos:
-       python extract_fifa18.py --only-ids 20801,158023,190871
+  fifa_mobile_18_base.json
+    Base principal en JSON, con campos adicionales UTF-8.
 
-REGISTRO Y ACTUALIZACION:
-  - data/cache_sofifa_list.json : lista SoFIFA descargada (con fecha)
-  - data/cache_renderz.jsonl    : 1 linea por ID consultado (ok/404/error)
-  - data/manual_overrides.json  : correcciones que quieres forzar siempre
-  - data/progress.json          : contadores de la ultima ejecucion
+  fifa_mobile_18_base.txt
+    Vista de texto plano de la base principal.
 
-  Corregir un nombre o media a mano (se aplica en cada exportacion):
-       python extract_fifa18.py --set-name 20801 "Cristiano Ronaldo"
-       python extract_fifa18.py --set-ovr 20801 91
-     o edita data/manual_overrides.json y luego --export-only
+  fifa_mobile_18_base_player_stats.csv
+    Base de cartas ampliada con atributos principales y detallados.
 
-  Actualizar todo de nuevo desde cero:
-       python extract_fifa18.py --refresh
+  fifa_mobile_18_base_player_stats.json
+    Exportacion JSON estructurada por jugador, carta y estadisticas.
 
-  Actualizar solo lo que falte (recomendado):
-       python extract_fifa18.py        (reanuda solo)
+  fifa_mobile_18_base_player_stats_SAMPLE.json
+    Muestra reducida del JSON estadistico.
 
-NOTAS:
-  - RenderZ deshabilito "Advanced player info" y "Legacy season browsing"
-    para la Temporada 2, por eso solo se puede sacar media/posicion/club/fondo
-    de la carta base. Las estadisticas detalladas (ritmo, tiro, pase...)
-    no las expone RenderZ para esta temporada.
-  - SoFIFA aporta la media FIFA18 consola (ej. Ronaldo 94, Messi 94).
-    La media FIFA Mobile es distinta (Ronaldo 90, Messi 89) y es la que
-    se guarda como ovr_mobile desde RenderZ.
-  - Respetar los sitios: el script usa 8 hilos por defecto y reintentos.
-    Si te bloquean, baja --workers a 4.
+  missing_in_renderz.csv
+    IDs para los que no se obtuvo una ficha base durante la extraccion.
+
+  programs_excluded.csv
+    IDs de cartas de programas/eventos excluidas de la base principal.
+
+FUENTES DE REFERENCIA
+---------------------
+  RenderZ: informacion de cartas base.
+  SoFIFA: referencia historica de jugadores FIFA 18.
+  FIFAMobileGuide: referencia reconocida durante la recopilacion y organizacion
+  de atributos de jugadores.
+
+Los nombres y materiales de terceros pertenecen a sus respectivos titulares.
+La atribucion no implica afiliacion ni concede permisos de redistribucion.
+Consulta NOTICE.md antes de publicar o reutilizar los archivos.
+
+COMO USAR EL EXTRACTOR PRINCIPAL
+--------------------------------
+Requisito recomendado: Python 3.10 o superior.
+Ejecuta desde la carpeta raiz del repositorio.
+
+  Prueba rapida:
+    python extract_fifa18.py --test
+
+  Procesar hasta 200 IDs:
+    python extract_fifa18.py --limit 200
+
+  Extraccion completa o reanudacion:
+    python extract_fifa18.py
+
+  Regenerar CSV/TXT/JSON principal desde las caches:
+    python extract_fifa18.py --export-only
+
+  Consultar IDs concretos:
+    python extract_fifa18.py --only-ids 20801,158023,190871
+
+  Cambiar el numero de trabajadores:
+    python extract_fifa18.py --workers 4
+
+  Corregir nombre o media:
+    python extract_fifa18.py --set-name 20801 "Cristiano Ronaldo"
+    python extract_fifa18.py --set-ovr 20801 91
+    python extract_fifa18.py --export-only
+
+  Consultar todas las opciones:
+    python extract_fifa18.py --help
+
+ESTRUCTURA DE ESTADISTICAS
+--------------------------
+  stats.primary      Seis atributos principales segun la posicion.
+  stats.detailed     Atributos detallados para jugadores de campo o porteros.
+  stats.goalkeeping  Diving, positioning, reflexes y handling para porteros.
+
+En el JSON, null identifica un bloque que no aplica. En el CSV, algunas celdas
+pueden quedar vacias cuando el atributo no corresponde a la posicion.
+
+CACHES Y ARCHIVOS DE APOYO
+-------------------------
+  data/cache_sofifa_list.json   Lista de referencia SoFIFA.
+  data/cache_renderz.jsonl      Consultas de fichas RenderZ.
+  data/cache_guide_stats.jsonl  Cache de referencia de atributos.
+  data/manual_overrides.json   Correcciones manuales del extractor principal.
+  data/progress.json           Contadores de la ultima ejecucion.
+
+NOTAS IMPORTANTES
+-----------------
+  - La base principal contiene cartas base; las cartas de programas/eventos
+    detectadas se conservan en un archivo separado.
+  - La media Mobile y la media de FIFA 18 para consola pertenecen a contextos
+    distintos y pueden no coincidir.
+  - Los datos se ofrecen como referencia comunitaria, sin garantia de exactitud,
+    integridad o disponibilidad. No se certifica cada valor como dato oficial.
+  - Respetar las condiciones de las plataformas consultadas y no redistribuir
+    materiales de terceros sin los permisos necesarios.
+  - La atribucion a FIFAMobileGuide, RenderZ o SoFIFA no sustituye autorizacion.
+
+DOCUMENTACION
+-------------
+  README.md             Presentacion general, estructura y uso.
+  README_JSON.md        Esquema detallado del JSON estadistico.
+  README_JSON_CLEAN.md  Guia rapida del JSON simplificado.
+  NOTICE.md             Atribuciones y avisos de propiedad intelectual.

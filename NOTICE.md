@@ -1,71 +1,84 @@
-# NOTICE — Avisos de terceros y propiedad intelectual
+# NOTICE — Atribuciones, derechos de terceros y avisos legales
 
-**Proyecto:** FIFA Mobile 18 — Base de cartas (Temporada 2)  
-**Última revisión de enlaces:** 5 de noviembre de 2026
+**Proyecto:** FIFA Mobile 18 — Base de cartas y estadísticas (Temporada 2)  
+**Versión documentada:** 2.0  
+**Última revisión:** 6 de noviembre de 2026
 
-Este documento identifica algunas marcas y fuentes de terceros mencionadas o utilizadas por el proyecto. Es un aviso informativo de atribución; **no es asesoría legal, no sustituye las condiciones de los sitios y no concede licencias ni permisos que sus titulares no hayan otorgado**.
+Este documento identifica marcas y referencias de terceros mencionadas o consultadas por el proyecto. Es un aviso informativo de atribución; **no constituye asesoría legal, no sustituye las condiciones de cada sitio y no concede licencias ni permisos que sus titulares no hayan otorgado**.
 
 ## 1. Proyecto independiente
 
-FIFA Mobile 18 — Base de cartas es un proyecto independiente y no oficial. No está afiliado, patrocinado, aprobado ni respaldado por Electronic Arts, EA SPORTS, FIFA, RenderZ o SoFIFA.
+FIFA Mobile 18 — Base de cartas y estadísticas es un proyecto independiente y no oficial. No está afiliado, patrocinado, aprobado ni respaldado por Electronic Arts, EA SPORTS, FIFA, RenderZ, SoFIFA ni FIFAMobileGuide.
 
-Los nombres de productos, empresas, servicios, marcas y sitios se mencionan exclusivamente para identificar el juego y las fuentes consultadas.
+Los nombres de empresas, productos, servicios, plataformas y sitios se utilizan para identificar el juego y las referencias consultadas. Este repositorio no reclama propiedad sobre las marcas, bases de datos, interfaces, diseños ni materiales de terceros.
 
 ## 2. Electronic Arts / EA SPORTS / FIFA Mobile
 
-**Electronic Arts Inc. (EA)** y sus licenciantes conservan los derechos que les correspondan sobre sus juegos, servicios, software, contenidos y materiales asociados. Los nombres EA, EA SPORTS y FIFA Mobile, así como los logotipos, gráficos, imágenes, elementos audiovisuales y demás materiales protegidos que pudieran aparecer en las fuentes, no se transfieren al autor ni a los usuarios de este repositorio.
+**Electronic Arts Inc. (EA)** y sus licenciantes conservan los derechos que les correspondan sobre sus juegos, servicios, software, contenidos y materiales asociados. Los nombres EA, EA SPORTS y FIFA Mobile, así como sus logotipos, gráficos, imágenes, elementos audiovisuales y demás materiales protegidos, no se transfieren al autor ni a los usuarios de este repositorio.
 
-El Acuerdo de usuario de EA establece que los servicios y contenidos se licencian, no se venden, y que no pueden copiarse, modificarse o distribuirse salvo autorización expresa o cuando la ley lo permita.
+El acuerdo de usuario de EA establece condiciones sobre el acceso, uso, copia y distribución de sus servicios y contenidos. La mención de EA o de FIFA Mobile no representa autorización para reproducir materiales del juego.
 
-- Sitio oficial: <https://www.ea.com/>
+- Sitio oficial de EA: <https://www.ea.com/>
 - Acuerdo de usuario: <https://www.ea.com/legal/user-agreement?isLocalized=true&setLocale=en-gb>
-- Política de contenido de EA: <https://help.ea.com/es/articles/security-and-rules/ea-content-policy/>
+- Política de contenido: <https://help.ea.com/es/articles/security-and-rules/ea-content-policy/>
 
 ## 3. FIFA
 
-**FIFA** y las marcas, emblemas, denominaciones y materiales oficiales que le correspondan pertenecen a la Fédération Internationale de Football Association (FIFA) o a los titulares que correspondan según cada material o licencia.
+**FIFA** y sus marcas, emblemas, denominaciones y materiales oficiales pertenecen a la Fédération Internationale de Football Association (FIFA) o a los titulares que correspondan según cada material o licencia.
 
-La mención de FIFA en el nombre del juego, los identificadores o la documentación no implica autorización para utilizar sus marcas oficiales, logotipos, emblemas o materiales protegidos.
+La mención de FIFA en el nombre del juego, identificadores o documentación no implica autorización para utilizar marcas oficiales, logotipos, emblemas o materiales protegidos.
 
 - Sitio oficial: <https://www.fifa.com/>
-- Información oficial sobre marcas y derechos: <https://inside.fifa.com/en/organisation/contact-fifa/legal-branding-and-rights>
-- Condiciones de servicio de FIFA: <https://legal.fifa.com/terms-of-service>
+- Información sobre marcas y derechos: <https://inside.fifa.com/en/organisation/contact-fifa/legal-branding-and-rights>
+- Condiciones de servicio: <https://legal.fifa.com/terms-of-service>
 
 ## 4. RenderZ
 
-**RenderZ** es una fuente externa consultada para identificar información de las cartas de FIFA Mobile 18, entre ella media móvil, posición, club, código de fondo y rareza.
+**RenderZ** se reconoce como una referencia externa consultada para identificar información de cartas de FIFA Mobile 18, como media móvil, posición, club, código de fondo y rareza.
 
-El sitio identifica a **RenderZ ApS** como titular de RenderZ y sus condiciones de servicio indican que RenderZ conserva derechos sobre el sitio, sus herramientas, software, propiedad intelectual y contenido. Sus condiciones también describen una licencia limitada, revocable, no transferible y no sublicenciable, e incluyen restricciones sobre la distribución o puesta a disposición de su sitio y servicios a terceros.
+Las condiciones publicadas por RenderZ identifican a **RenderZ ApS** y establecen que el sitio, sus herramientas, software, propiedad intelectual y contenido son de su titularidad. También describen una licencia limitada y restricciones sobre la distribución, sublicencia, transferencia o puesta a disposición de su sitio y servicios a terceros.
 
-Por tanto, la presencia de una atribución o de este archivo NOTICE **no autoriza** a publicar, redistribuir, sublicenciar o explotar los datos, cachés, contenido o servicios de RenderZ. Este repositorio incluye archivos que contienen respuestas y datos obtenidos de RenderZ, por ejemplo `data/cache_renderz.jsonl`, además de exportaciones que incorporan campos procedentes de sus fichas. Antes de hacer públicos o redistribuir esos archivos, el responsable del repositorio debe comprobar las condiciones aplicables y obtener los permisos necesarios. Si no cuenta con ellos, debe excluir los materiales afectados de la publicación.
+Por tanto, la atribución incluida en este repositorio **no autoriza** a publicar, redistribuir, sublicenciar o explotar datos, cachés, contenido o servicios de RenderZ. Esta distribución contiene archivos que almacenan respuestas y datos consultados en RenderZ —por ejemplo, `data/cache_renderz.jsonl`— y exportaciones que incluyen campos asociados a sus fichas. Antes de hacer público o redistribuir ese material, el responsable debe revisar las condiciones vigentes y obtener los permisos necesarios. Si no dispone de ellos, debe excluir los materiales afectados de la publicación.
 
-- Sitio oficial: <https://renderz.app/>
+- Sitio de RenderZ: <https://renderz.app/>
 - Condiciones de servicio: <https://renderz.app/terms-of-service>
 
 ## 5. SoFIFA
 
-**SoFIFA** es una base de datos independiente de referencia para la serie FIFA/EA SPORTS FC. Este proyecto consulta el conjunto histórico identificado por `r=180084` para obtener IDs e información de referencia de jugadores.
+**SoFIFA** se reconoce como referencia independiente para consultar información histórica de jugadores relacionada con FIFA 18. En el proyecto se utilizó el conjunto histórico identificado por `r=180084`.
 
-Los nombres, marcas, logotipos, imágenes y demás materiales de terceros que puedan mostrarse en SoFIFA pertenecen a sus respectivos titulares. Los términos de SoFIFA describen el servicio como proporcionado “tal cual” y establecen que el usuario es responsable de cumplir las leyes aplicables. La atribución de SoFIFA no debe interpretarse como permiso para republicar su base de datos ni para reutilizar masivamente sus contenidos.
+Las marcas, logotipos, imágenes, fichas, contenidos y demás materiales mostrados en SoFIFA corresponden a sus respectivos titulares. Los términos de SoFIFA describen el servicio como proporcionado “tal cual” y no deben interpretarse como una autorización general para republicar su base de datos ni reutilizar masivamente sus contenidos.
 
-Este repositorio contiene una caché de referencia en `data/cache_sofifa_list.json` y exportaciones que incorporan campos basados en esa fuente. Antes de hacer públicos o redistribuir esos archivos, el responsable debe revisar las condiciones actuales de SoFIFA y confirmar que el uso y la distribución están permitidos.
+Este repositorio contiene una caché de referencia en `data/cache_sofifa_list.json` y exportaciones que incorporan campos consultados en esa plataforma. Antes de hacer públicos o redistribuir esos archivos, el responsable debe revisar los términos vigentes y confirmar que el uso y la distribución están permitidos.
 
-- Sitio oficial: <https://sofifa.com/>
+- Sitio de SoFIFA: <https://sofifa.com/>
 - Términos de servicio: <https://sofifa.com/help/tos>
-- Información de su API y requisitos: <https://sofifa.com/document?profile=new>
+- Documentación de API: <https://sofifa.com/document?profile=new>
 
-## 6. Material original del proyecto
+## 6. FIFAMobileGuide
 
-El código de extracción, las transformaciones, las correcciones manuales y la documentación que hayan sido creados de forma original para este repositorio deben atribuirse a sus respectivos autores. Esta declaración no reclama la propiedad de datos, nombres, marcas, fichas, imágenes ni otros materiales obtenidos de terceros.
+**Crédito de referencia: FIFAMobileGuide.com.** Se reconoce a FIFAMobileGuide como una referencia consultada durante el trabajo de recopilación y organización de atributos de jugadores para FIFA Mobile 18.
 
-En esta versión no se incluye una licencia de software general (`LICENSE`). Por ello, no debe suponerse que el código o los datos pueden copiarse, modificarse o redistribuirse libremente. Si en el futuro se añade una licencia para el código original, su alcance deberá excluir expresamente cualquier material de terceros que no pueda licenciarse por el mantenedor.
+El repositorio no reclama la propiedad de FIFAMobileGuide, de su sitio web, base de datos, textos, diseños ni otros materiales. Los derechos que correspondan sobre esos recursos permanecen con sus respectivos titulares. La atribución se incluye para reconocer la referencia consultada y **no significa que FIFAMobileGuide haya aprobado, patrocinado o participado en este proyecto**.
 
-## 7. No afiliación ni respaldo
+**Importante sobre los permisos:** las condiciones de uso publicadas por FIFAMobileGuide indican que, salvo contrato o autorización expresa por escrito, los visitantes no tienen derecho a utilizar en un contexto público o comercial, copiar, guardar, vender o publicar partes del contenido o de las bases de datos del sitio. Sus condiciones también incluyen restricciones sobre enlazar o referenciar la dirección del sitio sin autorización expresa. Por ese motivo, este aviso reconoce el nombre de la fuente, pero no incluye una afirmación de permiso ni debe entenderse como una licencia para reutilizar sus contenidos.
 
-El uso de nombres de terceros es nominativo y descriptivo. No implica relación comercial, asociación, patrocinio, autorización, colaboración o respaldo por parte de EA, EA SPORTS, FIFA, RenderZ o SoFIFA.
+Antes de publicar o redistribuir los datos o materiales que puedan estar sujetos a esas condiciones, el responsable debe obtener autorización expresa por escrito o excluir de la distribución los materiales afectados. **Dar crédito por sí solo no sustituye ese permiso.**
 
-## 8. Nota sobre atribución y permisos
+## 7. Material original del proyecto
 
-Dar crédito a una fuente es una práctica de atribución, pero **no reemplaza una autorización** ni elimina las restricciones contractuales o los derechos de propiedad intelectual. El responsable de cualquier copia, publicación, adaptación o redistribución debe verificar por separado que cuenta con los permisos necesarios y cumplir las condiciones vigentes de cada fuente.
+Los scripts, transformaciones, correcciones manuales y textos de documentación desarrollados específicamente para este repositorio pueden ser obra de sus respectivos autores. Esta declaración no reclama propiedad sobre datos, nombres, marcas, fichas, imágenes, textos, bases de datos ni otros materiales obtenidos o consultados en sitios de terceros.
 
-Si un titular de derechos considera que algún archivo de este repositorio utiliza material sin autorización, puede contactar al mantenedor del repositorio mediante los medios de contacto publicados en el perfil de GitHub para que se revise el material señalado.
+Este repositorio no incluye una licencia general (`LICENSE`). Por ello, no debe suponerse que el código y los datos pueden copiarse, modificarse o redistribuirse libremente. Si posteriormente se añade una licencia para el código original, su alcance deberá excluir cualquier material de terceros que el mantenedor no tenga derecho a licenciar.
+
+## 8. No afiliación ni respaldo
+
+El uso de nombres de terceros es nominativo y descriptivo. No implica relación comercial, asociación, patrocinio, autorización, colaboración o respaldo por parte de EA, EA SPORTS, FIFA, RenderZ, SoFIFA o FIFAMobileGuide.
+
+## 9. Exactitud, atribución y permisos
+
+Los archivos de este proyecto se proporcionan como material de referencia comunitario, sin garantía de exactitud, integridad o disponibilidad. Los valores no deben interpretarse como una certificación oficial de EA ni como garantía de que coincidan exactamente con una versión concreta del juego.
+
+Dar crédito a una fuente no transfiere la propiedad de sus materiales, no elimina restricciones contractuales y no reemplaza una autorización. El responsable de copiar, publicar, adaptar o redistribuir cualquier archivo debe verificar por separado que cuenta con los permisos necesarios y cumplir las condiciones vigentes de cada titular.
+
+Si un titular considera que algún archivo utiliza material sin autorización, puede contactar al mantenedor del repositorio a través de los medios de contacto publicados en su perfil de GitHub para que se revise el material señalado.

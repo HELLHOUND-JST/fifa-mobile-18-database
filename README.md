@@ -1,74 +1,105 @@
-# FIFA Mobile 18 — Base de Datos de Jugadores (Temporada 2)
+# FIFA Mobile 18 — Base de cartas y estadísticas (Temporada 2)
 
-Proyecto independiente de recopilación y organización de información de **FIFA Mobile 18 — Season 2**. Incluye un extractor en Python, archivos de datos en CSV/JSON/TXT y cachés utilizados para conservar el progreso de las consultas.
+**Versión del proyecto: 2.0**  
+**Última actualización de esta documentación: 6 de noviembre de 2026**
 
-> [!IMPORTANT]
-> Este repositorio contiene datos y cachés obtenidos de sitios de terceros. **Dar crédito a una fuente no concede permiso para copiar o redistribuir su contenido.** Antes de publicar el repositorio como público, revisa especialmente las condiciones de RenderZ y SoFIFA y confirma que tienes autorización para distribuir los archivos derivados. Consulta [`NOTICE.md`](NOTICE.md). Mantener el repositorio privado tampoco sustituye el cumplimiento de las condiciones aplicables.
+Proyecto independiente y no oficial dedicado a recopilar, organizar y consultar información de las cartas base de **FIFA Mobile 18 — Season 2**. La versión 2.0 amplía la base original con un conjunto de atributos principales, estadísticas detalladas y valores específicos para porteros, además de exportaciones CSV y JSON.
 
 > [!NOTE]
-> **Proyecto no oficial.** No está afiliado, patrocinado ni respaldado por Electronic Arts (EA), EA SPORTS, FIFA, RenderZ o SoFIFA.
+> Este proyecto no está afiliado, patrocinado ni respaldado por Electronic Arts, EA SPORTS, FIFA, RenderZ, SoFIFA ni FIFAMobileGuide. Los nombres se utilizan únicamente para identificar el juego y las referencias consultadas.
+
+> [!IMPORTANT]
+> Los datos se ofrecen como material de referencia comunitario. No constituyen una publicación oficial de EA ni una certificación de que cada valor coincida exactamente con el juego. Pueden existir diferencias, datos incompletos o errores. La atribución a una fuente tampoco concede permiso para copiar o redistribuir sus materiales. Consulta [`NOTICE.md`](NOTICE.md) antes de publicar o reutilizar el contenido.
 
 ## Objetivo
 
-Construir una base organizada de las **cartas base** de la Temporada 2 de FIFA Mobile 18, relacionando los IDs de jugadores de SoFIFA con las fichas de jugador de RenderZ.
+Mantener una base estructurada de las **cartas base** de FIFA Mobile 18 Season 2, evitando mezclar en la tabla principal las cartas especiales o de programas. La base relaciona los identificadores de jugadores con los datos de carta y ofrece una segunda exportación enriquecida con atributos principales y detallados.
 
-La regla de inclusión es conservar la ficha de RenderZ cuyo ID coincide con el ID del jugador usado como referencia. Las cartas de programas o eventos relacionadas —por ejemplo, IDs de seis cifras a partir de `500000`— se excluyen de la base principal y se registran por separado en `programs_excluded.csv`.
+## Referencias consultadas
 
-## Fuentes consultadas
+- **RenderZ:** referencia para consultar información de las cartas base, como media móvil, posición, club, código de fondo y rareza. Ejemplo de ficha: `https://renderz.app/18/player/20801`.
+- **SoFIFA:** referencia histórica para identificar jugadores y consultar información asociada a FIFA 18. Conjunto utilizado: `r=180084`.
+- **FIFAMobileGuide:** referencia reconocida en el trabajo de recopilación y organización de atributos de jugadores. Se incluye su crédito en [`NOTICE.md`](NOTICE.md).
 
-- **RenderZ:** datos de la ficha de la carta base, como media móvil, posición, club, código de fondo y rareza. Ejemplo de consulta: [`https://renderz.app/18/player/20801`](https://renderz.app/18/player/20801).
-- **SoFIFA:** lista de referencia e información del jugador para el conjunto histórico indicado por `r=180084`. [Abrir la lista FIFA 18 en SoFIFA](https://sofifa.com/?r=180084&set=true).
+Cada plataforma conserva sus propios derechos, condiciones y políticas. La inclusión de una referencia no supone afiliación ni autorización para redistribuir sus contenidos.
 
-Las fuentes son independientes entre sí y conservan sus propios derechos, condiciones y políticas. Los enlaces se incluyen para identificar el origen de los datos, no como prueba de autorización para reutilizarlos.
+## Novedades de la versión 2.0
+
+- Se incorpora `fifa_mobile_18_base_player_stats.csv`, una exportación que combina la información de las cartas con atributos principales y detallados.
+- Se incorpora `fifa_mobile_18_base_player_stats.json`, un JSON organizado por jugador, carta y estadísticas.
+- Se añade `fifa_mobile_18_base_player_stats_SAMPLE.json` como muestra pequeña del esquema y de la estructura de los registros.
+- Se incluyen utilidades de organización y limpieza de datos JSON: `organize_json.py` y `clean_json.py`.
+- Se incorpora una caché adicional de referencia para el trabajo de atributos en `data/cache_guide_stats.jsonl`.
 
 ## Contenido del repositorio
 
 | Archivo o carpeta | Descripción |
 |---|---|
-| `extract_fifa18.py` | Script Python para consultar las fuentes, mantener cachés y generar las exportaciones. |
-| `fifa_mobile_18_base.csv` | Base principal: una fila por carta base, con campos simplificados para facilitar su lectura. |
-| `fifa_mobile_18_base.json` | Base principal en JSON; conserva campos originales UTF-8 adicionales para nombres, clubes y nacionalidades. |
-| `fifa_mobile_18_base.txt` | Vista de texto alineada para consulta rápida. |
-| `missing_in_renderz.csv` | IDs de la lista de referencia para los que no se obtuvo una ficha base en RenderZ. |
-| `programs_excluded.csv` | IDs de cartas de programas/eventos detectadas y excluidas de la base principal. |
-| `muestra_prueba_300.csv` / `muestra_prueba_300.txt` | Archivos de muestra reducida para inspección rápida. |
-| `data/cache_sofifa_list.json` | Caché de la lista de jugadores consultada en SoFIFA. |
-| `data/cache_renderz.jsonl` | Caché de respuestas de fichas de RenderZ, una entrada JSON por línea. |
-| `data/manual_overrides.json` | Correcciones manuales persistentes aplicadas durante la exportación. |
-| `data/progress.json` | Contadores y fecha de la última ejecución registrada. |
+| `extract_fifa18.py` | Extractor Python de la base de cartas. Consulta las referencias configuradas, mantiene cachés y genera las exportaciones principales. |
+| `fifa_mobile_18_base.csv` | Base principal de cartas, con una fila por carta base. Delimitador `;`. |
+| `fifa_mobile_18_base.json` | Base principal en JSON, con campos adicionales UTF-8 para conservar nombres y textos originales. |
+| `fifa_mobile_18_base.txt` | Vista de texto plano de la base principal. |
+| `fifa_mobile_18_base_player_stats.csv` | Base ampliada con datos de carta, atributos principales y atributos detallados. Delimitador `;`. |
+| `fifa_mobile_18_base_player_stats.json` | Base ampliada en JSON, con secciones para identidad, edad, carta y estadísticas. |
+| `fifa_mobile_18_base_player_stats_SAMPLE.json` | Muestra del JSON ampliado con ejemplos y esquema. |
+| `missing_in_renderz.csv` | IDs de referencia para los que no se obtuvo una ficha base en RenderZ durante la extracción incluida. |
+| `programs_excluded.csv` | IDs detectados como cartas de programas/eventos y excluidos de la base principal. |
+| `muestra_prueba_300.csv` / `muestra_prueba_300.txt` | Muestra reducida para inspección rápida de la base principal. |
+| `data/cache_sofifa_list.json` | Caché de la lista de referencia consultada en SoFIFA. |
+| `data/cache_renderz.jsonl` | Caché de consultas de fichas RenderZ, una entrada JSON por línea. |
+| `data/cache_guide_stats.jsonl` | Caché de referencia utilizada durante el trabajo de recopilación de atributos. |
+| `data/manual_overrides.json` | Correcciones manuales persistentes para la extracción principal. |
+| `data/progress.json` | Contadores y fecha de la última ejecución registrada por el extractor. |
+| `organize_json.py` | Utilidad de organización de los datos estadísticos en formato JSON. |
+| `clean_json.py` | Utilidad para generar una versión simplificada del JSON estadístico. |
+| `analisis_sofifa_mobile.py` | Script auxiliar de análisis de diferencias entre referencias. |
+| `check_wayback.py` | Script auxiliar para consultar disponibilidad de capturas históricas mediante Wayback Machine. |
+| `README_JSON.md` | Documentación de la estructura del JSON ampliado. |
+| `README_JSON_CLEAN.md` | Guía rápida de lectura de la estructura simplificada. |
 | `LEEME.txt` | Guía rápida complementaria en español. |
-| `NOTICE.md` | Avisos de marcas, derechos y materiales de terceros. |
+| `NOTICE.md` | Atribuciones, marcas, derechos de terceros y avisos legales. |
 
-### Cifras de la copia incluida
+## Cifras de la copia incluida
 
-Los siguientes valores describen los archivos de datos incluidos en esta versión del proyecto; pueden cambiar al volver a ejecutar el extractor:
+Los siguientes valores describen los archivos distribuidos en esta versión. Pueden cambiar al actualizar o volver a generar las exportaciones.
 
-- **13.885** registros en `fifa_mobile_18_base.csv`.
-- **4.048** IDs registrados en `missing_in_renderz.csv`.
-- **6.571** IDs de programas/eventos distintos en `programs_excluded.csv`.
-- **17.933** jugadores en la caché de referencia de SoFIFA.
+| Elemento | Registros |
+|---|---:|
+| Base principal (`fifa_mobile_18_base.csv`) | 13.885 |
+| Base con estadísticas (`fifa_mobile_18_base_player_stats.csv`) | 13.885 |
+| IDs sin ficha obtenida (`missing_in_renderz.csv`) | 4.048 |
+| IDs de programas/eventos excluidos (`programs_excluded.csv`) | 6.571 |
+| Jugadores en la caché de lista SoFIFA | 17.933 |
 
-La copia de datos y los contadores incluidos corresponden a una extracción realizada el **5 de noviembre de 2026**. No representan una garantía de disponibilidad, exactitud o vigencia futura de las fuentes.
+La copia de datos incluida corresponde a una extracción realizada entre el **5 y el 6 de noviembre de 2026**. Estas cifras no garantizan disponibilidad, exactitud ni vigencia futura de las fuentes externas.
+
+## Qué contiene la base estadística
+
+La exportación estadística añade dos grupos de atributos:
+
+- **Atributos principales:** seis valores generales para jugadores de campo y seis valores adaptados a la estructura de porteros.
+- **Atributos detallados:** velocidad, aceleración, fuerza, control, regate, cabezazo, finalización, potencia de tiro, posicionamiento, defensa, pase y otros campos asociados. La estructura de porteros utiliza los campos aplicables a esa posición.
+- **Datos de portero:** incluye un grupo específico con `gk_diving`, `gk_positioning`, `reflexes` y `handling`; en jugadores que no son porteros este grupo aparece como `null` en el JSON.
+
+Para conocer los nombres exactos de las claves y la estructura de cada registro, consulta [`README_JSON.md`](README_JSON.md) y [`README_JSON_CLEAN.md`](README_JSON_CLEAN.md).
 
 ## Campos de la base principal
 
 | Campo | Significado |
 |---|---|
-| `fifa_id` | ID usado para identificar al jugador y consultar su ficha base. |
+| `fifa_id` | Identificador del jugador utilizado para relacionar las referencias. |
 | `short_name`, `full_name` | Nombre corto y nombre completo. |
 | `position_mobile` | Posición de la carta en FIFA Mobile. |
 | `ovr_mobile` | Media general de la carta móvil. |
 | `club_id`, `club_name` | Identificador y nombre del club. |
-| `background_code`, `rarity` | Código de fondo y categoría de rareza de la carta. |
-| `sofifa_overall`, `sofifa_potential` | Media y potencial de referencia de SoFIFA. |
-| `sofifa_age`, `sofifa_position` | Edad y posición según la referencia de SoFIFA. |
-| `nationality` | Nacionalidad registrada en la fuente de referencia. |
-| `renderz_url`, `sofifa_url` | Enlaces a las fichas de origen. |
+| `background_code`, `rarity` | Código de fondo y categoría de rareza. |
+| `sofifa_overall`, `sofifa_potential` | Media y potencial de referencia de FIFA 18 para consola. |
+| `sofifa_age`, `sofifa_position` | Edad y posición de la referencia de consola. |
+| `nationality` | Nacionalidad registrada en la referencia. |
+| `renderz_url`, `sofifa_url` | Enlaces a las fichas consultadas. |
 | `season` | Temporada asociada al registro. |
 
 ### Códigos de rareza
-
-El extractor traduce los prefijos conocidos de `background_code` a estas categorías:
 
 | Código | Categoría |
 |---|---|
@@ -84,37 +115,37 @@ El extractor traduce los prefijos conocidos de `background_code` a estas categor
 
 ## Requisitos
 
-- Python **3.10 o superior**.
-- Conexión a Internet para consultar las fuentes.
-- No requiere instalar paquetes de terceros: el script utiliza módulos de la biblioteca estándar de Python.
+- Python **3.10 o superior** recomendado.
+- Conexión a Internet para realizar nuevas consultas con el extractor.
+- Los scripts principales utilizan módulos de la biblioteca estándar de Python; no requieren instalar paquetes externos para las funciones descritas en esta guía.
 
-## Uso
+## Uso del extractor de la base principal
 
 Ejecuta los comandos desde la carpeta raíz del repositorio, donde se encuentra `extract_fifa18.py`.
 
-### Comprobar el extractor
+### Prueba rápida
 
 ```bash
 python extract_fifa18.py --test
 ```
 
-Realiza una prueba limitada a los primeros 10 IDs de la lista de SoFIFA.
+Realiza una prueba limitada a los primeros 10 IDs de la lista de referencia.
 
-### Limitar una consulta de prueba
+### Limitar una consulta
 
 ```bash
 python extract_fifa18.py --limit 200
 ```
 
-Limita a 200 los IDs de referencia que se procesan en esa ejecución. El contenido que ya exista en las cachés también puede participar en las exportaciones.
+Limita a 200 los IDs que se procesan en esa ejecución.
 
-### Ejecutar el proceso completo
+### Ejecutar o reanudar el proceso
 
 ```bash
 python extract_fifa18.py
 ```
 
-Consulta los IDs pendientes, guarda las respuestas en caché y genera los archivos de salida. El proceso es reanudable: al ejecutarlo de nuevo reutiliza los registros guardados y continúa con los pendientes.
+Consulta los IDs pendientes, guarda respuestas en caché y genera los archivos de salida. El proceso puede reanudarse ejecutando el mismo comando otra vez.
 
 ### Consultar IDs específicos
 
@@ -122,15 +153,15 @@ Consulta los IDs pendientes, guarda las respuestas en caché y genera los archiv
 python extract_fifa18.py --only-ids 20801,158023,190871
 ```
 
-Limita las nuevas consultas de RenderZ a los IDs indicados. Las exportaciones pueden seguir incluyendo otros registros presentes en las cachés.
+Limita las nuevas consultas a los IDs indicados. Las exportaciones también pueden incluir registros que ya existan en las cachés.
 
-### Regenerar las exportaciones desde las cachés
+### Regenerar las exportaciones principales desde las cachés
 
 ```bash
 python extract_fifa18.py --export-only
 ```
 
-Reconstruye los archivos de salida sin volver a consultar las páginas. Necesita que existan las cachés requeridas.
+Reconstruye CSV, TXT y JSON de la base principal sin volver a consultar las páginas. Requiere las cachés correspondientes.
 
 ### Volver a consultar desde cero
 
@@ -138,15 +169,15 @@ Reconstruye los archivos de salida sin volver a consultar las páginas. Necesita
 python extract_fifa18.py --refresh
 ```
 
-Ignora las cachés existentes para la consulta y vuelve a obtener los datos de las fuentes.
+Ignora las cachés existentes durante la consulta y vuelve a obtener la información.
 
-### Ajustar el número de trabajadores
+### Cambiar el número de trabajadores
 
 ```bash
 python extract_fifa18.py --workers 4
 ```
 
-Permite cambiar el número de consultas concurrentes. Utiliza un ritmo razonable y respeta las condiciones de cada sitio.
+Permite ajustar el número de consultas concurrentes. Utiliza un ritmo razonable y respeta las condiciones de cada sitio.
 
 ### Aplicar correcciones manuales
 
@@ -156,7 +187,7 @@ python extract_fifa18.py --set-ovr 20801 91
 python extract_fifa18.py --export-only
 ```
 
-Las correcciones se guardan en `data/manual_overrides.json` y se aplican en las siguientes exportaciones. También puedes editar ese archivo directamente y después ejecutar `--export-only`.
+Las correcciones se guardan en `data/manual_overrides.json` y se aplican en las siguientes exportaciones.
 
 Para ver todas las opciones disponibles:
 
@@ -166,26 +197,28 @@ python extract_fifa18.py --help
 
 ## Criterios y limitaciones
 
-- La base principal pretende contener **cartas base**, no todas las versiones especiales o promocionales de cada jugador.
-- Los IDs identificados como cartas de programas/eventos se registran por separado y no se agregan como filas de la base principal.
-- Los campos de FIFA Mobile y los de SoFIFA proceden de fuentes y contextos distintos; por ello, sus medias, posiciones y otros valores pueden no coincidir.
-- Los archivos CSV/TXT de la copia están normalizados para facilitar su lectura. El JSON conserva valores originales UTF-8 en campos adicionales como `full_name_original`, `short_name_original`, `club_name_original` y `nationality_original`.
-- Los datos pueden estar incompletos, cambiar o dejar de estar disponibles. Los estados `404`, errores de conexión y resultados de extracción no garantizan que un jugador no haya existido en el juego.
-- Las páginas, interfaces y condiciones de las fuentes pueden cambiar; el extractor puede requerir ajustes para seguir funcionando.
-- El separador de los CSV puede depender de la exportación que generó cada archivo. Si una hoja de cálculo no divide las columnas correctamente, importa el archivo y selecciona el delimitador correspondiente.
+- La base principal está enfocada en **cartas base**, no en todas las versiones especiales o promocionales de cada jugador.
+- Los IDs detectados como cartas de programas/eventos se registran por separado y no se agregan como filas de la base principal.
+- Los campos de FIFA Mobile y los de la referencia FIFA 18 para consola pertenecen a contextos de juego distintos; sus medias, posiciones y otros valores pueden no coincidir.
+- Los archivos CSV/TXT utilizan nombres normalizados para facilitar su lectura. El JSON principal conserva campos UTF-8 adicionales para nombres, clubes y nacionalidades.
+- En la tabla estadística, las celdas vacías pueden corresponder a atributos que no aplican a una posición. En el JSON, `null` indica un campo no aplicable.
+- Los datos pueden contener omisiones o errores y las fuentes externas pueden cambiar, limitar el acceso o dejar de estar disponibles.
+- Los errores `404` y los fallos de conexión no demuestran por sí solos que un jugador nunca haya existido en el juego.
+- Los scripts `organize_json.py` y `clean_json.py` se incluyen como utilidades del proceso de estructuración. La reproducción íntegra de ese proceso puede requerir archivos intermedios que no forman parte de esta distribución.
+- Los CSV utilizan `;` como delimitador. Al importarlos en una hoja de cálculo, selecciona ese separador si las columnas no se dividen automáticamente.
 
 ## Créditos y propiedad intelectual
 
-Los nombres **FIFA**, **EA**, **EA SPORTS**, **FIFA Mobile**, **RenderZ** y **SoFIFA**, así como sus marcas, logotipos, productos y materiales protegidos, pertenecen a sus respectivos titulares. Se mencionan únicamente para identificar el juego y las fuentes consultadas.
+Se reconoce a **FIFAMobileGuide** como referencia consultada durante el trabajo de recopilación y organización de atributos de jugadores. También se reconocen RenderZ y SoFIFA como referencias utilizadas para la información de cartas y jugadores.
 
-La atribución no implica afiliación ni concede derechos de reproducción o redistribución. **No se debe asumir que los archivos de datos, cachés o exportaciones pueden publicarse o reutilizarse libremente.** Lee [`NOTICE.md`](NOTICE.md) antes de copiar o distribuir cualquier parte del repositorio.
+Los nombres **FIFA**, **EA**, **EA SPORTS**, **FIFA Mobile**, **RenderZ**, **SoFIFA** y **FIFAMobileGuide** pertenecen o están asociados a sus respectivos titulares. Este proyecto no reclama la propiedad de sus marcas, sitios, bases de datos ni materiales protegidos.
 
-Este repositorio no incluye una licencia abierta general para el conjunto de código y datos. No añadas una licencia MIT, Apache u otra licencia al repositorio completo sin separar primero los materiales propios de los materiales de terceros y comprobar que tienes derechos para licenciarlos.
+Dar crédito no implica afiliación ni concede derechos de reproducción o redistribución. Revisa [`NOTICE.md`](NOTICE.md) antes de copiar, publicar o distribuir cualquier archivo. Este repositorio no incluye una licencia abierta general para el conjunto de código y datos.
 
 ## Contribuciones
 
-Las correcciones, mejoras de documentación y propuestas para el extractor pueden plantearse mediante *Issues* o *Pull Requests*. No contribuyas con imágenes, logos, archivos del juego ni datos de terceros que no tengas derecho a compartir.
+Las correcciones, mejoras de documentación y propuestas para los scripts pueden plantearse mediante *Issues* o *Pull Requests*. No contribuyas con imágenes, logotipos, archivos del juego ni materiales de terceros que no tengas derecho a compartir.
 
 ---
 
-**Aviso:** este proyecto es una recopilación comunitaria no oficial. La información se ofrece tal como está, sin garantía de exactitud, integridad o disponibilidad. Para conocer los avisos de terceros, consulta [`NOTICE.md`](NOTICE.md).
+**Aviso:** proyecto comunitario independiente, ofrecido tal como está y sin garantía de exactitud, integridad o disponibilidad. Para más información sobre marcas, fuentes y permisos, consulta [`NOTICE.md`](NOTICE.md).
