@@ -1,6 +1,6 @@
 # NOTICE — Atribuciones, derechos de terceros y avisos legales
 
-**Proyecto:** FIFA Mobile 18 — Base de cartas y estadísticas (Temporada 2)  
+**Proyecto:** FIFA Mobile 18 — Base de datos de cartas y estadísticas (Temporada 2)  
 **Versión documentada:** 2.0  
 **Última revisión:** 6 de noviembre de 2026
 
