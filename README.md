@@ -1,4 +1,4 @@
-# FIFA Mobile 18 — Base de cartas (Temporada 2)
+# FIFA Mobile 18 — Base de Datos de Jugadores (Temporada 2)
 
 Proyecto independiente de recopilación y organización de información de **FIFA Mobile 18 — Season 2**. Incluye un extractor en Python, archivos de datos en CSV/JSON/TXT y cachés utilizados para conservar el progreso de las consultas.
 
