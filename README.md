@@ -1,4 +1,4 @@
-# FIFA Mobile 18 — Base de cartas y estadísticas (Temporada 2)
+# FIFA Mobile 18 — Base de Datos de cartas y estadísticas (Temporada 2)
 
 **Versión del proyecto: 2.0**  
 **Última actualización de esta documentación: 6 de noviembre de 2026**
