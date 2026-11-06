@@ -8,7 +8,7 @@ Este documento identifica marcas y referencias de terceros mencionadas o consult
 
 ## 1. Proyecto independiente
 
-FIFA Mobile 18 — Base de cartas y estadísticas es un proyecto independiente y no oficial. No está afiliado, patrocinado, aprobado ni respaldado por Electronic Arts, EA SPORTS, FIFA, RenderZ, SoFIFA ni FIFAMobileGuide.
+FIFA Mobile 18 — Base de datos de cartas y estadísticas es un proyecto independiente y no oficial. No está afiliado, patrocinado, aprobado ni respaldado por Electronic Arts, EA SPORTS, FIFA, RenderZ, SoFIFA ni FIFAMobileGuide.
 
 Los nombres de empresas, productos, servicios, plataformas y sitios se utilizan para identificar el juego y las referencias consultadas. Este repositorio no reclama propiedad sobre las marcas, bases de datos, interfaces, diseños ni materiales de terceros.
 
