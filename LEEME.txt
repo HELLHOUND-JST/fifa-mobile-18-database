@@ -1,13 +1,18 @@
-FIFA MOBILE 18 - TEMPORADA 2 - BASE DE CARTAS Y ESTADISTICAS
-============================================================
+FIFA MOBILE 18 - TEMPORADA 2 - BASE DE CARTAS, ESTADISTICAS E IMAGENES
+======================================================================
 
 PROYECTO
 --------
 Proyecto comunitario e independiente para recopilar, organizar y consultar
 informacion de las cartas base de FIFA Mobile 18 Season 2.
 
-La version 2.0 incorpora una exportacion adicional con atributos principales,
-estadisticas detalladas y campos especificos para porteros.
+VERSIONES
+---------
+  1.0.0  Base inicial de cartas y exportaciones.
+  2.0.0  Incorporacion de atributos principales, estadisticas detalladas
+y        campos especificos para porteros.
+  3.0.0  Incorporacion de PNG individuales de jugadores y PNG de cartas
+         base completas, con manifiestos y herramientas de generacion.
 
 ARCHIVOS PRINCIPALES
 --------------------
@@ -29,56 +34,80 @@ ARCHIVOS PRINCIPALES
   fifa_mobile_18_base_player_stats_SAMPLE.json
     Muestra reducida del JSON estadistico.
 
+IMAGENES DE JUGADORES
+---------------------
+  players_png/
+    13.885 PNG individuales de jugadores, organizados por rareza.
+    Dimensiones documentadas: 256 x 256 pixeles.
+    No incluyen el fondo, el escudo ni el marco completo de la carta.
+
+  players_png_manifest.csv / players_png_manifest.json
+    Inventario de los PNG individuales.
+
+  download_player_png.py
+    Herramienta para descargar imagenes individuales.
+
+CARTAS COMPLETAS
+----------------
+  cards_full/
+    13.885 composiciones PNG de cartas base completas, organizadas por rareza.
+    Dimensiones documentadas: 256 x 256 pixeles.
+
+  cards_full_manifest.csv / cards_full_manifest.json
+    Inventario de las cartas completas generadas.
+
+  generate_full_cards.py
+    Herramienta para generar las composiciones PNG de cartas completas.
+
+BASE Y ARCHIVOS AUXILIARES
+--------------------------
   missing_in_renderz.csv
     IDs para los que no se obtuvo una ficha base durante la extraccion.
 
   programs_excluded.csv
     IDs de cartas de programas/eventos excluidas de la base principal.
 
-FUENTES DE REFERENCIA
----------------------
-  RenderZ: informacion de cartas base.
-  SoFIFA: referencia historica de jugadores FIFA 18.
-  FIFAMobileGuide: referencia reconocida durante la recopilacion y organizacion
-  de atributos de jugadores.
+  data/cache_sofifa_list.json
+    Lista de referencia SoFIFA.
 
-Los nombres y materiales de terceros pertenecen a sus respectivos titulares.
-La atribucion no implica afiliacion ni concede permisos de redistribucion.
-Consulta NOTICE.md antes de publicar o reutilizar los archivos.
+  data/cache_renderz.jsonl
+    Cache de consultas de fichas RenderZ.
 
-COMO USAR EL EXTRACTOR PRINCIPAL
---------------------------------
+  data/cache_guide_stats.jsonl
+    Cache de referencia de atributos.
+
+  data/cache_png_downloads.jsonl
+    Cache reanudable para descargas de PNG individuales.
+
+  data/manual_overrides.json
+    Correcciones manuales del extractor principal.
+
+  data/progress.json
+    Contadores y fecha de la ultima ejecucion del extractor.
+
+COMO USAR LAS HERRAMIENTAS
+--------------------------
 Requisito recomendado: Python 3.10 o superior.
 Ejecuta desde la carpeta raiz del repositorio.
 
-  Prueba rapida:
+  Extractor principal:
     python extract_fifa18.py --test
-
-  Procesar hasta 200 IDs:
-    python extract_fifa18.py --limit 200
-
-  Extraccion completa o reanudacion:
-    python extract_fifa18.py
-
-  Regenerar CSV/TXT/JSON principal desde las caches:
-    python extract_fifa18.py --export-only
-
-  Consultar IDs concretos:
-    python extract_fifa18.py --only-ids 20801,158023,190871
-
-  Cambiar el numero de trabajadores:
-    python extract_fifa18.py --workers 4
-
-  Corregir nombre o media:
-    python extract_fifa18.py --set-name 20801 "Cristiano Ronaldo"
-    python extract_fifa18.py --set-ovr 20801 91
-    python extract_fifa18.py --export-only
-
-  Consultar todas las opciones:
     python extract_fifa18.py --help
 
-ESTRUCTURA DE ESTADISTICAS
---------------------------
+  Descargar PNG individuales:
+    python download_player_png.py --test
+    python download_player_png.py --workers 12
+    python download_player_png.py --only-ids 20801,158023
+    python download_player_png.py --help
+
+  Generar cartas completas:
+    python generate_full_cards.py --test
+    python generate_full_cards.py --workers 8
+    python generate_full_cards.py --workers 8 --overwrite
+    python generate_full_cards.py --help
+
+ESTADISTICAS
+------------
   stats.primary      Seis atributos principales segun la posicion.
   stats.detailed     Atributos detallados para jugadores de campo o porteros.
   stats.goalkeeping  Diving, positioning, reflexes y handling para porteros.
@@ -86,29 +115,22 @@ ESTRUCTURA DE ESTADISTICAS
 En el JSON, null identifica un bloque que no aplica. En el CSV, algunas celdas
 pueden quedar vacias cuando el atributo no corresponde a la posicion.
 
-CACHES Y ARCHIVOS DE APOYO
--------------------------
-  data/cache_sofifa_list.json   Lista de referencia SoFIFA.
-  data/cache_renderz.jsonl      Consultas de fichas RenderZ.
-  data/cache_guide_stats.jsonl  Cache de referencia de atributos.
-  data/manual_overrides.json   Correcciones manuales del extractor principal.
-  data/progress.json           Contadores de la ultima ejecucion.
-
-NOTAS IMPORTANTES
------------------
-  - La base principal contiene cartas base; las cartas de programas/eventos
-    detectadas se conservan en un archivo separado.
-  - La media Mobile y la media de FIFA 18 para consola pertenecen a contextos
-    distintos y pueden no coincidir.
-  - Los datos se ofrecen como referencia comunitaria, sin garantia de exactitud,
-    integridad o disponibilidad. No se certifica cada valor como dato oficial.
-  - Respetar las condiciones de las plataformas consultadas y no redistribuir
-    materiales de terceros sin los permisos necesarios.
-  - La atribucion a FIFAMobileGuide, RenderZ o SoFIFA no sustituye autorizacion.
-
 DOCUMENTACION
 -------------
-  README.md             Presentacion general, estructura y uso.
+  README.md             Presentacion general, estructura y uso del proyecto.
   README_JSON.md        Esquema detallado del JSON estadistico.
   README_JSON_CLEAN.md  Guia rapida del JSON simplificado.
+  README_PNG.md         Documentacion de las imagenes individuales de jugadores.
+  README_CARDS_FULL.md  Documentacion de las cartas completas en PNG.
   NOTICE.md             Atribuciones y avisos de propiedad intelectual.
+
+AVISOS IMPORTANTES
+------------------
+  - El proyecto es independiente y no oficial.
+  - Los datos y las imagenes se ofrecen como material de referencia, sin
+    garantia de exactitud, integridad o disponibilidad.
+  - La atribucion a EA, FIFA, RenderZ, SoFIFA o FIFAMobileGuide no implica
+    afiliacion ni concede permisos para redistribuir sus materiales.
+  - Los recursos graficos y tipograficos pueden estar protegidos por derechos
+    de terceros. Verificar permisos antes de publicar o distribuir.
+  - Consultar NOTICE.md antes de reutilizar cualquier archivo.

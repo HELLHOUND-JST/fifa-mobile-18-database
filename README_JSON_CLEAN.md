@@ -1,8 +1,9 @@
 # JSON simplificado — FIFA Mobile 18 Base
 
-Archivo: **`fifa_mobile_18_base_player_stats.json`**  
-Muestra: **`fifa_mobile_18_base_player_stats_SAMPLE.json`**  
-Registros: **13.885 jugadores**
+**Proyecto:** V3.0.0  
+**Archivo:** `fifa_mobile_18_base_player_stats.json`  
+**Muestra:** `fifa_mobile_18_base_player_stats_SAMPLE.json`  
+**Registros documentados:** 13.885 jugadores
 
 Esta exportación presenta cada jugador en una estructura compacta con identidad, edad, carta y atributos. Se omiten enlaces y campos auxiliares para que sea más sencilla de consultar desde aplicaciones, scripts y herramientas externas.
 
@@ -12,7 +13,7 @@ Esta exportación presenta cada jugador en una estructura compacta con identidad
 - **Edad:** `age`.
 - **Carta:** `card` con media, posición, club, rareza, código de fondo y temporada.
 - **Estadísticas:** `stats.primary`, `stats.detailed` y `stats.goalkeeping`.
-- **Metadatos:** título, versión de exportación, fecha de generación, temporada, cantidad de registros y conteos por rareza y posición.
+- **Metadatos:** título, versión interna de exportación, fecha de generación, temporada, cantidad de registros y conteos por rareza y posición.
 
 ## Estructura de un registro
 
@@ -77,4 +78,4 @@ if player:
     print(player["name"]["full"], player["stats"]["primary"])
 ```
 
-Para la explicación completa de las claves y tipos de datos, consulta [`README_JSON.md`](README_JSON.md). Para fuentes, atribuciones y avisos sobre derechos de terceros, consulta [`NOTICE.md`](NOTICE.md).
+Para la explicación completa de las claves y tipos de datos, consulta [`README_JSON.md`](README_JSON.md). Para las colecciones gráficas consulta [`README_PNG.md`](README_PNG.md) y [`README_CARDS_FULL.md`](README_CARDS_FULL.md). Para fuentes, atribuciones y avisos sobre derechos de terceros, consulta [`NOTICE.md`](NOTICE.md).

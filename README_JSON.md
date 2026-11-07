@@ -1,10 +1,11 @@
 # Estructura del JSON — FIFA Mobile 18 Base con estadísticas
 
-Archivo principal: **`fifa_mobile_18_base_player_stats.json`**  
-Muestra: **`fifa_mobile_18_base_player_stats_SAMPLE.json`**  
-Registros de la copia incluida: **13.885 jugadores**
+**Proyecto:** V3.0.0  
+**Archivo principal:** `fifa_mobile_18_base_player_stats.json`  
+**Muestra:** `fifa_mobile_18_base_player_stats_SAMPLE.json`  
+**Registros de la copia documentada:** 13.885 jugadores
 
-Este documento explica la estructura de la exportación JSON ampliada que acompaña a la base de cartas de FIFA Mobile 18 — Season 2.
+Este documento explica la estructura de la exportación JSON ampliada que acompaña a la base de cartas de FIFA Mobile 18 — Season 2. La V3.0.0 incorpora además colecciones de imágenes PNG, documentadas por separado en [`README_PNG.md`](README_PNG.md) y [`README_CARDS_FULL.md`](README_CARDS_FULL.md).
 
 ## Estructura general
 
@@ -35,6 +36,8 @@ El archivo contiene cuatro secciones principales:
   ]
 }
 ```
+
+La clave `metadata.version` describe la versión interna de esa exportación JSON; no debe confundirse automáticamente con la versión global del repositorio (`3.0.0`).
 
 ## Secciones de cada jugador
 
@@ -69,23 +72,9 @@ Información de la carta base:
 
 ### `stats.primary`
 
-Contiene seis atributos principales. Para jugadores de campo se utilizan:
+Contiene seis atributos principales. Para jugadores de campo se utilizan `pace`, `shooting`, `passing`, `agility`, `defending` y `physical`.
 
-- `pace`
-- `shooting`
-- `passing`
-- `agility`
-- `defending`
-- `physical`
-
-Para porteros se utilizan los campos:
-
-- `gk_diving`
-- `gk_positioning`
-- `handling`
-- `reflexes`
-- `passing`
-- `physical`
+Para porteros se utilizan `gk_diving`, `gk_positioning`, `handling`, `reflexes`, `passing` y `physical`.
 
 ### `stats.detailed`
 
@@ -97,12 +86,7 @@ Para porteros se utiliza una estructura de 16 campos, sin `finishing`, `shot_pow
 
 ### `stats.goalkeeping`
 
-En los porteros contiene un objeto con cuatro valores:
-
-- `gk_diving`
-- `gk_positioning`
-- `reflexes`
-- `handling`
+En los porteros contiene un objeto con cuatro valores: `gk_diving`, `gk_positioning`, `reflexes` y `handling`.
 
 En jugadores que no son porteros aparece como `null`, porque ese bloque no aplica a su posición.
 
@@ -143,12 +127,14 @@ print("Porteros encontrados:", len(goalkeepers))
 
 ## Archivos relacionados
 
-- `fifa_mobile_18_base_player_stats.csv`: misma colección en formato tabular para Excel, LibreOffice, pandas u otras herramientas compatibles con CSV separado por `;`.
+- `fifa_mobile_18_base_player_stats.csv`: misma colección en formato tabular para hojas de cálculo y herramientas compatibles con CSV separado por `;`.
 - `fifa_mobile_18_base_player_stats_SAMPLE.json`: muestra reducida para revisar la estructura sin cargar el archivo completo.
 - `fifa_mobile_18_base.json`: base original de cartas, con campos adicionales de referencia y nombres UTF-8.
+- `players_png/`: colección de imágenes individuales de los jugadores. Consulta [`README_PNG.md`](README_PNG.md).
+- `cards_full/`: composiciones PNG de cartas completas. Consulta [`README_CARDS_FULL.md`](README_CARDS_FULL.md).
 
-## Nota sobre la actualización del JSON
+## Nota sobre las exportaciones
 
 El JSON incluido es una exportación ya generada. Los scripts `organize_json.py` y `clean_json.py` forman parte de las utilidades de estructuración, pero la reproducción completa del proceso puede requerir archivos intermedios que no se incluyen en esta distribución.
 
-Para conocer el proyecto completo, sus fuentes consultadas y los avisos de propiedad intelectual, consulta [`README.md`](README.md) y [`NOTICE.md`](NOTICE.md).
+Para conocer el proyecto completo, sus referencias consultadas y los avisos de propiedad intelectual, consulta [`README.md`](README.md) y [`NOTICE.md`](NOTICE.md).
