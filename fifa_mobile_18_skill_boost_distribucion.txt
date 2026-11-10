@@ -1,0 +1,55 @@
+SKILL BOOST DISTRIBUCION - FIFA MOBILE 18 BASE (13.885)
+(cada jugador tiene 1 skill boost de los 37 oficiales)
+
+ generalist          1528  (11.0%)
+ balanced            1358  (9.8%)
+ captain              687  (4.9%)
+ tackling             603  (4.3%)
+ marking              550  (4.0%)
+ counter              518  (3.7%)
+ defending            504  (3.6%)
+ reactions            496  (3.6%)
+ composed             495  (3.6%)
+ crossing             452  (3.3%)
+ gk generalist        435  (3.1%)
+ awareness            421  (3.0%)
+ strength             395  (2.8%)
+ dribbling            373  (2.7%)
+ ball control         353  (2.5%)
+ agility              334  (2.4%)
+ physical             316  (2.3%)
+ shot power           315  (2.3%)
+ pace                 296  (2.1%)
+ set pieces           291  (2.1%)
+ long shoots          287  (2.1%)
+ long passing         284  (2.0%)
+ passing              265  (1.9%)
+ short passing        237  (1.7%)
+ speed                233  (1.7%)
+ aggresion            229  (1.6%)
+ heading              228  (1.6%)
+ acceleration         207  (1.5%)
+ positioning          206  (1.5%)
+ finishing            161  (1.2%)
+ holding              147  (1.1%)
+ reflexes             135  (1.0%)
+ shooting             123  (0.9%)
+ handling             121  (0.9%)
+ gk diving            121  (0.9%)
+ gk positioning       101  (0.7%)
+ second striker        80  (0.6%)
+
+
+Top boost por grupo:
+  GK: gk generalist=435, balanced=250, generalist=174
+  CB: tackling=309, marking=303, generalist=289
+  RB: generalist=124, tackling=113, marking=106
+  LB: generalist=140, marking=130, defending=99
+  CDM: holding=147, generalist=110, balanced=106
+  CM: generalist=216, balanced=167, long passing=113
+  CAM: generalist=68, balanced=63, counter=58
+  LM: generalist=97, balanced=78, counter=74
+  RM: generalist=111, balanced=89, counter=73
+  LW: agility=20, composed=20, counter=19
+  RW: balanced=19, finishing=18, counter=17
+  ST: generalist=156, counter=132, ball control=113
