@@ -1,39 +1,42 @@
-# Datos JSON y estadísticas — FIFA Mobile 18 Base y eventos (V4.0.0)
+# Datos JSON y estadísticas — FIFA Mobile 18 Base, eventos e Iconos (V4.0.0)
 
-Este documento resume los datos estadísticos documentados para las cartas base y los datos incluidos en la nueva base de cartas de eventos.
+Este documento resume los datos estadísticos documentados para las tres bases de datos: cartas base, cartas de eventos y cartas Icono. La V4.0.0 amplía la información de cartas base con *skill boosts* reales del motor y estadísticas revisadas que ofrecen valores reales del juego; las 265 cartas con fichas originales de fifamobileguide.com conservan sus valores de la guía (intocables). La base de Iconos sigue la misma regla (15 originales de guía, 54 del motor).
 
 ## 1. Cartas base
 
 La V4.0.0 amplía los datos de cartas base con:
 
 - información de **skill boosts**; el catálogo documentado incluye **37 nombres** (consulta [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md));
-- estadísticas revisadas para ofrecer valores más realistas;
-- exportación completa adicional en CSV, JSON y TXT.
+- estadísticas reales del motor (sin valores generados);
+- exportación completa adicional en CSV, JSON y TXT;
+- nuevo campo `total_stats` = suma del motor de los 24 atributos detallados.
 
-La documentación de versiones anteriores describía el archivo estadístico `fifa_mobile_18_base_player_stats.json`, una muestra `fifa_mobile_18_base_player_stats_SAMPLE.json` y una estructura por jugador con identidad, edad, carta y estadísticas. Las claves exactas añadidas o modificadas en V4 deben comprobarse en la exportación real.
+### Exportaciones V4.0.0
 
-### Exportaciones completas añadidas en V4.0.0
-
-- `fifa_mobile_18_base_completa.csv`
-- `fifa_mobile_18_base_completa.json`
-- `fifa_mobile_18_base_completa.txt`
+- `fifa_mobile_18_base_player_stats.csv` / `.json`
+- `fifa_mobile_18_base_completa.csv` / `.json` / `.txt`
 - `fifa_mobile_18_skill_boost_distribucion.txt`
 
-El nombre identifica una exportación de la base completa; consulta los propios archivos para ver columnas, claves, orden y contenido detallado.
+### Estructura de estadísticas (V4.0.0)
 
-### Estructura de estadísticas documentada en versiones anteriores
-
-La base de cartas base utilizaba las siguientes secciones:
+La base de cartas base utiliza las siguientes secciones:
 
 - `fifa_id`: identificador numérico del jugador.
 - `name`: nombres `short` y `full`.
 - `age`: edad de referencia cuando está disponible.
 - `card`: datos de la carta, como `ovr`, `position`, `club_id`, `club`, `rarity`, `background_code` y `season`.
-- `stats.primary`: seis atributos principales según la posición.
-- `stats.detailed`: atributos detallados de jugadores de campo o porteros.
-- `stats.goalkeeping`: valores de portero (`gk_diving`, `gk_positioning`, `reflexes` y `handling`) en la estructura anterior.
+- `stats.primary`: seis atributos principales según la posición. En porteros: `gk_diving`, `gk_positioning`, `handling`, `reflexes`, `passing` y `physical`.
+- `stats.detailed`: los **24** atributos del motor, tanto en campo como en porteros (los porteros tienen valores de campo bajos, como en el juego).
+- `stats.goalkeeping`: `gk_diving`, `gk_positioning`, `reflexes`, `handling` en **todas** las posiciones (valores reales del motor; bajos en campo, p. ej. `4`, `18`/`22`).
+- `total_stats`: suma del motor de los 24 atributos de `stats.detailed`.
 
-Los ejemplos y campos descritos en esa sección representan el esquema documentado previamente; no se debe asumir que el JSON V4 conserva todas las claves exactamente igual.
+En detalle:
+
+`sprint_speed`, `acceleration`, `strength`, `ball_control`, `dribbling`, `heading`, `finishing`, `shot_power`, `long_shot`, `positioning`, `tackling`, `marking`, `aggression`, `composure`, `awareness`, `reactions`, `free_kick`, `short_passing`, `long_passing` y `crossing` (+ los 4 `gk_*`).
+
+Los valores son **sin boost**; la vista del juego muestra +13 % adicional sobre los atributos afectados por el skill boost.<br/> Las 265 cartas con originales de la guía conservan sus valores exactos de la guía (de fifamobileguide.com), que pueden diferir 1–3 puntos respecto del motor.
+
+Las claves exactas añadidas o modificadas en V4.0.0 son las del JSON real; la introspección completa está en este documento y en la muestra incluida en el repositorio.
 
 ## 2. Cartas de eventos
 
@@ -43,22 +46,35 @@ La V4.0.0 añade una base independiente en estos formatos:
 - `fifa_mobile_18_eventos.json`
 - `fifa_mobile_18_eventos.txt`
 
-La copia subida contiene **6.571 filas**. Los registros incluyen el campo `SKILL_BOOST` y **30 estadísticas**. El catálogo `skill_boosts` documenta por separado **37 nombres de refuerzos de habilidad**; no son 37 estadísticas adicionales. La lista exacta está en [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md).
+La copia subida contiene **6.571 filas**. Los registros incluyen el campo `SKILL_BOOST` real (del motor) y **30 estadísticas** (6 primarias + 24 detallados) con sus valores reales del motor; el máximo encontrado es **140** (Bonucci 100 OVR). El catálogo `skill_boosts` documenta por separado **37 nombres** de refuerzos de habilidad; no son 37 estadísticas adicionales. La lista exacta está en [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md).
 
-La documentación de esta versión no enumera aquí los nombres individuales de las 30 estadísticas ni las claves JSON. Para integraciones, consulta los encabezados de `fifa_mobile_18_eventos.csv` y las claves de `fifa_mobile_18_eventos.json` directamente. No supongas que el esquema de eventos replica el de la base de cartas base.
+Las estadísticas de la base de eventos son todas del motor, sin originales de guía (ninguna carta de eventos tiene ficha original en fifamobileguide.com).
 
-## 3. Diferencias entre colecciones
+## 3. Cartas Icono
+
+La V4.0.0 incorpora una base independiente en estos formatos:
+
+- `fifa_mobile_18_iconos.csv`
+- `fifa_mobile_18_iconos.txt`
+- `fifa_mobile_18_iconos.json`
+
+La copia subida contiene **69 filas** en tres categorías (36 Icon, 16 Prime Icon, 17 WC Icon), con identidad completa, estadísticas, 69 cartas completas en `icons_cards/` y 66 renders únicos en `icons_png/`. Más información en [`README_ICONOS.md`](README_ICONOS.md).
+
+Los skill boosts de iconos son también 1 de los 37 oficiales: 54 del motor y 15 conservados de la guía (intocables). Las 279 de 280 cartas con originales de guía (base e iconos) coinciden con las del motor; la excepción documentada es Khedira 80 CM (`179846`: guía "long shoots" vs motor `long passing`).
+
+## 4. Diferencias entre colecciones
 
 | Colección | Exportaciones | Contenido documentado |
 |---|---|---|
-| Cartas base | `fifa_mobile_18_base_player_stats.*`, `fifa_mobile_18_base_completa.*` | Datos y estadísticas de cartas base; V4 añade *skill boosts* y estadísticas revisadas. |
-| Cartas de eventos | `fifa_mobile_18_eventos.csv/.json/.txt` | 6.571 filas, `SKILL_BOOST` y 30 estadísticas; catálogo separado de 37 nombres de refuerzos. |
+| Cartas base | `fifa_mobile_18_base_player_stats.*`, `fifa_mobile_18_base_completa.*` | 13.885 filas, stats reales del motor (265 de guía intocables) |
+| Cartas de eventos | `fifa_mobile_18_eventos.csv/.json/.txt` | 6.571 filas, SKILL_BOOST real y stats reales del motor |
+| Cartas Icono | `fifa_mobile_18_iconos.csv/.json/.txt` | 69 filas; stats reales (54) o guía (15 intocables) |
 
-Mantén separadas ambas bases al consultar, importar o combinar registros. No se han proporcionado reglas de unión completas ni garantías de que todos los identificadores sean únicos entre colecciones.
+Mantén separadas las tres bases al consultar, importar o combinar registros. No se han proporcionado reglas de unión completas ni garantías de que todos los identificadores sean únicos entre colecciones.
 
-## 4. Ejemplos de lectura
+## 5. Ejemplo de lectura
 
-### Base JSON de cartas base (estructura previa documentada)
+### Base JSON de cartas base
 
 ```python
 import json
@@ -74,9 +90,8 @@ if players:
     print(player.get("name", {}).get("full"))
     print(player.get("card", {}).get("ovr"))
     print(player.get("stats", {}).get("primary"))
+    print("total_stats:", player.get("total_stats"))
 ```
-
-Este ejemplo corresponde a la estructura documentada anteriormente. Si el archivo V4 utiliza claves diferentes o adicionales, adapta la consulta al contenido real.
 
 ### Base JSON de eventos
 
@@ -86,22 +101,39 @@ import json
 with open("fifa_mobile_18_eventos.json", encoding="utf-8") as file:
     events_data = json.load(file)
 
-# Inspecciona el nivel superior antes de recorrer los registros.
 print(type(events_data).__name__)
 if isinstance(events_data, dict):
     print("Claves superiores:", list(events_data.keys()))
-elif isinstance(events_data, list):
-    print("Registros:", len(events_data))
+    print("Registros:", len(events_data.get("players", [])))
 ```
 
-El ejemplo evita asumir una estructura de raíz que no está especificada en el resumen de actualización.
+### Base JSON de Iconos
 
-## 5. Archivos y herramientas relacionados
+```python
+import json
+
+with open("fifa_mobile_18_iconos.json", encoding="utf-8") as file:
+    icons_data = json.load(file)
+
+players = icons_data.get("players", [])
+for p in players:
+    print(p.get("fifa_id"), p.get("card", {}).get("ovr"), p.get("skill_boost"), p.get("total_stats"))
+```
+
+## 6. Archivos y herramientas relacionados
 
 - `generate_skill_boost.py`: herramienta relacionada con la generación de *skill boosts*.
-- `fifa_mobile_18_skill_boost_distribucion.txt`: distribución de *skill boosts*.
+- `fifa_mobile_18_skill_boost_distribucion.txt`: distribución de *skill boosts* de la base.
+- `fifa_mobile_18_skill_boost_iconos.txt`: distribución de *skill boosts* de iconos.
+- `fetch_mobile_stats.py`: descarga el feed del motor (`__data.json` de RenderZ/SvelteKit).
+- `fix_mobile_stats.py`: sustitución ordenada de estadísticas (respeta las 280 originales de guía).
 - `extract_eventos_fifa18.py`: extractor de datos de cartas de eventos.
+- `generate_iconos.py`: generador de la base de iconos.
+- `data/cache_mobile_stats.jsonl`: caché con los 20.525 registros del motor.
 - `data/cache_eventos.jsonl`: caché de trabajo de eventos.
 - [`README_JSON_CLEAN.md`](README_JSON_CLEAN.md): guía del JSON simplificado de cartas base.
 - [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md): base de datos y recursos de eventos.
+- [`README_ICONOS.md`](README_ICONOS.md): base de datos y recursos de Iconos.
 - [`NOTICE.md`](NOTICE.md): fuentes, atribuciones y avisos de propiedad intelectual.
+
+La exportación es generada a partir de las fuentes descritas; la correspondencia entre este documento y el archivo subido es exacta en la versión publicada (`1.1-mobile-stats`).

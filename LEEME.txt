@@ -1,27 +1,43 @@
-FIFA MOBILE 18 - TEMPORADA 2 - BASE DE CARTAS, ESTADISTICAS Y EVENTOS
-=====================================================================
+FIFA MOBILE 18 - TEMPORADA 2 - BASE DE CARTAS, ESTADISTICAS E IMAGENES
+======================================================================
+
+PROYECTO
+--------
+Proyecto comunitario e independiente para recopilar, organizar y consultar
+informacion de cartas base, cartas de eventos y cartas Icono de FIFA Mobile 18
+Season 2.
 
 VERSION DEL PROYECTO
 --------------------
   V4.0.0
 
-Proyecto independiente y no oficial para recopilar, organizar y consultar
-informacion de cartas base y cartas de eventos de FIFA Mobile 18 Season 2.
-
 NOVEDADES DE LA V4.0.0
 ----------------------
+  ESTADISTICAS REALES DEL MOTOR
+    - Los valores de las tres bases son los reales del motor FIFA Mobile 18
+      (feed de datos del juego capturado carta a carta), no de consola.
+    - 1.708 cartas de eventos superan 99 (max 140); 41 iconos superan 99
+      (max 120); los niveles bajos/medios de la base no superan 100 de
+      forma natural.
+    - 265 cartas de la base y 15 de los iconos conservan las originales
+      de fifamobileguide.com (intocables; p. ej. Bale 87, Heading 866).
+    - total_stats = suma del motor de los 24 atributos. Presente en CSV y JSON.
+    - Skill boosts reales del motor (mapeados a los 37 oficiales):
+      13.620 base + 6.571 eventos + 54 iconos; los demas conservan la guia.
+
   CARTAS BASE
     - Skill boosts incorporados a la informacion de cartas base.
-    - Catalogo documentado de 37 nombres de refuerzos de habilidad (ver README_EVENT_CARDS.md).
-    - Estadisticas revisadas para ofrecer valores mas realistas.
-    - Nuevas exportaciones: fifa_mobile_18_base_completa.csv/.json/.txt.
+    - Catalogo documentado de 37 nombres de refuerzos de habilidad
+      (ver README_EVENT_CARDS.md).
+    - Exportaciones: fifa_mobile_18_base_completa.csv/.json/.txt.
     - Distribucion de skill boosts en fifa_mobile_18_skill_boost_distribucion.txt.
     - Se conservan los PNG individuales y las cartas completas de la V3.0.0.
 
   CARTAS DE EVENTOS
     - Base de datos: 6.571 filas en CSV, JSON y TXT.
-    - Cada registro incluye SKILL_BOOST y 30 estadisticas.
-    - Los 37 nombres de skill boost son etiquetas de refuerzo, no estadisticas adicionales.
+    - Cada registro incluye SKILL_BOOST real y estadisticas reales.
+    - Los 37 nombres de skill boost son etiquetas de refuerzo, no
+      estadisticas adicionales.
     - 6.483 cartas completas PNG de 256 x 256 en events_cards/.
     - 6.570 PNG individuales de jugadores en events_png/ (solo Action Shot).
     - 92 iconos/logotipos de programas en events_logos/.
@@ -29,59 +45,111 @@ NOVEDADES DE LA V4.0.0
     - Manifiestos: events_manifest.csv y events_manifest.json.
     - 931 recursos nuevos de fondos y 47 recursos nuevos de clubes.
 
-ARCHIVOS DE EVENTOS
--------------------
-  fifa_mobile_18_eventos.csv
-  fifa_mobile_18_eventos.json
-  fifa_mobile_18_eventos.txt
-  events_cards/
-  events_png/
-  events_logos/
-  events_manifest.csv
-  events_manifest.json
-  data/cache_eventos.jsonl
+  CARTAS ICONO (nueva coleccion)
+    - Base: 69 cartas (36 Icon, 16 Prime Icon, 17 WC Icon) en
+      fifa_mobile_18_iconos.csv/.json/.txt.
+    - Identidad completa por icono (nombre civil, nacionalidad, nacimiento,
+      altura, rol real, clubes, honores) curada a mano.
+    - 15 originales de la guia intocables (Deco 85, Inzaghi 87, Maradona 91...).
+    - 66 renders unicos en icons_png/ (3 pares comparten render);
+      69/69 cartas completas en icons_cards/; 2 logos en icons_logos/.
+    - Icon/Prime Icon usan el escudo 112658; WC Icon usan la bandera del
+      pais. Obtienen tambien program_17_ICONS.png / program_17_WCICON.png.
+    - Pares Pele/Ronaldo/Henry en dos posiciones con el mismo render:
+      marcados con shared_render_with (CSV) / related_cards (JSON).
 
-HERRAMIENTAS NUEVAS
--------------------
-  extract_eventos_fifa18.py
-  generate_events_assets.py
-  generate_skill_boost.py
-  reconcile_guide.py
-  inspect_event_assets.py
-  _guide_by_fifa_id.py
-
-RECURSOS ADICIONALES
+ARCHIVOS PRINCIPALES
 --------------------
-  assets_cards/backgrounds/   931 recursos nuevos (fondos World Cup y eventos).
-  assets_cards/clubs/         47 recursos nuevos de clubes.
+  fifa_mobile_18_base.csv / .json / .txt
+    Base principal de cartas base. Una fila por carta base.
+
+  fifa_mobile_18_base_player_stats.csv / .json
+    Base de cartas ampliada con los atributos REALES del motor.
+
+  fifa_mobile_18_base_completa.csv / .json / .txt
+    Super completa: 13.885 cartas con 1 skill boost (real o de la guia)
+    y sus estadisticas reales.
+
+  fifa_mobile_18_eventos.csv / .txt / .json
+    Base de eventos: 6.571 cartas 6-digit con stats reales y boost real.
+
+  fifa_mobile_18_iconos.csv / .txt / .json
+    Base de iconos: 69 cartas con identidad completa y stats reales.
+
+PLAYERS_PNG / CARDS_FULL / EVENTS / ICONS
+-----------------------------------------
+  players_png/  13.885 PNG individuales de la base, por rareza.
+  cards_full/   13.885 cartas completas de la base, 256 x 256.
+  events_png/   6.570 PNG (Action Shot).
+  events_cards/ 6.483 cartas de eventos (88 card_error).
+  events_logos/ 92 logos/iconos de programas.
+  icons_png/    66 renders unicos.
+  icons_cards/  69 cartas completas.
+  icons_logos/  program_17_ICONS.png y program_17_WCICON.png.
+  icons_manifest.csv / .json    Inventario de iconos (69 ok).
+  events_manifest.csv / .json   Inventario de eventos (6.483 ok).
+
+COMO USAR LAS HERRAMIENTAS
+--------------------------
+Requisito recomendado: Python 3.10 o superior.
+Ejecuta desde la carpeta raiz del repositorio.
+
+  Extractor principal:
+    python extract_fifa18.py --test
+    python extract_fifa18.py --help
+
+  Descargar estadisticas reales del motor (~20.500 IDs):
+    python fetch_mobile_stats.py 10
+
+  Aplicar las estadisticas reales a las bases:
+    python fix_mobile_stats.py
+
+  Regenerar la base completa con stats y boosts reales:
+    python generate_skill_boost.py
+
+  Regenerar y validar la base de ICONOS y sus assets:
+    python generate_iconos.py
+    python validate_iconos.py
+    python generate_iconos_assets.py
 
 SUBIDA Y ARCHIVOS GRANDES
 -------------------------
   El registro de V4.0.0 reporta 11.242 objetos Git LFS y aproximadamente
-  513 MB transferidos. Para obtener los archivos grandes al clonar el
-  repositorio, instala y configura Git LFS.
+  513 MB transferidos en la subida inicial. La V4.0.0 con estadisticas
+  reales y la base Iconos transfirio 139/139 objetos LFS (8,1 MB).
+  Para obtener los archivos grandes al clonar el repositorio, instala y
+  configura Git LFS.
 
 DOCUMENTACION
 -------------
   README.md              Presentacion general, estructura y novedades V4.0.0.
   README_JSON.md         Datos JSON, estadisticas y skill boosts.
   README_JSON_CLEAN.md   Guia del JSON simplificado de cartas base.
-  README_PNG.md          PNG individuales de jugadores base y eventos.
-  README_CARDS_FULL.md   Cartas completas PNG base y eventos.
-  README_EVENT_CARDS.md  Base de datos y recursos de cartas de eventos.
+  README_PNG.md          PNG individuales de jugadores base/eventos/iconos.
+  README_CARDS_FULL.md   Cartas completas PNG base/eventos/iconos.
+  README_EVENT_CARDS.md  Base de datos y recursos de eventos.
+  README_EVENTOS.md      Documentacion estadistica de la base de Eventos.
+  README_ICONOS.md       Documentacion completa de la base de Iconos.
   NOTICE.md              Atribuciones y avisos de propiedad intelectual.
 
 NOTAS IMPORTANTES
 -----------------
-  - Cartas base y cartas de eventos son colecciones separadas.
+  - Cartas base, cartas de eventos y cartas Icono son colecciones distintas.
   - 6.571 filas de eventos, 6.483 cartas completas y 6.570 PNG individuales
     son recuentos de recursos distintos; no representan correspondencias 1:1.
   - Los PNG de jugadores de eventos son solo la variante Action Shot.
-  - 17_FAV y 17_SBC_PLAYER no se encontraron en el CDN durante la recopilacion.
+  - 17_FAV y 17_SBC_PLAYER no se encontraron en el CDN durante la
+    recopilacion.
   - Los datos no constituyen una certificacion oficial de EA.
-  - La atribucion a RenderZ, SoFIFA o FIFAMobileGuide no sustituye autorizacion.
+  - Las 265 cartas de la base y las 15 de los iconos conservan los valores
+    originales de la guia fifamobileguide.com.
+  - Los valores del juego se presentan SIN boost; la vista del juego aplica
+    +13 % adicional a los atributos afectados por el skill boost.
+  - La atribucion a RenderZ, SoFIFA o FIFAMobileGuide no sustituye
+    autorizacion.
   - No redistribuir materiales de terceros sin los permisos necesarios.
 
 Este es un proyecto comunitario independiente, sin afiliacion ni respaldo de
 EA, EA SPORTS, FIFA, RenderZ, SoFIFA ni FIFAMobileGuide.
 Consulta NOTICE.md antes de publicar o reutilizar materiales.
+

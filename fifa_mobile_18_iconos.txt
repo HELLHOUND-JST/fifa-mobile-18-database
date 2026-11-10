@@ -1,0 +1,73 @@
+FIFA MOBILE 18 ICONS (ALL RARITIES) - COMPLETE DATABASE
+Source: RenderZ + fifamobileguide (originals) + me (generated)
+Total: 69
+
+ 501083 Icon        86 ST   Owen                      shot power     | renderz_mobile_original | England
+ 501084 Icon        89 CAM  Ronaldinho                ball control   | renderz_mobile_original | Brazil
+ 501085 Icon        88 CB   Maldini                   aggresion      | renderz_mobile_original | Italy
+ 501150 Icon        86 CM   Gullit                    generalist     | guide_original | Netherlands
+ 501151 Icon        86 CB   Carles Puyol              defending      | guide_original | Spain
+ 501152 Icon        85 CAM  Deco                      short passing  | guide_original | Portugal born Brazil
+ 501267 Icon        91 CAM  Maradona                  speed          | guide_original | Argentina
+ 501268 Icon        85 CDM  Emmanuel Petit            holding        | guide_original | France
+ 501269 Icon        89 GK   Lev Yashin                gk diving      | guide_original | Soviet Union
+ 501350 Icon        89 CB   Rio Ferdinand             tackling       | guide_original | England
+ 501351 Icon        86 RM   Jay-Jay Okocha            counter        | guide_original | Nigeria
+ 501352 Icon        87 ST   Filippo Inzaghi           finishing      | guide_original | Italy
+ 501927 Icon        90 LB   Roberto Carlos            counter        | renderz_mobile_original | Brazil
+ 501928 Icon        92 CDM  Lothar Matthaus           generalist     | renderz_mobile_original | Germany
+ 501929 Icon        93 ST   Marco van Basten          shot power     | renderz_mobile_original | Netherlands
+ 501987 Icon        91 CM   Patrick Vieira            holding        | renderz_mobile_original | France
+ 501988 Icon        90 LW   Marc Overmars             pace           | renderz_mobile_original | Netherlands
+ 501989 Icon        90 CAM  Gheorghe Hagi             ball control   | renderz_mobile_original | Romania
+ 502102 Icon        95 CF   Pele                      dribbling      | renderz_mobile_original | Brazil
+ 502177 Icon        90 RB   Javier Zanetti            aggresion      | renderz_mobile_original | Argentina
+ 502178 Icon        90 ST   Luis Hernandez            acceleration   | renderz_mobile_original | Mexico
+ 502179 Icon        91 GK   Edwin van der Sar         gk diving      | renderz_mobile_original | Netherlands
+ 502232 Icon        91 CB   Laurent Blanc             holding        | renderz_mobile_original | France
+ 502233 Icon        93 ST   Thierry Henry             speed          | renderz_mobile_original | France
+ 502287 Icon        90 CAM  Rui Costa                 set pieces     | renderz_mobile_original | Portugal
+ 502288 Icon        91 RF   Andriy Shevchenko         shooting       | renderz_mobile_original | Ukraine
+ 502289 Icon        91 LF   Michael Laudrup           dribbling      | renderz_mobile_original | Denmark
+ 502398 Icon        90 LM   Robert Pires              pace           | renderz_mobile_original | France
+ 502399 Icon        90 ST   Patrick Kluivert          finishing      | renderz_mobile_original | Netherlands
+ 502400 Icon        90 CDM  Frank Rijkaard            defending      | renderz_mobile_original | Netherlands
+ 502490 Icon        91 CB   Alessandro Nesta          composed       | renderz_mobile_original | Italy
+ 502491 Icon        91 CF   Alessandro Del Piero      second striker | renderz_mobile_original | Italy
+ 502492 Icon        90 ST   Hernan Crespo             agility        | renderz_mobile_original | Argentina
+ 502573 Icon        91 ST   Alan Shearer              shooting       | renderz_mobile_original | England
+ 502574 Icon        93 ST   Ronaldo Nazario           shot power     | renderz_mobile_original | Brazil
+ 502575 Icon        91 GK   Peter Schmeichel          gk diving      | renderz_mobile_original | Denmark
+ 501461 Prime Icon  97 ST   Marco van Basten          second striker | guide_original | Netherlands
+ 501462 Prime Icon  98 CDM  Lothar Matthaus           marking        | guide_original | Germany
+ 501493 Prime Icon  98 CAM  Ronaldinho                captain        | guide_original | Brazil
+ 501574 Prime Icon  97 CB   Carles Puyol              aggresion      | guide_original | Spain
+ 501655 Prime Icon  98 GK   Edwin van der Sar         gk diving      | guide_original | Netherlands
+ 501764 Prime Icon  97 CM   Ruud Gullit               captain        | guide_original | Netherlands
+ 502056 Prime Icon  98 CAM  Maradona                  shot power     | renderz_mobile_original | Argentina
+ 502262 Prime Icon  99 CF   Pele                      second striker | renderz_mobile_original | Brazil | shared_render=502555
+ 502350 Prime Icon  98 CB   Paolo Maldini             holding        | renderz_mobile_original | Italy
+ 502555 Prime Icon  99 ST   Pele                      second striker | renderz_mobile_original | Brazil | shared_render=502262
+ 502592 Prime Icon  97 LB   Roberto Carlos            generalist     | renderz_mobile_original | Brazil
+ 502732 Prime Icon  97 RB   Javier Zanetti            aggresion      | renderz_mobile_original | Argentina
+ 502898 Prime Icon  98 ST   Ronaldo Nazario           shot power     | renderz_mobile_original | Brazil | shared_render=502901
+ 502901 Prime Icon  98 CF   Ronaldo Nazario           second striker | renderz_mobile_original | Brazil | shared_render=502898
+ 502899 Prime Icon  98 ST   Thierry Henry             speed          | renderz_mobile_original | France | shared_render=502900
+ 502900 Prime Icon  98 LW   Thierry Henry             shooting       | renderz_mobile_original | France | shared_render=502899
+ 603280 WC Icon     88 CAM  Jay-Jay Okocha            counter        | renderz_mobile_original | Nigeria
+ 603281 WC Icon     89 CAM  Rui Costa                 counter        | renderz_mobile_original | Portugal
+ 603282 WC Icon     91 ST   Thierry Henry             finishing      | renderz_mobile_original | France
+ 603283 WC Icon     88 ST   Miroslav Klose            finishing      | renderz_mobile_original | Germany
+ 603284 WC Icon     88 CAM  Hidetoshi Nakata          counter        | renderz_mobile_original | Japan
+ 603285 WC Icon     88 CM   Deco                      counter        | renderz_mobile_original | Portugal born Brazil
+ 603286 WC Icon     89 ST   Luis Hernandez            agility        | renderz_mobile_original | Mexico
+ 603287 WC Icon     91 CAM  Maradona                  dribbling      | renderz_mobile_original | Argentina
+ 603288 WC Icon     90 CB   Bobby Moore               composed       | renderz_mobile_original | England
+ 603289 WC Icon     90 ST   Gary Lineker              agility        | renderz_mobile_original | England
+ 603290 WC Icon     92 ST   Ronaldo Nazario           finishing      | renderz_mobile_original | Brazil
+ 603291 WC Icon     93 CAM  Pele                      dribbling      | renderz_mobile_original | Brazil
+ 603292 WC Icon     92 GK   Lev Yashin                reflexes       | renderz_mobile_original | Soviet Union
+ 603293 WC Icon     91 CB   Carles Puyol              aggresion      | renderz_mobile_original | Spain
+ 603294 WC Icon     90 CAM  Ronaldinho                shooting       | renderz_mobile_original | Brazil
+ 603295 WC Icon     90 CM   Lothar Matthaus           generalist     | renderz_mobile_original | Germany
+ 603296 WC Icon     90 CB   Laurent Blanc             aggresion      | renderz_mobile_original | France

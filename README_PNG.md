@@ -1,10 +1,10 @@
-# PNG de jugadores — FIFA Mobile 18 Base y eventos (V4.0.0)
+# PNG de jugadores — FIFA Mobile 18 Base, eventos e Iconos (V4.0.0)
 
-Este documento describe las colecciones de imágenes PNG individuales de jugadores asociadas a cartas base y cartas de eventos de FIFA Mobile 18 — Season 2.
+Este documento describe las colecciones de imágenes PNG individuales de jugadores asociadas a las cartas de FIFA Mobile 18 — Season 2: cartas base, cartas de eventos y cartas Icono/Prime Icon/WC Icon.
 
 ## Colección de cartas base
 
-La colección documentada en V3.0.0 contiene:
+La colección base documentada en V3.0.0 contiene:
 
 - **13.885 archivos PNG**.
 - Dimensiones: **256 × 256 píxeles**.
@@ -25,7 +25,7 @@ La colección documentada en V3.0.0 contiene:
 
 Según el registro de actualización V4.0.0, los PNG originales de jugadores base no se modificaron; las novedades descritas para esta versión son adiciones.
 
-## Colección de cartas de eventos (V4.0.0)
+## Colección de cartas de eventos
 
 La V4.0.0 incorpora una colección adicional:
 
@@ -34,7 +34,17 @@ La V4.0.0 incorpora una colección adicional:
 - Variante disponible: **Action Shot únicamente**.
 - La colección es independiente de `players_png/`, que contiene las imágenes individuales de jugadores de cartas base.
 
-El resumen de actualización no especifica las dimensiones, nombres de archivo o esquema de manifiesto de `events_png/`. Consulta la carpeta y los manifiestos reales antes de asumir esas propiedades.
+La variante Action Shot en eventos aplica a **todas** las cartas de la base de eventos (compuestas como cartas completas en `events_cards/`).
+
+## Colección de cartas Icono
+
+La V4.0.0 incorpora la colección de Iconos:
+
+- Carpeta: `icons_png/` (agrupada por rareza: `Icon/`, `Prime_Icon/`, `WC_Icon/`).
+- **66 renders PNG únicos** (variante de la carta; nombres originales del CDN).
+- Las 69 cartas Icono usan **66 renders**: tres pares de cartas (Pelé 99 CF/ST, Ronaldo Nazário 98 ST/CF, Thierry Henry 98 ST/LW) comparten el mismo archivo de render en RenderZ.
+- Subidos con nombre `p{base_fifa_id}{_SUFIJO}.png` (Icons/Prime: sufijos `_IC1`/`PI1`; WC Icon: sin sufijo, ruta `players_18wc/`).
+- Los iconos de programa de Icon (`program_17_ICONS.png`) y WC Icon (`program_17_WCICON.png`) están en `icons_logos/`; los Prime Icons no muestran icono de programa en RenderZ.
 
 ## Manifiestos
 
@@ -48,7 +58,12 @@ Para recursos de eventos se incorpora:
 - `events_manifest.csv`
 - `events_manifest.json`
 
-El manifiesto de eventos corresponde a la colección de recursos de eventos y puede incluir información de más de un tipo de recurso. Consulta sus encabezados y claves para identificar las columnas, rutas y relaciones exactas. No se debe asumir que su estructura es igual a la de los manifiestos de la colección base.
+Para recursos de Iconos se incorpora:
+
+- `icons_manifest.csv`
+- `icons_manifest.json`
+
+Los manifiestos de eventos y de Iconos corresponden a su colección respectiva y pueden incluir información de más de un tipo de recurso. Consulta sus encabezados y claves para identificar las columnas, rutas y relaciones exactas. No se debe asumir que su estructura es igual a la de los manifiestos de la colección base.
 
 ## Nombres de archivo de la colección base
 
@@ -95,18 +110,19 @@ python download_player_png.py --export-only
 python download_player_png.py --help
 ```
 
-Estos comandos se refieren al descargador de imágenes de cartas base. Para los recursos PNG de eventos, consulta `generate_events_assets.py` y su ayuda; no se asumen opciones no confirmadas.
+Estos comandos se refieren al descargador de imágenes de cartas base. Para los recursos PNG de eventos e Iconos, consulta `generate_events_assets.py` y `generate_iconos_assets.py` y su ayuda; no se asumen opciones no confirmadas.
 
 ## Uso desde otros proyectos
 
 - Para imágenes base, relaciona `fifa_id` y ruta mediante `players_png_manifest.csv` o `.json`.
 - Para imágenes de eventos, consulta `events_manifest.csv` o `.json` y comprueba qué campos identifican cada PNG.
+- Para imágenes de Iconos, consulta `icons_manifest.csv` o `.json`; en particular `player_file` (archivo original del CDN) y `player_png` (ruta local).
 - Distingue la imagen individual del jugador de la composición de la carta completa.
-- No asumas que los sufijos, nombres o rutas de eventos son iguales a los de las cartas base.
+- No asumas que los sufijos, nombres o rutas de eventos o Iconos son iguales a los de las cartas base.
 
 ## Consideraciones
 
-- La colección base y la colección de eventos son recursos distintos.
+- La colección base, la colección de eventos y la colección de Iconos son recursos distintos.
 - `events_png/` contiene únicamente la variante Action Shot según el registro de V4.0.0.
 - Las imágenes, marcas y otros elementos gráficos pueden pertenecer a EA, sus licenciantes, RenderZ u otros titulares.
 - La inclusión de URLs, imágenes o logotipos no implica afiliación ni autorización para redistribuir recursos de terceros.

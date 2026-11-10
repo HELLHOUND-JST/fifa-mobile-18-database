@@ -1,0 +1,623 @@
+[
+  {
+    "rarity": "Icon",
+    "num": 1,
+    "name": "Owen",
+    "ovr": 86,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/501083-owen",
+    "fifa_id": 501083
+  },
+  {
+    "rarity": "Icon",
+    "num": 2,
+    "name": "Ronaldinho",
+    "ovr": 89,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/501084-ronaldinho",
+    "fifa_id": 501084
+  },
+  {
+    "rarity": "Icon",
+    "num": 3,
+    "name": "Maldini",
+    "ovr": 88,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/501085-maldini",
+    "fifa_id": 501085
+  },
+  {
+    "rarity": "Icon",
+    "num": 4,
+    "name": "Gullit",
+    "ovr": 86,
+    "position": "CM",
+    "renderz_url": "https://renderz.app/18/player/501150-gullit",
+    "fifa_id": 501150
+  },
+  {
+    "rarity": "Icon",
+    "num": 5,
+    "name": "Carles Puyol",
+    "ovr": 86,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/501151-carles-puyol",
+    "fifa_id": 501151
+  },
+  {
+    "rarity": "Icon",
+    "num": 6,
+    "name": "Deco",
+    "ovr": 85,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/501152-deco",
+    "fifa_id": 501152
+  },
+  {
+    "rarity": "Icon",
+    "num": 7,
+    "name": "Maradona",
+    "ovr": 91,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/501267-maradona",
+    "fifa_id": 501267
+  },
+  {
+    "rarity": "Icon",
+    "num": 8,
+    "name": "Emmanuel Petit",
+    "ovr": 85,
+    "position": "CDM",
+    "renderz_url": "https://renderz.app/18/player/501268-petit",
+    "fifa_id": 501268
+  },
+  {
+    "rarity": "Icon",
+    "num": 9,
+    "name": "Lev Yashin",
+    "ovr": 89,
+    "position": "GK",
+    "renderz_url": "https://renderz.app/18/player/501269-yashin",
+    "fifa_id": 501269
+  },
+  {
+    "rarity": "Icon",
+    "num": 10,
+    "name": "Rio Ferdinand",
+    "ovr": 89,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/501350-ferdinand",
+    "fifa_id": 501350
+  },
+  {
+    "rarity": "Icon",
+    "num": 11,
+    "name": "Jay-Jay Okocha",
+    "ovr": 86,
+    "position": "RM",
+    "renderz_url": "https://renderz.app/18/player/501351-okocha",
+    "fifa_id": 501351
+  },
+  {
+    "rarity": "Icon",
+    "num": 12,
+    "name": "Filippo Inzaghi",
+    "ovr": 87,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/501352-inzaghi",
+    "fifa_id": 501352
+  },
+  {
+    "rarity": "Icon",
+    "num": 13,
+    "name": "Roberto Carlos",
+    "ovr": 90,
+    "position": "LB",
+    "renderz_url": "https://renderz.app/18/player/501927-roberto-carlos",
+    "fifa_id": 501927
+  },
+  {
+    "rarity": "Icon",
+    "num": 14,
+    "name": "Lothar Matthäus",
+    "ovr": 92,
+    "position": "CDM",
+    "renderz_url": "https://renderz.app/18/player/501928-matthaus",
+    "fifa_id": 501928
+  },
+  {
+    "rarity": "Icon",
+    "num": 15,
+    "name": "Marco van Basten",
+    "ovr": 93,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/501929-van-basten",
+    "fifa_id": 501929
+  },
+  {
+    "rarity": "Icon",
+    "num": 16,
+    "name": "Patrick Vieira",
+    "ovr": 91,
+    "position": "CM",
+    "renderz_url": "https://renderz.app/18/player/501987-vieira",
+    "fifa_id": 501987
+  },
+  {
+    "rarity": "Icon",
+    "num": 17,
+    "name": "Marc Overmars",
+    "ovr": 90,
+    "position": "LW",
+    "renderz_url": "https://renderz.app/18/player/501988-overmars",
+    "fifa_id": 501988
+  },
+  {
+    "rarity": "Icon",
+    "num": 18,
+    "name": "Gheorghe Hagi",
+    "ovr": 90,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/501989-hagi",
+    "fifa_id": 501989
+  },
+  {
+    "rarity": "Icon",
+    "num": 19,
+    "name": "Pelé",
+    "ovr": 95,
+    "position": "CF",
+    "renderz_url": "https://renderz.app/18/player/502102-pele",
+    "fifa_id": 502102
+  },
+  {
+    "rarity": "Icon",
+    "num": 20,
+    "name": "Javier Zanetti",
+    "ovr": 90,
+    "position": "RB",
+    "renderz_url": "https://renderz.app/18/player/502177-zanetti",
+    "fifa_id": 502177
+  },
+  {
+    "rarity": "Icon",
+    "num": 21,
+    "name": "Luis Hernández",
+    "ovr": 90,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502178-hernandez",
+    "fifa_id": 502178
+  },
+  {
+    "rarity": "Icon",
+    "num": 22,
+    "name": "Edwin van der Sar",
+    "ovr": 91,
+    "position": "GK",
+    "renderz_url": "https://renderz.app/18/player/502179-van-der-sar",
+    "fifa_id": 502179
+  },
+  {
+    "rarity": "Icon",
+    "num": 23,
+    "name": "Laurent Blanc",
+    "ovr": 91,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/502232-blanc",
+    "fifa_id": 502232
+  },
+  {
+    "rarity": "Icon",
+    "num": 24,
+    "name": "Thierry Henry",
+    "ovr": 93,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502233-henry",
+    "fifa_id": 502233
+  },
+  {
+    "rarity": "Icon",
+    "num": 25,
+    "name": "Rui Costa",
+    "ovr": 90,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/502287-rui-costa",
+    "fifa_id": 502287
+  },
+  {
+    "rarity": "Icon",
+    "num": 26,
+    "name": "Andriy Shevchenko",
+    "ovr": 91,
+    "position": "RF",
+    "renderz_url": "https://renderz.app/18/player/502288-shevchenko",
+    "fifa_id": 502288
+  },
+  {
+    "rarity": "Icon",
+    "num": 27,
+    "name": "Michael Laudrup",
+    "ovr": 91,
+    "position": "LF",
+    "renderz_url": "https://renderz.app/18/player/502289-laudrup",
+    "fifa_id": 502289
+  },
+  {
+    "rarity": "Icon",
+    "num": 28,
+    "name": "Robert Pirès",
+    "ovr": 90,
+    "position": "LM",
+    "renderz_url": "https://renderz.app/18/player/502398-pires",
+    "fifa_id": 502398
+  },
+  {
+    "rarity": "Icon",
+    "num": 29,
+    "name": "Patrick Kluivert",
+    "ovr": 90,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502399-kluivert",
+    "fifa_id": 502399
+  },
+  {
+    "rarity": "Icon",
+    "num": 30,
+    "name": "Frank Rijkaard",
+    "ovr": 90,
+    "position": "CDM",
+    "renderz_url": "https://renderz.app/18/player/502400-rijkaard",
+    "fifa_id": 502400
+  },
+  {
+    "rarity": "Icon",
+    "num": 31,
+    "name": "Alessandro Nesta",
+    "ovr": 91,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/502490-nesta",
+    "fifa_id": 502490
+  },
+  {
+    "rarity": "Icon",
+    "num": 32,
+    "name": "Alessandro Del Piero",
+    "ovr": 91,
+    "position": "CF",
+    "renderz_url": "https://renderz.app/18/player/502491-del-piero",
+    "fifa_id": 502491
+  },
+  {
+    "rarity": "Icon",
+    "num": 33,
+    "name": "Hernán Crespo",
+    "ovr": 90,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502492-crespo",
+    "fifa_id": 502492
+  },
+  {
+    "rarity": "Icon",
+    "num": 34,
+    "name": "Alan Shearer",
+    "ovr": 91,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502573-shearer",
+    "fifa_id": 502573
+  },
+  {
+    "rarity": "Icon",
+    "num": 35,
+    "name": "Ronaldo Nazário",
+    "ovr": 93,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502574-ronaldo",
+    "fifa_id": 502574
+  },
+  {
+    "rarity": "Icon",
+    "num": 36,
+    "name": "Peter Schmeichel",
+    "ovr": 91,
+    "position": "GK",
+    "renderz_url": "https://renderz.app/18/player/502575-schmeichel",
+    "fifa_id": 502575
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 1,
+    "name": "Marco van Basten",
+    "ovr": 97,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/501461-van-basten",
+    "fifa_id": 501461
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 2,
+    "name": "Lothar Matthäus",
+    "ovr": 98,
+    "position": "CDM",
+    "renderz_url": "https://renderz.app/18/player/501462-matthaus",
+    "fifa_id": 501462
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 3,
+    "name": "Ronaldinho",
+    "ovr": 98,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/501493-ronaldinho",
+    "fifa_id": 501493
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 4,
+    "name": "Carles Puyol",
+    "ovr": 97,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/501574-carles-puyol",
+    "fifa_id": 501574
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 5,
+    "name": "Edwin van der Sar",
+    "ovr": 98,
+    "position": "GK",
+    "renderz_url": "https://renderz.app/18/player/501655-van-der-sar",
+    "fifa_id": 501655
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 6,
+    "name": "Ruud Gullit",
+    "ovr": 97,
+    "position": "CM",
+    "renderz_url": "https://renderz.app/18/player/501764-gullit",
+    "fifa_id": 501764
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 7,
+    "name": "Maradona",
+    "ovr": 98,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/502056-maradona",
+    "fifa_id": 502056
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 8,
+    "name": "Pelé",
+    "ovr": 99,
+    "position": "CF",
+    "renderz_url": "https://renderz.app/18/player/502262-pele",
+    "fifa_id": 502262
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 9,
+    "name": "Paolo Maldini",
+    "ovr": 98,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/502350-maldini",
+    "fifa_id": 502350
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 10,
+    "name": "Pelé",
+    "ovr": 99,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502555-pele",
+    "fifa_id": 502555
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 11,
+    "name": "Roberto Carlos",
+    "ovr": 97,
+    "position": "LB",
+    "renderz_url": "https://renderz.app/18/player/502592-roberto-carlos",
+    "fifa_id": 502592
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 12,
+    "name": "Javier Zanetti",
+    "ovr": 97,
+    "position": "RB",
+    "renderz_url": "https://renderz.app/18/player/502732-zanetti",
+    "fifa_id": 502732
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 13,
+    "name": "Ronaldo Nazário",
+    "ovr": 98,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502898-ronaldo",
+    "fifa_id": 502898
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 14,
+    "name": "Ronaldo Nazário",
+    "ovr": 98,
+    "position": "CF",
+    "renderz_url": "https://renderz.app/18/player/502901-ronaldo",
+    "fifa_id": 502901
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 15,
+    "name": "Thierry Henry",
+    "ovr": 98,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/502899-henry",
+    "fifa_id": 502899
+  },
+  {
+    "rarity": "Prime Icon",
+    "num": 16,
+    "name": "Thierry Henry",
+    "ovr": 98,
+    "position": "LW",
+    "renderz_url": "https://renderz.app/18/player/502900-henry",
+    "fifa_id": 502900
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 1,
+    "name": "Jay-Jay Okocha",
+    "ovr": 88,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/603280-okocha",
+    "fifa_id": 603280
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 2,
+    "name": "Rui Costa",
+    "ovr": 89,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/603281-rui-costa",
+    "fifa_id": 603281
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 3,
+    "name": "Thierry Henry",
+    "ovr": 91,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/603282-henry",
+    "fifa_id": 603282
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 4,
+    "name": "Miroslav Klose",
+    "ovr": 88,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/603283-klose",
+    "fifa_id": 603283
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 5,
+    "name": "Hidetoshi Nakata",
+    "ovr": 88,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/603284-nakata",
+    "fifa_id": 603284
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 6,
+    "name": "Deco",
+    "ovr": 88,
+    "position": "CM",
+    "renderz_url": "https://renderz.app/18/player/603285-deco",
+    "fifa_id": 603285
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 7,
+    "name": "Luis Hernández",
+    "ovr": 89,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/603286-hernandez",
+    "fifa_id": 603286
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 8,
+    "name": "Maradona",
+    "ovr": 91,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/603287-maradona",
+    "fifa_id": 603287
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 9,
+    "name": "Bobby Moore",
+    "ovr": 90,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/603288-moore",
+    "fifa_id": 603288
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 10,
+    "name": "Gary Lineker",
+    "ovr": 90,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/603289-lineker",
+    "fifa_id": 603289
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 11,
+    "name": "Ronaldo Nazário",
+    "ovr": 92,
+    "position": "ST",
+    "renderz_url": "https://renderz.app/18/player/603290-ronaldo",
+    "fifa_id": 603290
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 12,
+    "name": "Pelé",
+    "ovr": 93,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/603291-pele",
+    "fifa_id": 603291
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 13,
+    "name": "Lev Yashin",
+    "ovr": 92,
+    "position": "GK",
+    "renderz_url": "https://renderz.app/18/player/603292-yashin",
+    "fifa_id": 603292
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 14,
+    "name": "Carles Puyol",
+    "ovr": 91,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/603293-carles-puyol",
+    "fifa_id": 603293
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 15,
+    "name": "Ronaldinho",
+    "ovr": 90,
+    "position": "CAM",
+    "renderz_url": "https://renderz.app/18/player/603294-ronaldinho",
+    "fifa_id": 603294
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 16,
+    "name": "Lothar Matthäus",
+    "ovr": 90,
+    "position": "CM",
+    "renderz_url": "https://renderz.app/18/player/603295-matthaus",
+    "fifa_id": 603295
+  },
+  {
+    "rarity": "WC Icon",
+    "num": 17,
+    "name": "Laurent Blanc",
+    "ovr": 90,
+    "position": "CB",
+    "renderz_url": "https://renderz.app/18/player/603296-blanc",
+    "fifa_id": 603296
+  }
+]
