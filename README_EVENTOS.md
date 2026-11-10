@@ -1,62 +1,82 @@
-# FIFA Mobile 18 — Base de cartas de Eventos (Season 2)
+# Base de cartas de eventos y programas — FIFA Mobile 18 (V5.0.0)
 
-**Versión del proyecto: 4.0.0**  
-**Archivo principal:** `fifa_mobile_18_eventos.csv`  
-**Registros:** 6.571 cartas de eventos
+Este documento describe la colección de cartas de eventos/programas y los recursos relacionados incorporados al proyecto.
 
-La copia documentada contiene **6.571 filas**. El catálogo de **37 nombres de refuerzos de habilidad** está separado (ver [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md)); no son 37 estadísticas. La lista de boosts asignados a estas cartas coincide con los códigos reales del motor.
+## 1. Base de datos
 
-Este documento presenta la base dedicada de las **cartas de programas/eventos** de FIFA Mobile 18 — Season 2 (los IDs de 6 dígitos ≥ 500.000), separada de la base principal de cartas base siguiendo la exclusión automática aplicada durante la extracción.
+Archivos documentados:
 
-## Alcance
+- `fifa_mobile_18_eventos.csv`
+- `fifa_mobile_18_eventos.json`
+- `fifa_mobile_18_eventos.txt`
 
-- Incluidas todas las cartas con IDs de 6 dígitos del rango de eventos (≥ 500.000): eventos semanales, Golden Ticket, World League promo horarios, etc.
-- Excluidas quedan las cartas base de < 500.000 (base principal) y las cartas de WC Icon, que se documentan en [`README_ICONOS.md`](README_ICONOS.md).
-- Las estadísticas fueron reemplazadas por los **valores reales del motor FIFA Mobile 18** (feed del juego capturado por carta a carta).
-- Los skill boosts son los reales asignados por el motor a cada carta (mapeados a los 37 oficiales).
+Inventario comunicado para la colección V4 que se conserva en V5:
 
-## Archivos
+- **6.571 filas** de eventos.
+- Campo `SKILL_BOOST`.
+- **30 estadísticas** por registro, según el resumen de la versión anterior.
 
-| Archivo | Contenido |
-|---|---|
-| `fifa_mobile_18_eventos.csv` | 6.571 filas. Delimitador `;`. 54 columnas (+ `total_stats`). |
-| `fifa_mobile_18_eventos.txt` | Vista de texto plano con ASCII puro. |
-| `fifa_mobile_18_eventos.json` | JSON organizado: `{metadata, players[]}` con identidad, carta, stats reales y boost. |
-| `events_manifest.csv` / `.json` | Inventario de assets: 6.483 compuestas (`ok`, 98.7 %), 88 `card_error` (assets WC no disponibles en RenderZ para todas las cartas). |
-| `events_png/` | PNG individuales de los jugadores (organizados por programa). |
-| `events_logos/` | Logos de programa descargados. |
-| `events_cards/` | Cartas completas 256×256. |
-| `extract_eventos_fifa18.py` | Extractor original de la base de eventos. |
-| `generate_events_assets.py` / `inspect_event_assets.py` | Generador de assets. |
+La base de eventos es independiente de la base de cartas base. No se debe asumir que comparten los mismos IDs, estructura JSON, claves, contextos de estadísticas o manifiestos.
 
-## Estructura
+## 2. Estructura JSON
 
-Cada fila mantiene la identidad de la carta, la referencia de programa, las stats detalladas y el skill boost. Los campos principales son:
+La documentación de V5 identifica un objeto superior `has_meta` con las secciones `metadata` y `players`:
 
-- `fifa_id`, `page_name`, `title_name`, `short_name`, `full_name`, `full_name_original`
-- `position_mobile`, `ovr_mobile`, `club_id`, `club_name`, `background_code`, `rarity`
-- `sofifa_age`, `nationality`, `season`, `renderz_url`
-- `skill_boost` (real, del motor o guía — todas vienen del motor)
-- `event_name`, `event_id`, `event_detail`, `program_icon`, `action_variant`, `event_resolved_name`, `event_confidence`
-- `pace … handling` (6 primarias: `pace/shooting/passing/agility/defending/physical`; 24 detallados)
-- `total_stats` — suma del motor de los 24 atributos detallados. Añadido en 4.0.0.
+```json
+{
+  "has_meta": {
+    "metadata": {},
+    "players": []
+  }
+}
+```
 
-## Estadísticas reales
+Este ejemplo solo representa la estructura superior. Consulta `fifa_mobile_18_eventos.json` para obtener las claves reales de cada carta y jugador.
 
-- Todos los valores provienen del motor de FIFA Mobile 18 (feed de datos oficial del juego vía RenderZ, `__data.json`).
-- 1.708 cartas superan los 99; el valor máximo encontrado es **140** (Bonucci 100 OVR, 603695).
-- Los detalles completos se exponen sin tope console: 0–160 aprox.
-- `stats_source` en JSON: `renderz_mobile_original` para el 100 % de las cartas (no hay originales de guía con ficha propia dentro de este subconjunto).
+## 3. Estadísticas y Skill Boosts
 
-Distribución de boosts: véase `skill_boosts` en `metadata` del JSON (coincidencia 1 a 1 con los códigos del motor).
+Según el responsable del proyecto, las estadísticas oficiales del juego y los *Skill Boosts* oficiales se obtienen de RenderZ. Los registros de eventos documentados incluyen `SKILL_BOOST` y 30 estadísticas. La base de eventos no debe confundirse con el catálogo de 37 nombres de *Skill Boost* descrito en versiones anteriores: esos 37 elementos son nombres/etiquetas de refuerzo, no estadísticas adicionales.
 
-## Imágenes y cartas completas
+Los campos exactos, los tipos y la interpretación deben verificarse en los encabezados del CSV o las claves del JSON distribuidos.
 
-- Todas las cartas componen 256×256 con fondo, render de jugador, escudo y tipografías Knul Medium/Regular (misma disposición que la base).
-- 6.483 (`ok`) generadas; 88 (`card_error`) no se pudieron componer por falta de assets jugables en RenderZ para su club/fondo/ícono.
+## 4. Recursos gráficos
 
-## Criterios
+- `events_png/`: **6.570 PNG** individuales de jugadores de eventos; la variante documentada anteriormente es Action Shot.
+- `events_cards/`: **6.483 cartas completas** de eventos en PNG de 256 × 256.
+- `events_logos/`: **92 logos** de eventos/programas, según el inventario V4.
+- `assets_cards/backgrounds/`: fondos de eventos y World Cup; V4 informó 931 recursos añadidos en esta carpeta compartida.
+- `assets_cards/clubs/`: V4 informó 47 recursos nuevos de clubes.
 
-- Las estadísticas son del motor, son **sin boost**; la vista del juego muestra +13 % adicional sobre los atributos afectados por el skill boost.
-- Los CSV utilizan `;` como delimitador; los TXT están libres de caracteres no ASCII (nombres saneados); el JSON conserva campos UTF-8.
-- Dar crédito no implica afiliación ni concede permiso para redistribuir; consulta [`NOTICE.md`](NOTICE.md).
+Los recursos `17_FAV` y `17_SBC_PLAYER` no se encontraron en el CDN durante la consulta documentada en V4; esa observación no demuestra que no puedan existir en otra fuente.
+
+## 5. Manifiestos
+
+La colección utiliza:
+
+- `events_manifest.csv`
+- `events_manifest.json`
+
+Consulta sus encabezados y claves para identificar los campos que enlazan registros, imágenes individuales, cartas completas y logos. No asumas que todos los tipos de recursos aparecen asociados uno a uno.
+
+## 6. Herramientas conocidas
+
+- `extract_eventos_fifa18.py`: extracción de datos de eventos.
+- `generate_events_assets.py`: preparación/generación de recursos gráficos de eventos.
+- `generate_skill_boost.py`: herramienta de procesamiento de *Skill Boosts*.
+- `reconcile_guide.py`: conciliación de referencias.
+- `inspect_event_assets.py`: inspección de recursos gráficos de eventos.
+- `_guide_by_fifa_id.py`: herramienta auxiliar por FIFA ID.
+
+Consulta los scripts y su `--help` para conocer opciones vigentes; no se asumen argumentos no documentados.
+
+## 7. Uso recomendado
+
+1. Consulta `fifa_mobile_18_eventos.csv` o `.json` para localizar la carta.
+2. Utiliza `events_manifest.csv` o `.json` para localizar los recursos visuales.
+3. Distingue PNG individuales (`events_png/`) de cartas completas (`events_cards/`).
+4. Consulta `README_ICONOS.md` para logos e iconos de programas.
+5. Comprueba la fuente y el contexto de cada dato antes de reutilizarlo.
+
+## 8. Git LFS y derechos
+
+Los recursos grandes se gestionan parcialmente mediante Git LFS. Instala Git LFS para recuperar los objetos al clonar. Las cartas, imágenes, logos, escudos, fondos y datos pueden estar sujetos a derechos y condiciones de terceros. Consulta `NOTICE.md`; la atribución no equivale a permiso para redistribuir.
