@@ -1,136 +1,87 @@
-FIFA MOBILE 18 - TEMPORADA 2 - BASE DE CARTAS, ESTADISTICAS E IMAGENES
-======================================================================
+FIFA MOBILE 18 - TEMPORADA 2 - BASE DE CARTAS, ESTADISTICAS Y EVENTOS
+=====================================================================
 
-PROYECTO
---------
-Proyecto comunitario e independiente para recopilar, organizar y consultar
-informacion de las cartas base de FIFA Mobile 18 Season 2.
-
-VERSIONES
----------
-  1.0.0  Base inicial de cartas y exportaciones.
-  2.0.0  Incorporacion de atributos principales, estadisticas detalladas
-y        campos especificos para porteros.
-  3.0.0  Incorporacion de PNG individuales de jugadores y PNG de cartas
-         base completas, con manifiestos y herramientas de generacion.
-
-ARCHIVOS PRINCIPALES
+VERSION DEL PROYECTO
 --------------------
-  fifa_mobile_18_base.csv
-    Base principal de cartas. Una fila por carta base. Delimitador: punto y coma.
+  V4.0.0
 
-  fifa_mobile_18_base.json
-    Base principal en JSON, con campos adicionales UTF-8.
+Proyecto independiente y no oficial para recopilar, organizar y consultar
+informacion de cartas base y cartas de eventos de FIFA Mobile 18 Season 2.
 
-  fifa_mobile_18_base.txt
-    Vista de texto plano de la base principal.
+NOVEDADES DE LA V4.0.0
+----------------------
+  CARTAS BASE
+    - Skill boosts incorporados a la informacion de cartas base.
+    - Catalogo documentado de 37 nombres de refuerzos de habilidad (ver README_EVENT_CARDS.md).
+    - Estadisticas revisadas para ofrecer valores mas realistas.
+    - Nuevas exportaciones: fifa_mobile_18_base_completa.csv/.json/.txt.
+    - Distribucion de skill boosts en fifa_mobile_18_skill_boost_distribucion.txt.
+    - Se conservan los PNG individuales y las cartas completas de la V3.0.0.
 
-  fifa_mobile_18_base_player_stats.csv
-    Base de cartas ampliada con atributos principales y detallados.
+  CARTAS DE EVENTOS
+    - Base de datos: 6.571 filas en CSV, JSON y TXT.
+    - Cada registro incluye SKILL_BOOST y 30 estadisticas.
+    - Los 37 nombres de skill boost son etiquetas de refuerzo, no estadisticas adicionales.
+    - 6.483 cartas completas PNG de 256 x 256 en events_cards/.
+    - 6.570 PNG individuales de jugadores en events_png/ (solo Action Shot).
+    - 92 iconos/logotipos de programas en events_logos/.
+    - No se encontraron en el CDN 17_FAV y 17_SBC_PLAYER.
+    - Manifiestos: events_manifest.csv y events_manifest.json.
+    - 931 recursos nuevos de fondos y 47 recursos nuevos de clubes.
 
-  fifa_mobile_18_base_player_stats.json
-    Exportacion JSON estructurada por jugador, carta y estadisticas.
+ARCHIVOS DE EVENTOS
+-------------------
+  fifa_mobile_18_eventos.csv
+  fifa_mobile_18_eventos.json
+  fifa_mobile_18_eventos.txt
+  events_cards/
+  events_png/
+  events_logos/
+  events_manifest.csv
+  events_manifest.json
+  data/cache_eventos.jsonl
 
-  fifa_mobile_18_base_player_stats_SAMPLE.json
-    Muestra reducida del JSON estadistico.
+HERRAMIENTAS NUEVAS
+-------------------
+  extract_eventos_fifa18.py
+  generate_events_assets.py
+  generate_skill_boost.py
+  reconcile_guide.py
+  inspect_event_assets.py
+  _guide_by_fifa_id.py
 
-IMAGENES DE JUGADORES
----------------------
-  players_png/
-    13.885 PNG individuales de jugadores, organizados por rareza.
-    Dimensiones documentadas: 256 x 256 pixeles.
-    No incluyen el fondo, el escudo ni el marco completo de la carta.
+RECURSOS ADICIONALES
+--------------------
+  assets_cards/backgrounds/   931 recursos nuevos (fondos World Cup y eventos).
+  assets_cards/clubs/         47 recursos nuevos de clubes.
 
-  players_png_manifest.csv / players_png_manifest.json
-    Inventario de los PNG individuales.
-
-  download_player_png.py
-    Herramienta para descargar imagenes individuales.
-
-CARTAS COMPLETAS
-----------------
-  cards_full/
-    13.885 composiciones PNG de cartas base completas, organizadas por rareza.
-    Dimensiones documentadas: 256 x 256 pixeles.
-
-  cards_full_manifest.csv / cards_full_manifest.json
-    Inventario de las cartas completas generadas.
-
-  generate_full_cards.py
-    Herramienta para generar las composiciones PNG de cartas completas.
-
-BASE Y ARCHIVOS AUXILIARES
---------------------------
-  missing_in_renderz.csv
-    IDs para los que no se obtuvo una ficha base durante la extraccion.
-
-  programs_excluded.csv
-    IDs de cartas de programas/eventos excluidas de la base principal.
-
-  data/cache_sofifa_list.json
-    Lista de referencia SoFIFA.
-
-  data/cache_renderz.jsonl
-    Cache de consultas de fichas RenderZ.
-
-  data/cache_guide_stats.jsonl
-    Cache de referencia de atributos.
-
-  data/cache_png_downloads.jsonl
-    Cache reanudable para descargas de PNG individuales.
-
-  data/manual_overrides.json
-    Correcciones manuales del extractor principal.
-
-  data/progress.json
-    Contadores y fecha de la ultima ejecucion del extractor.
-
-COMO USAR LAS HERRAMIENTAS
---------------------------
-Requisito recomendado: Python 3.10 o superior.
-Ejecuta desde la carpeta raiz del repositorio.
-
-  Extractor principal:
-    python extract_fifa18.py --test
-    python extract_fifa18.py --help
-
-  Descargar PNG individuales:
-    python download_player_png.py --test
-    python download_player_png.py --workers 12
-    python download_player_png.py --only-ids 20801,158023
-    python download_player_png.py --help
-
-  Generar cartas completas:
-    python generate_full_cards.py --test
-    python generate_full_cards.py --workers 8
-    python generate_full_cards.py --workers 8 --overwrite
-    python generate_full_cards.py --help
-
-ESTADISTICAS
-------------
-  stats.primary      Seis atributos principales segun la posicion.
-  stats.detailed     Atributos detallados para jugadores de campo o porteros.
-  stats.goalkeeping  Diving, positioning, reflexes y handling para porteros.
-
-En el JSON, null identifica un bloque que no aplica. En el CSV, algunas celdas
-pueden quedar vacias cuando el atributo no corresponde a la posicion.
+SUBIDA Y ARCHIVOS GRANDES
+-------------------------
+  El registro de V4.0.0 reporta 11.242 objetos Git LFS y aproximadamente
+  513 MB transferidos. Para obtener los archivos grandes al clonar el
+  repositorio, instala y configura Git LFS.
 
 DOCUMENTACION
 -------------
-  README.md             Presentacion general, estructura y uso del proyecto.
-  README_JSON.md        Esquema detallado del JSON estadistico.
-  README_JSON_CLEAN.md  Guia rapida del JSON simplificado.
-  README_PNG.md         Documentacion de las imagenes individuales de jugadores.
-  README_CARDS_FULL.md  Documentacion de las cartas completas en PNG.
-  NOTICE.md             Atribuciones y avisos de propiedad intelectual.
+  README.md              Presentacion general, estructura y novedades V4.0.0.
+  README_JSON.md         Datos JSON, estadisticas y skill boosts.
+  README_JSON_CLEAN.md   Guia del JSON simplificado de cartas base.
+  README_PNG.md          PNG individuales de jugadores base y eventos.
+  README_CARDS_FULL.md   Cartas completas PNG base y eventos.
+  README_EVENT_CARDS.md  Base de datos y recursos de cartas de eventos.
+  NOTICE.md              Atribuciones y avisos de propiedad intelectual.
 
-AVISOS IMPORTANTES
-------------------
-  - El proyecto es independiente y no oficial.
-  - Los datos y las imagenes se ofrecen como material de referencia, sin
-    garantia de exactitud, integridad o disponibilidad.
-  - La atribucion a EA, FIFA, RenderZ, SoFIFA o FIFAMobileGuide no implica
-    afiliacion ni concede permisos para redistribuir sus materiales.
-  - Los recursos graficos y tipograficos pueden estar protegidos por derechos
-    de terceros. Verificar permisos antes de publicar o distribuir.
-  - Consultar NOTICE.md antes de reutilizar cualquier archivo.
+NOTAS IMPORTANTES
+-----------------
+  - Cartas base y cartas de eventos son colecciones separadas.
+  - 6.571 filas de eventos, 6.483 cartas completas y 6.570 PNG individuales
+    son recuentos de recursos distintos; no representan correspondencias 1:1.
+  - Los PNG de jugadores de eventos son solo la variante Action Shot.
+  - 17_FAV y 17_SBC_PLAYER no se encontraron en el CDN durante la recopilacion.
+  - Los datos no constituyen una certificacion oficial de EA.
+  - La atribucion a RenderZ, SoFIFA o FIFAMobileGuide no sustituye autorizacion.
+  - No redistribuir materiales de terceros sin los permisos necesarios.
+
+Este es un proyecto comunitario independiente, sin afiliacion ni respaldo de
+EA, EA SPORTS, FIFA, RenderZ, SoFIFA ni FIFAMobileGuide.
+Consulta NOTICE.md antes de publicar o reutilizar materiales.

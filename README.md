@@ -1,173 +1,169 @@
-# FIFA Mobile 18 — Base de cartas, estadísticas e imágenes (Season 2)
+# FIFA Mobile 18 — Base de cartas, estadísticas, eventos e imágenes (Season 2)
 
-**Versión del proyecto: 3.0.0**  
-**Documentación actualizada: 6 de noviembre de 2026**
+**Versión del proyecto: 4.0.0**  
+**Documentación actualizada: 10 de noviembre de 2026**
 
-Proyecto independiente y no oficial para recopilar, organizar y consultar información de las cartas base de **FIFA Mobile 18 — Season 2**. La colección reúne datos de jugadores y cartas, atributos principales y detallados, imágenes individuales de los jugadores y composiciones PNG de las cartas base completas.
+Proyecto independiente y no oficial dedicado a recopilar, organizar y consultar información de **FIFA Mobile 18 — Season 2**. Reúne datos de cartas base y cartas de eventos, estadísticas, *skill boosts*, imágenes individuales de jugadores y composiciones PNG de cartas completas, además de fondos, escudos de clubes y logotipos de eventos.
 
 > [!NOTE]
 > Este proyecto no está afiliado, patrocinado ni respaldado por Electronic Arts, EA SPORTS, FIFA, RenderZ, SoFIFA ni FIFAMobileGuide. Los nombres se utilizan únicamente para identificar el juego y las referencias consultadas.
->
+
 > [!IMPORTANT]
-> El contenido se ofrece como material de referencia comunitario. No constituye una publicación oficial de EA ni una certificación de que cada dato o imagen coincida exactamente con el juego. Puede contener omisiones, diferencias o errores. La atribución a una fuente no concede permiso para copiar o redistribuir sus materiales. Consulta [`NOTICE.md`](NOTICE.md) antes de publicar o reutilizar cualquier contenido.
+> El contenido se ofrece como material de referencia comunitario. No constituye una publicación oficial de EA ni una certificación de que cada dato, estadística, imagen o composición coincida exactamente con el juego. Puede contener omisiones, diferencias o errores. La atribución a una fuente no concede permiso para copiar o redistribuir sus materiales. Consulta [`NOTICE.md`](NOTICE.md) antes de publicar o reutilizar cualquier contenido.
 
 ## Evolución del proyecto
 
 - **1.0.0 — Base inicial:** recopilación de información de las cartas base y exportaciones en distintos formatos.
 - **2.0.0 — Estadísticas:** ampliación de la base con atributos principales, estadísticas detalladas y campos específicos para porteros.
-- **3.0.0 — Recursos gráficos:** incorporación de PNG individuales de jugadores y PNG de cartas base completas, junto con manifiestos y herramientas para descargarlos o generarlos.
+- **3.0.0 — Recursos gráficos de cartas base:** incorporación de PNG individuales de jugadores y PNG de cartas base completas, junto con manifiestos y herramientas.
+- **4.0.0 — Skill boosts y cartas de eventos:** actualización de las cartas base con *skill boosts* y estadísticas revisadas; incorporación de una base de datos de eventos, sus imágenes individuales, cartas completas, logos y recursos gráficos adicionales.
 
-## Novedades de la versión 3.0.0
+## Novedades de la versión 4.0.0
 
-- Se incorpora la colección `players_png/` con **13.885 imágenes PNG individuales** de los jugadores de las cartas base. Son imágenes del jugador, sin el fondo, el escudo del club ni el marco completo de la carta.
-- Se incorpora `cards_full/` con **13.885 composiciones PNG de cartas base completas** a 256 × 256 píxeles.
-- Se añaden manifiestos CSV y JSON para inventariar ambas colecciones gráficas.
-- Se añade `download_player_png.py` para descargar las imágenes individuales y mantener una caché reanudable.
-- Se añade `generate_full_cards.py` para componer las cartas completas utilizando los recursos gráficos disponibles.
-- Se amplía la documentación con [`README_PNG.md`](README_PNG.md) y [`README_CARDS_FULL.md`](README_CARDS_FULL.md).
+### Cartas base
 
-## Contenido del repositorio
+- Se amplía la información de las cartas base con **skill boosts**. Se documenta un catálogo de **37 nombres de refuerzos de habilidad**; la lista completa está en [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md).
+- Se revisan las estadísticas para ofrecer valores más realistas.
+- Se añade una exportación de la base completa en CSV, JSON y TXT: `fifa_mobile_18_base_completa.csv`, `fifa_mobile_18_base_completa.json` y `fifa_mobile_18_base_completa.txt`.
+- Se añade `fifa_mobile_18_skill_boost_distribucion.txt`, con la distribución de *skill boosts*.
+- Se conservan las colecciones de imágenes individuales y cartas completas de jugadores base publicadas en V3.0.0.
+
+### Cartas de eventos
+
+- Se incorpora una base independiente con **6.571 filas**: `fifa_mobile_18_eventos.csv`, `fifa_mobile_18_eventos.json` y `fifa_mobile_18_eventos.txt`.
+- La información de cada registro incluye `SKILL_BOOST` y **30 estadísticas**. Por separado, el catálogo documentado de refuerzos de habilidad contiene **37 nombres**; no son 37 estadísticas adicionales.
+- Se incorporan **6.483 cartas completas de eventos** de 256 × 256 píxeles en `events_cards/`.
+- Se incorporan **6.570 PNG de jugadores de eventos** en `events_png/`. Esta colección contiene únicamente la variante **Action Shot**.
+- Se añaden **92 iconos/logotipos de programas** en `events_logos/`. No se encontraron en el CDN los recursos `17_FAV` y `17_SBC_PLAYER`.
+- Se añaden los manifiestos `events_manifest.csv` y `events_manifest.json`.
+- Se incorporan recursos gráficos adicionales: **931 recursos de fondos** en `assets_cards/backgrounds/` y **47 recursos nuevos de clubes** en `assets_cards/clubs/`, incluidos recursos relacionados con World Cup y eventos.
+
+### Herramientas y utilidades nuevas
+
+- `extract_eventos_fifa18.py`: extractor de la base de cartas de eventos.
+- `generate_events_assets.py`: herramienta para generar/preparar recursos gráficos de eventos.
+- `generate_skill_boost.py`: herramienta relacionada con la generación de información de *skill boosts*.
+- `reconcile_guide.py`: utilidad de conciliación de referencias.
+- `inspect_event_assets.py`: herramienta de inspección de recursos gráficos de eventos.
+- `_guide_by_fifa_id.py`: utilidad auxiliar de consulta por FIFA ID.
+- `data/cache_eventos.jsonl`: caché de trabajo de la colección de eventos.
+
+## Qué se añadió y qué se conservó
+
+Según el registro de actualización compartido para el commit `a78158b4`, la subida de V4.0.0 incorporó los archivos y recursos nuevos descritos en esta documentación. La base anterior y los PNG originales de jugadores base no se modificaron: la actualización se realizó mediante adiciones.
+
+## Contenido del proyecto
 
 | Archivo o carpeta | Descripción |
 |---|---|
-| `extract_fifa18.py` | Extractor Python de la base principal de cartas. Mantiene cachés y genera las exportaciones principales. |
-| `fifa_mobile_18_base.csv` | Base principal de cartas, con una fila por carta base. Delimitador `;`. |
-| `fifa_mobile_18_base.json` | Base principal en JSON, con campos UTF-8 adicionales. |
-| `fifa_mobile_18_base.txt` | Vista de texto plano de la base principal. |
-| `fifa_mobile_18_base_player_stats.csv` | Base ampliada con datos de carta, atributos principales y atributos detallados. Delimitador `;`. |
-| `fifa_mobile_18_base_player_stats.json` | Base ampliada en JSON, organizada por jugador, carta y estadísticas. |
-| `fifa_mobile_18_base_player_stats_SAMPLE.json` | Muestra reducida del esquema JSON estadístico. |
-| `missing_in_renderz.csv` | IDs para los que no se obtuvo una ficha base durante la extracción incluida. |
-| `programs_excluded.csv` | IDs detectados como cartas de programas/eventos y excluidos de la base principal. |
-| `muestra_prueba_300.csv` / `muestra_prueba_300.txt` | Muestra reducida para inspección rápida de la base principal. |
-| `players_png/` | Imágenes PNG individuales de los jugadores, organizadas por rareza. |
-| `players_png_manifest.csv` / `.json` | Manifiestos de la colección de imágenes individuales. |
-| `download_player_png.py` | Descargador de imágenes individuales desde las referencias/CDN configuradas. |
-| `cards_full/` | Composiciones PNG de las cartas base completas, organizadas por rareza. |
-| `cards_full_manifest.csv` / `.json` | Manifiestos de las cartas completas generadas. |
-| `generate_full_cards.py` | Generador de composiciones de cartas completas a partir de los recursos gráficos. |
-| `assets_cards/` | Recursos gráficos auxiliares utilizados por el generador; incluye los logotipos de clubes documentados en `assets_cards/clubs/`. |
-| `fonts/` | Archivos tipográficos auxiliares utilizados por el generador de cartas, cuando están incluidos en la distribución. |
-| `backgrounds_18/` | Recursos de fondos de cartas utilizados por el generador, cuando están incluidos en la distribución. |
-| `data/cache_sofifa_list.json` | Caché de la lista de referencia consultada en SoFIFA. |
-| `data/cache_renderz.jsonl` | Caché de consultas de fichas RenderZ. |
-| `data/cache_guide_stats.jsonl` | Caché de referencia utilizada durante el trabajo de recopilación de atributos. |
-| `data/cache_png_downloads.jsonl` | Caché reanudable de descargas de PNG individuales. |
-| `data/manual_overrides.json` | Correcciones manuales persistentes para el extractor principal. |
-| `data/progress.json` | Contadores y fecha de la última ejecución registrada por el extractor. |
-| `organize_json.py` / `clean_json.py` | Utilidades de organización y simplificación de los datos JSON. |
-| `README_JSON.md` | Documentación de la estructura del JSON estadístico. |
-| `README_JSON_CLEAN.md` | Guía rápida para consultar la estructura JSON simplificada. |
-| `README_PNG.md` | Documentación de las imágenes PNG individuales de jugadores. |
-| `README_CARDS_FULL.md` | Documentación de las composiciones PNG de cartas completas. |
+| `extract_fifa18.py` | Extractor Python de la base principal de cartas base. |
+| `fifa_mobile_18_base.csv` / `.json` / `.txt` | Exportaciones de la base principal de cartas base. |
+| `fifa_mobile_18_base_player_stats.csv` / `.json` | Base de cartas base con atributos y estadísticas. |
+| `fifa_mobile_18_base_player_stats_SAMPLE.json` | Muestra del esquema JSON estadístico, cuando está incluida. |
+| `fifa_mobile_18_base_completa.csv` / `.json` / `.txt` | Exportaciones añadidas en V4.0.0 para la base completa. |
+| `fifa_mobile_18_skill_boost_distribucion.txt` | Distribución de *skill boosts* de las cartas base. El catálogo de 37 nombres se documenta en `README_EVENT_CARDS.md`. |
+| `players_png/` | PNG individuales de jugadores de cartas base. |
+| `players_png_manifest.csv` / `.json` | Manifiestos de las imágenes individuales de cartas base. |
+| `download_player_png.py` | Descargador de imágenes individuales de cartas base. |
+| `cards_full/` | Composiciones PNG de cartas base completas. |
+| `cards_full_manifest.csv` / `.json` | Manifiestos de las cartas base completas. |
+| `generate_full_cards.py` | Generador de cartas base completas. |
+| `fifa_mobile_18_eventos.csv` / `.json` / `.txt` | Base de datos de eventos, con 6.571 filas y `SKILL_BOOST` más 30 estadísticas. |
+| `events_cards/` | 6.483 composiciones PNG de cartas completas de eventos (256 × 256). |
+| `events_png/` | 6.570 PNG individuales de jugadores de eventos; solo variante Action Shot. |
+| `events_logos/` | 92 iconos/logotipos de programas; `17_FAV` y `17_SBC_PLAYER` no se encontraron en el CDN. |
+| `events_manifest.csv` / `.json` | Manifiestos de los recursos de eventos. |
+| `extract_eventos_fifa18.py` | Extractor de la base de datos de eventos. |
+| `generate_events_assets.py` | Herramienta de generación/preparación de recursos de eventos. |
+| `generate_skill_boost.py` | Herramienta relacionada con la generación de *skill boosts*. |
+| `reconcile_guide.py` | Utilidad para conciliar referencias. |
+| `inspect_event_assets.py` | Herramienta para inspeccionar recursos de eventos. |
+| `_guide_by_fifa_id.py` | Utilidad auxiliar de consulta por FIFA ID. |
+| `data/cache_eventos.jsonl` | Caché de datos de la colección de eventos. |
+| `assets_cards/backgrounds/` | Recursos de fondos; en V4.0.0 se añadieron 931 recursos, incluidos fondos de World Cup y eventos. |
+| `assets_cards/clubs/` | Recursos de clubes; en V4.0.0 se añadieron 47 recursos. |
+| `assets_cards/` | Recursos gráficos auxiliares utilizados en la composición de cartas. |
+| `fonts/` | Fuentes auxiliares documentadas para la composición de cartas base, si están incluidas en la distribución. |
+| `backgrounds_18/` | Fondos de cartas base, si están incluidos en la distribución. |
+| `organize_json.py` / `clean_json.py` | Utilidades de organización y simplificación JSON. |
+| `README_JSON.md` | Documentación de datos estadísticos y *skill boosts*. |
+| `README_JSON_CLEAN.md` | Guía del JSON simplificado de cartas base. |
+| `README_PNG.md` | Documentación de PNG individuales de jugadores base y eventos. |
+| `README_CARDS_FULL.md` | Documentación de cartas completas base y eventos. |
+| `README_EVENT_CARDS.md` | Guía de la base y recursos gráficos de eventos. |
 | `NOTICE.md` | Atribuciones, marcas, derechos de terceros y avisos legales. |
-| `LEEME.txt` | Guía rápida complementaria en español. |
+| `LEEME.txt` | Guía rápida en español. |
 
-> La tabla describe los elementos documentados para el proyecto. La presencia de un archivo o carpeta concreta depende de los contenidos incluidos en cada distribución del repositorio.
+## Cifras documentadas de la V4.0.0
 
-## Cifras de la copia documentada
-
-Los siguientes valores describen la colección documentada en esta versión. Pueden cambiar si se regeneran o actualizan los archivos.
-
-| Elemento | Registros / archivos |
+| Colección o recurso | Cantidad documentada |
 |---|---:|
-| Base principal (`fifa_mobile_18_base.csv`) | 13.885 |
-| Base con estadísticas (`fifa_mobile_18_base_player_stats.csv`) | 13.885 |
-| Imágenes individuales (`players_png/`) | 13.885 |
-| Cartas completas (`cards_full/`) | 13.885 |
-| IDs sin ficha obtenida (`missing_in_renderz.csv`) | 4.048 |
-| IDs de programas/eventos excluidos (`programs_excluded.csv`) | 6.571 |
-| Jugadores en la caché de lista SoFIFA | 17.933 |
+| Base de cartas base (copia documentada en V3.0.0) | 13.885 |
+| PNG individuales de jugadores base (copia documentada en V3.0.0) | 13.885 |
+| Cartas base completas PNG (copia documentada en V3.0.0) | 13.885 |
+| Filas de la base de eventos | 6.571 |
+| Cartas completas de eventos PNG | 6.483 |
+| PNG individuales de jugadores de eventos (Action Shot) | 6.570 |
+| Iconos/logotipos de programas | 92 |
+| Recursos nuevos de fondos | 931 |
+| Recursos nuevos de clubes | 47 |
 
-La colección de imágenes individuales ocupa aproximadamente **128,8 MB** según el manifiesto de documentación de la versión. No se proporciona un tamaño total de la colección de cartas completas porque puede variar según los recursos y la compresión de los PNG.
+Estos recuentos describen la subida de V4.0.0 comunicada para el commit `a78158b4`. Las cantidades de filas de datos, PNG individuales, cartas completas y logos representan tipos de recursos distintos; no deben interpretarse como un conjunto con correspondencia uno a uno. Para las colecciones de versiones anteriores, consulta los manifiestos correspondientes.
 
-### Distribución por rareza
+### Recursos de eventos no encontrados
 
-| Rareza | PNG individuales | Cartas completas |
-|---|---:|---:|
-| Master Rare | 1 | 1 |
-| Epic Rare | 285 | 285 |
-| Gold Rare | 3.656 | 3.656 |
-| Silver Rare | 7.752 | 7.752 |
-| Bronze Rare | 2.191 | 2.191 |
-| **Total** | **13.885** | **13.885** |
+Los iconos de programa `17_FAV` y `17_SBC_PLAYER` no se encontraron en el CDN durante la recopilación indicada. Por eso no forman parte de los 92 iconos disponibles. Esta observación describe el resultado de esa consulta y no demuestra que los recursos no puedan existir en otra fuente.
 
-## Base de datos y estadísticas
+## Estadísticas y *skill boosts*
 
-La base principal se centra en **cartas base** y relaciona identificadores de jugadores con la información de sus cartas. La exportación estadística añade:
+Las cartas base de V4.0.0 incorporan *skill boosts* y estadísticas revisadas con el objetivo de ofrecer valores más realistas. La distribución de *skill boosts* se resume en `fifa_mobile_18_skill_boost_distribucion.txt`.
 
-- **Atributos principales:** seis valores generales para jugadores de campo y seis campos adaptados a la estructura de porteros.
-- **Atributos detallados:** velocidad, aceleración, fuerza, control, regate, cabezazo, finalización, potencia de tiro, posicionamiento, defensa, pase y otros campos asociados.
-- **Datos de portero:** `gk_diving`, `gk_positioning`, `reflexes` y `handling`; en posiciones a las que no aplica, el bloque correspondiente aparece como `null` en el JSON.
+La base de eventos se distribuye en CSV, JSON y TXT y contiene 6.571 filas con `SKILL_BOOST` y 30 estadísticas. El proyecto documenta además un catálogo de **37 nombres de refuerzos de habilidad**; estos nombres no deben confundirse con las 30 estadísticas. Consulta [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md) para ver el catálogo completo y los archivos de datos para comprobar las columnas o claves exactas.
 
-Consulta [`README_JSON.md`](README_JSON.md) y [`README_JSON_CLEAN.md`](README_JSON_CLEAN.md) para conocer las claves y estructuras exactas.
+## Recursos gráficos
 
-## Imágenes PNG individuales de jugadores
+- **Jugadores base:** `players_png/` conserva la colección individual documentada en V3.0.0.
+- **Cartas base completas:** `cards_full/` conserva la colección de cartas base completas documentada en V3.0.0.
+- **Jugadores de eventos:** `events_png/` contiene 6.570 PNG, únicamente de tipo Action Shot.
+- **Cartas de eventos completas:** `events_cards/` contiene 6.483 PNG de 256 × 256 píxeles.
+- **Logotipos de eventos:** `events_logos/` contiene 92 iconos/logotipos de programas.
+- **Fondos y clubes:** en `assets_cards/backgrounds/` se añadieron 931 recursos y en `assets_cards/clubs/`, 47 recursos nuevos.
 
-La carpeta `players_png/` contiene una imagen del jugador correspondiente a cada registro de la base de cartas. No incluye el fondo, el escudo del club ni el marco completo de la carta.
+Consulta [`README_PNG.md`](README_PNG.md), [`README_CARDS_FULL.md`](README_CARDS_FULL.md) y [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md) para detalles adicionales.
 
-- Ruta: `players_png/{rareza}/p{fifa_id}*.png`.
-- Dimensiones documentadas: **256 × 256 píxeles**.
-- Cantidad documentada: **13.885 PNG**.
-- Los nombres de archivo siguen el nombre encontrado en el CDN; algunos incluyen sufijos como `_AS` o `_AS2`.
-- Los manifiestos `players_png_manifest.csv` y `players_png_manifest.json` registran los datos de cada descarga.
+## Manifiestos
 
-Consulta [`README_PNG.md`](README_PNG.md) para conocer el esquema del manifiesto y las opciones del descargador.
+- `events_manifest.csv`
+- `events_manifest.json`
 
-## Cartas base completas en PNG
+Los manifiestos de eventos permiten inventariar los recursos de esa colección. Revisa sus encabezados y registros para conocer los campos exactos y las relaciones que proporciona cada uno. Para los recursos base se mantienen `players_png_manifest.csv`/`.json` y `cards_full_manifest.csv`/`.json`.
 
-La carpeta `cards_full/` contiene una composición gráfica de cada carta base:
+## Herramientas de eventos
 
-- Ruta: `cards_full/{rareza}/card_{fifa_id}.png`.
-- Dimensiones documentadas: **256 × 256 píxeles**.
-- Cantidad documentada: **13.885 PNG**.
-- Las composiciones combinan recursos gráficos de jugador, fondo, club y tipografía, siguiendo una referencia de distribución visual de la carta.
-- Los manifiestos `cards_full_manifest.csv` y `cards_full_manifest.json` inventarían los resultados.
+Los scripts incorporados en V4.0.0 son:
 
-Estas imágenes se generaron mediante composición programática de recursos; no son capturas de pantalla de una sesión autenticada de RenderZ ni una declaración de que sean archivos oficiales publicados por EA. Consulta [`README_CARDS_FULL.md`](README_CARDS_FULL.md) para conocer los recursos y el proceso.
+```text
+extract_eventos_fifa18.py
+generate_events_assets.py
+generate_skill_boost.py
+reconcile_guide.py
+inspect_event_assets.py
+_guide_by_fifa_id.py
+```
 
-## Campos de la base principal
+Para conocer sus argumentos, opciones y requisitos exactos, consulta la ayuda de cada script o su código. No se documentan comandos con parámetros no confirmados.
 
-| Campo | Significado |
-|---|---|
-| `fifa_id` | Identificador del jugador utilizado para relacionar referencias. |
-| `short_name`, `full_name` | Nombre corto y nombre completo. |
-| `position_mobile` | Posición de la carta en FIFA Mobile. |
-| `ovr_mobile` | Media general de la carta móvil. |
-| `club_id`, `club_name` | Identificador y nombre del club. |
-| `background_code`, `rarity` | Código de fondo y categoría de rareza. |
-| `sofifa_overall`, `sofifa_potential` | Media y potencial de la referencia histórica de FIFA 18 para consola. |
-| `sofifa_age`, `sofifa_position` | Edad y posición de la referencia de consola. |
-| `nationality` | Nacionalidad registrada en la referencia. |
-| `renderz_url`, `sofifa_url` | Enlaces a las fichas consultadas. |
-| `season` | Temporada asociada al registro. |
+## Git LFS y archivos grandes
 
-### Códigos de rareza
+La actualización compartida indica que la subida de Git LFS finalizó correctamente con **11.242 objetos** y aproximadamente **513 MB transferidos**. La colección utiliza Git LFS para almacenar archivos grandes. Para clonar o descargar el repositorio y obtener el contenido real de esos recursos, instala y configura Git LFS antes de recuperar los objetos LFS.
 
-| Código | Categoría |
-|---|---|
-| `BR` | Bronze Rare |
-| `SR` | Silver Rare |
-| `GR` | Gold Rare |
-| `ER` | Epic Rare |
-| `MR` | Master Rare |
-| `CR` | Common Rare |
-| `BC` | Bronze Common |
-| `SC` | Silver Common |
-| `GC` | Gold Common |
+El resumen de la subida también muestra una advertencia remota `GH010` relacionada con una muestra aleatoria de 10.000 objetos; según el registro compartido, la advertencia no impidió completar la subida.
 
-## Requisitos
+## Uso de herramientas de cartas base
 
-- Python **3.10 o superior** recomendado.
-- Conexión a Internet para realizar nuevas consultas o descargas mediante los scripts correspondientes.
-- Las dependencias concretas pueden variar según el script y la distribución. Consulta la ayuda (`--help`) de cada herramienta y los archivos de requisitos si están incluidos.
-- Espacio de almacenamiento suficiente para las bases, cachés, recursos auxiliares e imágenes PNG. La distribución gráfica completa puede ocupar bastante más que los archivos de documentación.
+Ejecuta desde la raíz del repositorio. Estos comandos corresponden a las herramientas documentadas para la base y recursos base en versiones anteriores; consulta `--help` antes de ejecutar procesos completos.
 
-## Uso de las herramientas
-
-Ejecuta los comandos desde la carpeta raíz del repositorio, donde se encuentran los scripts.
-
-### Extractor de la base principal
+### Extractor principal
 
 ```bash
 python extract_fifa18.py --test
@@ -180,9 +176,7 @@ python extract_fifa18.py --workers 4
 python extract_fifa18.py --help
 ```
 
-El extractor consulta los IDs configurados, guarda respuestas en caché y genera las exportaciones de la base principal. Las opciones disponibles se pueden consultar con `--help`.
-
-### Descargar PNG individuales de jugadores
+### PNG individuales de cartas base
 
 ```bash
 python download_player_png.py --test
@@ -193,9 +187,7 @@ python download_player_png.py --export-only
 python download_player_png.py --help
 ```
 
-El descargador utiliza una caché reanudable en `data/cache_png_downloads.jsonl`. Sin opciones de sobrescritura, puede omitir imágenes ya descargadas. Consulta [`README_PNG.md`](README_PNG.md) antes de ejecutar una descarga completa.
-
-### Generar cartas completas
+### Cartas base completas
 
 ```bash
 python generate_full_cards.py --test
@@ -205,26 +197,24 @@ python generate_full_cards.py --only-ids 20801,158023
 python generate_full_cards.py --help
 ```
 
-La generación es reanudable: según la documentación de la herramienta, sin `--overwrite` se omiten los archivos ya generados. Consulta [`README_CARDS_FULL.md`](README_CARDS_FULL.md) para revisar los recursos de entrada y las opciones.
+Para las herramientas de eventos, consulta `--help` en los scripts correspondientes. No se asume que tengan los mismos parámetros que las herramientas de cartas base.
 
-## Criterios y limitaciones
+## Requisitos y consideraciones
 
-- La base principal está enfocada en **cartas base**, no en todas las versiones especiales o promocionales de cada jugador.
-- Los IDs detectados como cartas de programas/eventos se registran por separado y no se agregan como filas de la base principal.
-- Los campos de FIFA Mobile y los de la referencia histórica FIFA 18 para consola pertenecen a contextos de juego distintos; sus medias, posiciones y otros valores pueden no coincidir.
-- Los archivos CSV/TXT utilizan nombres normalizados para facilitar su lectura. El JSON principal conserva campos UTF-8 adicionales.
-- En la tabla estadística, las celdas vacías pueden corresponder a atributos que no aplican a una posición. En JSON, `null` indica un campo no aplicable o no disponible en esa estructura.
-- Las imágenes PNG corresponden a los recursos y composiciones descritos en sus manifiestos y documentos específicos. La disponibilidad futura de las URLs externas no está garantizada.
-- Los datos pueden contener omisiones o errores y las fuentes externas pueden cambiar, limitar el acceso o dejar de estar disponibles.
-- Los errores `404` o los fallos de conexión no demuestran por sí solos que un jugador nunca haya existido en el juego.
-- Los CSV utilizan `;` como delimitador. Al importarlos en una hoja de cálculo, selecciona ese separador si las columnas no se dividen automáticamente.
-- Dar crédito no concede derechos para redistribuir archivos de terceros. Revisa `NOTICE.md` y confirma los permisos antes de publicar datos, imágenes, fuentes tipográficas o recursos gráficos.
+- Python **3.10 o superior** era la versión recomendada para las herramientas documentadas en versiones anteriores. Comprueba los requisitos específicos de cada script.
+- Algunas herramientas requieren conexión a Internet para realizar consultas o descargas.
+- Se necesita espacio suficiente para bases, cachés, imágenes, fondos, escudos, logotipos y cartas completas.
+- Los CSV pueden utilizar `;` como delimitador; confirma el separador del archivo antes de importarlo.
+- Los datos pueden contener omisiones o errores; las fuentes externas pueden cambiar, limitar el acceso o dejar de estar disponibles.
+- Las estadísticas y *skill boosts* se ofrecen como información de referencia y no constituyen una certificación oficial de EA.
+- Las cartas base y las cartas de eventos son colecciones distintas. No mezcles sus manifiestos ni asumas que comparten esquema, identificadores o rutas.
+- Dar crédito no concede derechos para redistribuir archivos de terceros. Revisa [`NOTICE.md`](NOTICE.md) y confirma los permisos necesarios antes de publicar datos o recursos gráficos.
 
 ## Créditos y propiedad intelectual
 
-Se reconocen **RenderZ**, **SoFIFA** y **FIFAMobileGuide** como referencias consultadas durante el trabajo de recopilación y organización. Los recursos gráficos y tipográficos utilizados por las herramientas también pueden estar sujetos a derechos de EA y de otros titulares.
+Se reconocen **RenderZ**, **SoFIFA** y **FIFAMobileGuide** como referencias consultadas en el trabajo documentado de recopilación y organización. Los recursos gráficos, tipográficos, logotipos, nombres de eventos y materiales de juego pueden pertenecer a EA, sus licenciantes u otros titulares.
 
-Los nombres **FIFA**, **EA**, **EA SPORTS**, **FIFA Mobile**, **RenderZ**, **SoFIFA** y **FIFAMobileGuide** pertenecen o están asociados a sus respectivos titulares. Este proyecto no reclama la propiedad de sus marcas, sitios, bases de datos, fuentes tipográficas, imágenes ni materiales protegidos.
+Los nombres **FIFA**, **EA**, **EA SPORTS**, **FIFA Mobile**, **RenderZ**, **SoFIFA** y **FIFAMobileGuide** pertenecen o están asociados a sus respectivos titulares. Este proyecto no reclama la propiedad de sus marcas, sitios, bases de datos, imágenes, fuentes tipográficas, logotipos ni materiales protegidos.
 
 Dar crédito no implica afiliación ni concede derechos de reproducción o redistribución. Este repositorio no incluye una licencia abierta general para el conjunto de código y datos. Consulta [`NOTICE.md`](NOTICE.md) antes de copiar, publicar o distribuir cualquier archivo.
 

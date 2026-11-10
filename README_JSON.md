@@ -1,103 +1,64 @@
-# Estructura del JSON — FIFA Mobile 18 Base con estadísticas
+# Datos JSON y estadísticas — FIFA Mobile 18 Base y eventos (V4.0.0)
 
-**Proyecto:** V3.0.0  
-**Archivo principal:** `fifa_mobile_18_base_player_stats.json`  
-**Muestra:** `fifa_mobile_18_base_player_stats_SAMPLE.json`  
-**Registros de la copia documentada:** 13.885 jugadores
+Este documento resume los datos estadísticos documentados para las cartas base y los datos incluidos en la nueva base de cartas de eventos.
 
-Este documento explica la estructura de la exportación JSON ampliada que acompaña a la base de cartas de FIFA Mobile 18 — Season 2. La V3.0.0 incorpora además colecciones de imágenes PNG, documentadas por separado en [`README_PNG.md`](README_PNG.md) y [`README_CARDS_FULL.md`](README_CARDS_FULL.md).
+## 1. Cartas base
 
-## Estructura general
+La V4.0.0 amplía los datos de cartas base con:
 
-El archivo contiene cuatro secciones principales:
+- información de **skill boosts**; el catálogo documentado incluye **37 nombres** (consulta [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md));
+- estadísticas revisadas para ofrecer valores más realistas;
+- exportación completa adicional en CSV, JSON y TXT.
 
-```json
-{
-  "_readme": "Descripción breve del archivo",
-  "metadata": {
-    "title": "FIFA Mobile 18 (Temporada 2) - Cartas base con estadisticas",
-    "version": "1.0-clean",
-    "generated_at": "fecha ISO 8601",
-    "season": "FIFA Mobile 18 - Season 2",
-    "total_cards": 13885,
-    "counts_by_rarity": {},
-    "counts_by_position": {},
-    "how_to_read": {}
-  },
-  "schema": {},
-  "players": [
-    {
-      "fifa_id": 20801,
-      "name": {"short": "Cristiano Ronaldo", "full": "Cristiano Ronaldo"},
-      "age": 32,
-      "card": {},
-      "stats": {}
-    }
-  ]
-}
-```
+La documentación de versiones anteriores describía el archivo estadístico `fifa_mobile_18_base_player_stats.json`, una muestra `fifa_mobile_18_base_player_stats_SAMPLE.json` y una estructura por jugador con identidad, edad, carta y estadísticas. Las claves exactas añadidas o modificadas en V4 deben comprobarse en la exportación real.
 
-La clave `metadata.version` describe la versión interna de esa exportación JSON; no debe confundirse automáticamente con la versión global del repositorio (`3.0.0`).
+### Exportaciones completas añadidas en V4.0.0
 
-## Secciones de cada jugador
+- `fifa_mobile_18_base_completa.csv`
+- `fifa_mobile_18_base_completa.json`
+- `fifa_mobile_18_base_completa.txt`
+- `fifa_mobile_18_skill_boost_distribucion.txt`
 
-### `fifa_id`
+El nombre identifica una exportación de la base completa; consulta los propios archivos para ver columnas, claves, orden y contenido detallado.
 
-Identificador numérico utilizado para reconocer al jugador y relacionar sus registros.
+### Estructura de estadísticas documentada en versiones anteriores
 
-### `name`
+La base de cartas base utilizaba las siguientes secciones:
 
-- `short`: nombre corto.
-- `full`: nombre completo.
+- `fifa_id`: identificador numérico del jugador.
+- `name`: nombres `short` y `full`.
+- `age`: edad de referencia cuando está disponible.
+- `card`: datos de la carta, como `ovr`, `position`, `club_id`, `club`, `rarity`, `background_code` y `season`.
+- `stats.primary`: seis atributos principales según la posición.
+- `stats.detailed`: atributos detallados de jugadores de campo o porteros.
+- `stats.goalkeeping`: valores de portero (`gk_diving`, `gk_positioning`, `reflexes` y `handling`) en la estructura anterior.
 
-Los valores de esta exportación están normalizados para facilitar su uso en herramientas y scripts.
+Los ejemplos y campos descritos en esa sección representan el esquema documentado previamente; no se debe asumir que el JSON V4 conserva todas las claves exactamente igual.
 
-### `age`
+## 2. Cartas de eventos
 
-Edad registrada en la referencia histórica incluida en la base. Se almacena como número entero cuando está disponible.
+La V4.0.0 añade una base independiente en estos formatos:
 
-### `card`
+- `fifa_mobile_18_eventos.csv`
+- `fifa_mobile_18_eventos.json`
+- `fifa_mobile_18_eventos.txt`
 
-Información de la carta base:
+La copia subida contiene **6.571 filas**. Los registros incluyen el campo `SKILL_BOOST` y **30 estadísticas**. El catálogo `skill_boosts` documenta por separado **37 nombres de refuerzos de habilidad**; no son 37 estadísticas adicionales. La lista exacta está en [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md).
 
-| Clave | Descripción |
-|---|---|
-| `ovr` | Media general de la carta móvil. |
-| `position` | Posición de la carta (`GK`, `CB`, `ST`, `LW`, etc.). |
-| `club_id` | Identificador numérico del club. |
-| `club` | Nombre del club. |
-| `rarity` | Categoría de rareza. |
-| `background_code` | Código de fondo, como `MR4`, `ER3`, `GR2`, `SR1` o `BR0`. |
-| `season` | Temporada asociada a la carta. |
+La documentación de esta versión no enumera aquí los nombres individuales de las 30 estadísticas ni las claves JSON. Para integraciones, consulta los encabezados de `fifa_mobile_18_eventos.csv` y las claves de `fifa_mobile_18_eventos.json` directamente. No supongas que el esquema de eventos replica el de la base de cartas base.
 
-### `stats.primary`
+## 3. Diferencias entre colecciones
 
-Contiene seis atributos principales. Para jugadores de campo se utilizan `pace`, `shooting`, `passing`, `agility`, `defending` y `physical`.
+| Colección | Exportaciones | Contenido documentado |
+|---|---|---|
+| Cartas base | `fifa_mobile_18_base_player_stats.*`, `fifa_mobile_18_base_completa.*` | Datos y estadísticas de cartas base; V4 añade *skill boosts* y estadísticas revisadas. |
+| Cartas de eventos | `fifa_mobile_18_eventos.csv/.json/.txt` | 6.571 filas, `SKILL_BOOST` y 30 estadísticas; catálogo separado de 37 nombres de refuerzos. |
 
-Para porteros se utilizan `gk_diving`, `gk_positioning`, `handling`, `reflexes`, `passing` y `physical`.
+Mantén separadas ambas bases al consultar, importar o combinar registros. No se han proporcionado reglas de unión completas ni garantías de que todos los identificadores sean únicos entre colecciones.
 
-### `stats.detailed`
+## 4. Ejemplos de lectura
 
-Incluye atributos detallados. La estructura de jugadores de campo contiene 20 campos:
-
-`sprint_speed`, `acceleration`, `strength`, `ball_control`, `dribbling`, `heading`, `finishing`, `shot_power`, `long_shot`, `positioning`, `tackling`, `marking`, `aggression`, `composure`, `awareness`, `reactions`, `free_kick`, `short_passing`, `long_passing` y `crossing`.
-
-Para porteros se utiliza una estructura de 16 campos, sin `finishing`, `shot_power`, `long_shot` ni `positioning`.
-
-### `stats.goalkeeping`
-
-En los porteros contiene un objeto con cuatro valores: `gk_diving`, `gk_positioning`, `reflexes` y `handling`.
-
-En jugadores que no son porteros aparece como `null`, porque ese bloque no aplica a su posición.
-
-## Tipos de datos
-
-- Los identificadores, edades y atributos numéricos se guardan como números, no como cadenas.
-- `null` representa un campo que no aplica o un dato no disponible en esa estructura.
-- Las claves mantienen nombres consistentes en inglés para facilitar su consulta desde código.
-- El archivo utiliza codificación UTF-8.
-
-## Ejemplo de lectura en Python
+### Base JSON de cartas base (estructura previa documentada)
 
 ```python
 import json
@@ -105,36 +66,42 @@ import json
 with open("fifa_mobile_18_base_player_stats.json", encoding="utf-8") as file:
     database = json.load(file)
 
-print("Total de jugadores:", database["metadata"]["total_cards"])
+players = database.get("players", [])
+print("Registros:", len(players))
 
-# El archivo está ordenado por media de carta, de mayor a menor.
-player = database["players"][0]
-print(player["name"]["full"])
-print("OVR:", player["card"]["ovr"])
-print("Ritmo:", player["stats"]["primary"].get("pace"))
-
-# Porteros con al menos 85 de reflejos.
-goalkeepers = [
-    player for player in database["players"]
-    if player["card"]["position"] == "GK"
-    and player["stats"]["goalkeeping"] is not None
-    and player["stats"]["goalkeeping"]["reflexes"] is not None
-    and player["stats"]["goalkeeping"]["reflexes"] >= 85
-]
-
-print("Porteros encontrados:", len(goalkeepers))
+if players:
+    player = players[0]
+    print(player.get("name", {}).get("full"))
+    print(player.get("card", {}).get("ovr"))
+    print(player.get("stats", {}).get("primary"))
 ```
 
-## Archivos relacionados
+Este ejemplo corresponde a la estructura documentada anteriormente. Si el archivo V4 utiliza claves diferentes o adicionales, adapta la consulta al contenido real.
 
-- `fifa_mobile_18_base_player_stats.csv`: misma colección en formato tabular para hojas de cálculo y herramientas compatibles con CSV separado por `;`.
-- `fifa_mobile_18_base_player_stats_SAMPLE.json`: muestra reducida para revisar la estructura sin cargar el archivo completo.
-- `fifa_mobile_18_base.json`: base original de cartas, con campos adicionales de referencia y nombres UTF-8.
-- `players_png/`: colección de imágenes individuales de los jugadores. Consulta [`README_PNG.md`](README_PNG.md).
-- `cards_full/`: composiciones PNG de cartas completas. Consulta [`README_CARDS_FULL.md`](README_CARDS_FULL.md).
+### Base JSON de eventos
 
-## Nota sobre las exportaciones
+```python
+import json
 
-El JSON incluido es una exportación ya generada. Los scripts `organize_json.py` y `clean_json.py` forman parte de las utilidades de estructuración, pero la reproducción completa del proceso puede requerir archivos intermedios que no se incluyen en esta distribución.
+with open("fifa_mobile_18_eventos.json", encoding="utf-8") as file:
+    events_data = json.load(file)
 
-Para conocer el proyecto completo, sus referencias consultadas y los avisos de propiedad intelectual, consulta [`README.md`](README.md) y [`NOTICE.md`](NOTICE.md).
+# Inspecciona el nivel superior antes de recorrer los registros.
+print(type(events_data).__name__)
+if isinstance(events_data, dict):
+    print("Claves superiores:", list(events_data.keys()))
+elif isinstance(events_data, list):
+    print("Registros:", len(events_data))
+```
+
+El ejemplo evita asumir una estructura de raíz que no está especificada en el resumen de actualización.
+
+## 5. Archivos y herramientas relacionados
+
+- `generate_skill_boost.py`: herramienta relacionada con la generación de *skill boosts*.
+- `fifa_mobile_18_skill_boost_distribucion.txt`: distribución de *skill boosts*.
+- `extract_eventos_fifa18.py`: extractor de datos de cartas de eventos.
+- `data/cache_eventos.jsonl`: caché de trabajo de eventos.
+- [`README_JSON_CLEAN.md`](README_JSON_CLEAN.md): guía del JSON simplificado de cartas base.
+- [`README_EVENT_CARDS.md`](README_EVENT_CARDS.md): base de datos y recursos de eventos.
+- [`NOTICE.md`](NOTICE.md): fuentes, atribuciones y avisos de propiedad intelectual.
